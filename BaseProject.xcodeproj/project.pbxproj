@@ -141,9 +141,9 @@
 		EEB0E6E42172655800CAF99E /* Account Container */ = {
 			isa = PBXGroup;
 			children = (
+				EEB0E6E92172686400CAF99E /* AccountContainerPresenter.swift */,
 				EEB0E6E52172657700CAF99E /* AccountContainerViewController.swift */,
 				EEB0E6E62172657700CAF99E /* AccountContainerViewController.xib */,
-				EEB0E6E92172686400CAF99E /* AccountContainerPresenter.swift */,
 			);
 			path = "Account Container";
 			sourceTree = "<group>";
