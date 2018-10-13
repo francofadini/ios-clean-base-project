@@ -18,6 +18,7 @@ class AccountContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        self.presenter.start(view: self)
     }
 
     // MARK: Private Methods
@@ -25,4 +26,8 @@ class AccountContainerViewController: UIViewController {
     private func setup() {
         self.title = NSLocalizedString("Mi Cuenta", comment: "My Account container title")
     }
+}
+
+extension AccountContainerViewController: AccountContainerView {
+
 }
