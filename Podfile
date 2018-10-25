@@ -4,6 +4,7 @@ target 'BaseProject' do
   use_frameworks!
   
   pod 'IGListKit', '~> 3.0'
+  pod 'Kingfisher', '~> 4.0'
   
   target 'BaseProjectTests' do
     inherit! :search_paths

@@ -4,17 +4,21 @@ PODS:
   - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
+  - Kingfisher (4.10.0)
 
 DEPENDENCIES:
   - IGListKit (~> 3.0)
+  - Kingfisher (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - IGListKit
+    - Kingfisher
 
 SPEC CHECKSUMS:
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
 
-PODFILE CHECKSUM: 769730f34c9593dbe148f5bedcb4ea13ebdd3b7a
+PODFILE CHECKSUM: 6708740fc2f29d3000549b598c6258e7ea3c0755
 
 COCOAPODS: 1.5.3

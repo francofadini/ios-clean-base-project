@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1EC6D791175CAE4706444210 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C273E710044C70A6C74C4FDD /* Pods_BaseProject.framework */; };
 		4FA0DD8B89A4AF678A53DD41 /* Pods_BaseProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC67CD6FF51DF9DDDD198F8 /* Pods_BaseProjectTests.framework */; };
+		EEA297F2217FE00F005C7FDC /* ImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA297F1217FE00F005C7FDC /* ImageComponent.swift */; };
+		EEA297F9217FE6EB005C7FDC /* SimpleImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA297F7217FE6EB005C7FDC /* SimpleImageComponent.swift */; };
+		EEA297FA217FE6EB005C7FDC /* SimpleImageComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA297F8217FE6EB005C7FDC /* SimpleImageComponent.xib */; };
+		EEA297FF217FFA91005C7FDC /* SimpleLabelCompoent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA297FD217FFA91005C7FDC /* SimpleLabelCompoent.swift */; };
+		EEA29800217FFA91005C7FDC /* SimpleLabelCompoent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA297FE217FFA91005C7FDC /* SimpleLabelCompoent.xib */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -19,6 +24,8 @@
 		EEB0E6E72172657700CAF99E /* AccountContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6E52172657700CAF99E /* AccountContainerViewController.swift */; };
 		EEB0E6E82172657700CAF99E /* AccountContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6E62172657700CAF99E /* AccountContainerViewController.xib */; };
 		EEB0E6EA2172686400CAF99E /* AccountContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6E92172686400CAF99E /* AccountContainerPresenter.swift */; };
+		EEB9E22D217BDBC9002485EE /* BaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9E22C217BDBC9002485EE /* BaseComponent.swift */; };
+		EEE34E2C21726D2C0094E32A /* ProfileHeaderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE34E2B21726D2C0094E32A /* ProfileHeaderSectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,11 @@
 		C273E710044C70A6C74C4FDD /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C531D2DE55731110BDF5046D /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		CAC67CD6FF51DF9DDDD198F8 /* Pods_BaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA297F1217FE00F005C7FDC /* ImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComponent.swift; sourceTree = "<group>"; };
+		EEA297F7217FE6EB005C7FDC /* SimpleImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImageComponent.swift; sourceTree = "<group>"; };
+		EEA297F8217FE6EB005C7FDC /* SimpleImageComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleImageComponent.xib; sourceTree = "<group>"; };
+		EEA297FD217FFA91005C7FDC /* SimpleLabelCompoent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabelCompoent.swift; sourceTree = "<group>"; };
+		EEA297FE217FFA91005C7FDC /* SimpleLabelCompoent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLabelCompoent.xib; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +64,8 @@
 		EEB0E6E52172657700CAF99E /* AccountContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountContainerViewController.swift; sourceTree = "<group>"; };
 		EEB0E6E62172657700CAF99E /* AccountContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountContainerViewController.xib; sourceTree = "<group>"; };
 		EEB0E6E92172686400CAF99E /* AccountContainerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountContainerPresenter.swift; sourceTree = "<group>"; };
+		EEB9E22C217BDBC9002485EE /* BaseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseComponent.swift; sourceTree = "<group>"; };
+		EEE34E2B21726D2C0094E32A /* ProfileHeaderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderSectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EEA297F0217FE000005C7FDC /* Image Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEA297F3217FE6B6005C7FDC /* Cells */,
+				EEA297F1217FE00F005C7FDC /* ImageComponent.swift */,
+			);
+			path = "Image Component";
+			sourceTree = "<group>";
+		};
+		EEA297F3217FE6B6005C7FDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEA297F6217FE6D6005C7FDC /* Simple Image Component */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EEA297F6217FE6D6005C7FDC /* Simple Image Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEA297F7217FE6EB005C7FDC /* SimpleImageComponent.swift */,
+				EEA297F8217FE6EB005C7FDC /* SimpleImageComponent.xib */,
+			);
+			path = "Simple Image Component";
+			sourceTree = "<group>";
+		};
+		EEA297FB217FFA45005C7FDC /* Label Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEA297FC217FFA6D005C7FDC /* Cells */,
+			);
+			path = "Label Component";
+			sourceTree = "<group>";
+		};
+		EEA297FC217FFA6D005C7FDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEA297FD217FFA91005C7FDC /* SimpleLabelCompoent.swift */,
+				EEA297FE217FFA91005C7FDC /* SimpleLabelCompoent.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EEB0E6A921725E3600CAF99E = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +174,8 @@
 		EEB0E6B421725E3600CAF99E /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				EEE34E3321727B680094E32A /* Section Components */,
+				EEE34E2A21726D0B0094E32A /* Section Controllers */,
 				EEB0E6E42172655800CAF99E /* Account Container */,
 				EEB0E6E22172640600CAF99E /* Extensions */,
 				EEB0E6D721725F0500CAF99E /* Main Container */,
@@ -178,6 +237,40 @@
 				EEB0E6E62172657700CAF99E /* AccountContainerViewController.xib */,
 			);
 			path = "Account Container";
+			sourceTree = "<group>";
+		};
+		EEB9E22B217BDBAC002485EE /* Base Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEB9E22C217BDBC9002485EE /* BaseComponent.swift */,
+			);
+			path = "Base Component";
+			sourceTree = "<group>";
+		};
+		EEE34E2A21726D0B0094E32A /* Section Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EEE34E2D21726D500094E32A /* Profile Header */,
+			);
+			path = "Section Controllers";
+			sourceTree = "<group>";
+		};
+		EEE34E2D21726D500094E32A /* Profile Header */ = {
+			isa = PBXGroup;
+			children = (
+				EEE34E2B21726D2C0094E32A /* ProfileHeaderSectionController.swift */,
+			);
+			path = "Profile Header";
+			sourceTree = "<group>";
+		};
+		EEE34E3321727B680094E32A /* Section Components */ = {
+			isa = PBXGroup;
+			children = (
+				EEB9E22B217BDBAC002485EE /* Base Component */,
+				EEA297F0217FE000005C7FDC /* Image Component */,
+				EEA297FB217FFA45005C7FDC /* Label Component */,
+			);
+			path = "Section Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +360,9 @@
 			files = (
 				EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */,
 				EEB0E6E82172657700CAF99E /* AccountContainerViewController.xib in Resources */,
+				EEA29800217FFA91005C7FDC /* SimpleLabelCompoent.xib in Resources */,
 				EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */,
+				EEA297FA217FE6EB005C7FDC /* SimpleImageComponent.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,12 +430,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -371,12 +468,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA297F2217FE00F005C7FDC /* ImageComponent.swift in Sources */,
 				EEB0E6E1217263FF00CAF99E /* UIViewController+Extension.swift in Sources */,
 				EEB0E6E72172657700CAF99E /* AccountContainerViewController.swift in Sources */,
 				EEB0E6EA2172686400CAF99E /* AccountContainerPresenter.swift in Sources */,
 				EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */,
+				EEA297F9217FE6EB005C7FDC /* SimpleImageComponent.swift in Sources */,
+				EEE34E2C21726D2C0094E32A /* ProfileHeaderSectionController.swift in Sources */,
 				EEB0E6DD21725F1500CAF99E /* MainContainerViewController.swift in Sources */,
 				EEB0E6DC21725F1500CAF99E /* MainContainerPresenter.swift in Sources */,
+				EEB9E22D217BDBC9002485EE /* BaseComponent.swift in Sources */,
+				EEA297FF217FFA91005C7FDC /* SimpleLabelCompoent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
