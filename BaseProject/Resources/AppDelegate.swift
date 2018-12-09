@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  BaseProject
-//
-//  Created by Franco Fadini on 13/10/18.
-//  Copyright © 2018 made2. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -16,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = MainContainerViewController()
+        self.window?.rootViewController = UIViewController()
         self.window?.makeKeyAndVisible()
         return true
     }
