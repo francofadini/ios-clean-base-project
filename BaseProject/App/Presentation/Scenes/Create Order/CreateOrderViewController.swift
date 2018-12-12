@@ -1,18 +1,17 @@
 import UIKit
 
-class CreateOrderViewController: UIViewController, CreateOrderController {
-
-  // MARK: CREATE ORDER CONTROLLER
-
-  var createOrderInput: CreateOrderInput!
-  var createOrderRequest = CreateOrderRequest(identifier: nil)
+class CreateOrderViewController: UIViewController {
 
   // MARK: OUTLETS
 
   // MARK: PRIVATE ATTRIBUTES
 
+  //UI
   private let form = FormOrganism()
-  private let nameInput = TextInputAtom()
+  private let firstNameInput = TextInputAtom()
+
+  //Presentation
+  private var presenter: CreateOrderPresenter!
 
   // MARK: PUBLIC ATTRIBUTES
 
@@ -20,7 +19,7 @@ class CreateOrderViewController: UIViewController, CreateOrderController {
 
   init(configurator: CreateOrderSceneConfigurator = CreateOrderSceneConfiguratorImp()) {
     super.init(nibName: nil, bundle: nil)
-    configurator.configure(controller: self, view: self)
+    configurator.configure(view: self)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -31,28 +30,47 @@ class CreateOrderViewController: UIViewController, CreateOrderController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    configure()
+    addSubmitButton()
     configureInputs()
     buildForm()
   }
 
   // MARK: VIEW ACTIONS
 
-  func createOrderButtonAction() {
-    self.createOrderInput.createOrder(requestModel: self.createOrderRequest)
+  @objc func createOrderButtonAction() {
+    self.presenter.onSubmitButtonPressed(firstName: firstNameInput.getValue())
   }
 
   // MARK: PRIVATE METHODS
 
+  private func configure() {
+    self.title = "Crear Orden"
+  }
+
+  private func addSubmitButton() {
+    let submitButton = UIBarButtonItem(title: "Enviar",
+                                       style: .done,
+                                       target: self,
+                                       action: #selector(createOrderButtonAction))
+
+    self.navigationItem.rightBarButtonItem = submitButton
+  }
+
   private func configureInputs() {
-    nameInput.data.label = "Nombre y Apellido"
+    firstNameInput.data.label = "Nombre"
   }
 
   private func buildForm() {
-    form.appendSection(inputs: [nameInput])
+    form.appendSection(inputs: [firstNameInput])
     self.addChild(childViewController: form, to: self.view)
   }
 }
 
 extension CreateOrderViewController: CreateOrderView {
   // MARK: CREATE ORDER VIEW
+  func showLoader() {}
+  func hideLoader() {}
+  func showToast(text: String) {}
+  func close() {}
 }

@@ -1,11 +1,5 @@
 import Foundation
 
-// MARK: VIEW
-
-protocol CreateOrderView {
-
-}
-
 // MARK: CONTROLLER
 
 protocol CreateOrderController {
@@ -16,16 +10,15 @@ protocol CreateOrderController {
 // MARK: CONFIGURATOR
 
 protocol CreateOrderSceneConfigurator {
-  func configure(controller: CreateOrderController, view: CreateOrderView)
+  func configure(view: CreateOrderView)
 }
 
 // MARK: DEFAULT CONFIGURATOR
 
 class CreateOrderSceneConfiguratorImp: CreateOrderSceneConfigurator {
-  func configure(controller: CreateOrderController, view: CreateOrderView) {
-    var controller = controller
+  func configure(view: CreateOrderView) {
     let presenter = CreateOrderPresenter(view: view)
     let interactor = CreateOrderInteractor(output: presenter)
-    controller.createOrderInput = interactor
+    presenter.createOrderInput = interactor
   }
 }

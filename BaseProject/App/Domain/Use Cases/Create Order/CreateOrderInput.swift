@@ -10,4 +10,10 @@ protocol CreateOrderInput: Boundary {
 
 struct CreateOrderRequest: RequestModel {
   let identifier: Int?
+  var firstName: String?
+
+  init() {
+    self.identifier = nil
+    self.firstName = nil
+  }
 }

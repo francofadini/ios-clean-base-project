@@ -10,7 +10,7 @@ protocol CreateOrderOutput: Boundary {
 
 struct CreateOrderResponse: ResponseModel {
   let status: CreateOrderResponseStatus
-  let orderId: Int
+  let orderId: Int?
 }
 
 enum CreateOrderResponseStatus {

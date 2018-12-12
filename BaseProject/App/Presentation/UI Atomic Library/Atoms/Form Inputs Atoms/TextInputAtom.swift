@@ -18,6 +18,10 @@ public class TextInputAtom: InputRow {
     buildAtom()
   }
 
+  public func getValue() -> String? {
+    return self.textField.text
+  }
+
   private func preConfigureSubviews() {}
 
   private func bindData() {
