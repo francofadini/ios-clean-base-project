@@ -126,7 +126,7 @@
 		6DC2078921B99FE9000A6A5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				6DFF50BC21BD20C6007B1630 /* UI Framework */,
+				6DFF50BC21BD20C6007B1630 /* UI Atomic Library */,
 				6DC207A721B9C030000A6A5A /* Scenes */,
 			);
 			path = Presentation;
@@ -203,14 +203,14 @@
 			path = "Create Order";
 			sourceTree = "<group>";
 		};
-		6DFF50BC21BD20C6007B1630 /* UI Framework */ = {
+		6DFF50BC21BD20C6007B1630 /* UI Atomic Library */ = {
 			isa = PBXGroup;
 			children = (
 				6D8D371A21BDEE2A00B9BE66 /* Extensions */,
 				6D8D371521BDEC3C00B9BE66 /* Organisms */,
 				6DFF50BD21BD20F2007B1630 /* Atoms */,
 			);
-			path = "UI Framework";
+			path = "UI Atomic Library";
 			sourceTree = "<group>";
 		};
 		6DFF50BD21BD20F2007B1630 /* Atoms */ = {
