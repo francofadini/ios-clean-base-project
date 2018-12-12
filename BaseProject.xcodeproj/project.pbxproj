@@ -23,6 +23,8 @@
 		6DC207A221B9BE3E000A6A5A /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC207A121B9BE3E000A6A5A /* Boundary.swift */; };
 		6DC207A521B9C00B000A6A5A /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC207A321B9C00B000A6A5A /* CreateOrderViewController.swift */; };
 		6DC207AA21B9C06F000A6A5A /* CreateOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC207A921B9C06F000A6A5A /* CreateOrderPresenter.swift */; };
+		6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF91421C1AF3D00BFB240 /* OrdersRepository.swift */; };
+		6DCAF91721C1AF5200BFB240 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF91621C1AF5200BFB240 /* Repository.swift */; };
 		6DFF50BB21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */; };
 		6DFF50C021BD2143007B1630 /* TextInputAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BF21BD2143007B1630 /* TextInputAtom.swift */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		6DC207A121B9BE3E000A6A5A /* Boundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boundary.swift; sourceTree = "<group>"; };
 		6DC207A321B9C00B000A6A5A /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
 		6DC207A921B9C06F000A6A5A /* CreateOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderPresenter.swift; sourceTree = "<group>"; };
+		6DCAF91421C1AF3D00BFB240 /* OrdersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRepository.swift; sourceTree = "<group>"; };
+		6DCAF91621C1AF5200BFB240 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderSceneConfigurator.swift; sourceTree = "<group>"; };
 		6DFF50BF21BD2143007B1630 /* TextInputAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputAtom.swift; sourceTree = "<group>"; };
 		8F6C3DE9642FD62CFA29EF20 /* Pods-BaseProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProjectTests/Pods-BaseProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		6DC2078B21B99FF8000A6A5A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6DCAF91421C1AF3D00BFB240 /* OrdersRepository.swift */,
+				6DCAF91621C1AF5200BFB240 /* Repository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -496,8 +502,10 @@
 				6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */,
 				6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */,
 				EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */,
+				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
 				6DFF50C021BD2143007B1630 /* TextInputAtom.swift in Sources */,
 				6DC207A521B9C00B000A6A5A /* CreateOrderViewController.swift in Sources */,
+				6DCAF91721C1AF5200BFB240 /* Repository.swift in Sources */,
 				6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */,
 				6D8D371C21BDEE4100B9BE66 /* UIViewExtensions.swift in Sources */,
 				6DFF50BB21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift in Sources */,

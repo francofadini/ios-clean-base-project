@@ -1,24 +1,37 @@
 import Foundation
 
+protocol CreateOrderDatastore {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (Error) -> Void)
+}
+
 class CreateOrderInteractor: Interactor {
   typealias RequestModelType = CreateOrderRequest
 
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: CreateOrderOutput
+  private let datastore: CreateOrderDatastore
 
   // MARK: INITIALIZER
 
-  init(output: CreateOrderOutput) {
+  init(output: CreateOrderOutput, datastore: CreateOrderDatastore) {
     self.output = output
+    self.datastore = datastore
   }
 
   // MARK: INTERACTOR
 
   func execute(requestModel: CreateOrderRequest) {
-    //... steps for executing the use case
-    //... create response models
-    let requestResponse = CreateOrderResponse(status: .success, orderId: 0)
+
+    let firstName = requestModel.firstName
+    var requestResponse: CreateOrderResponse!
+
+    self.datastore.creteOrderWith(firstName: firstName, success: { (order) in
+      requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
+      }, fail: { (_) in
+      requestResponse = CreateOrderResponse(status: .failure, orderId: nil)
+    })
+
     self.output.onOrderCreated(responseModel: requestResponse)
   }
 }

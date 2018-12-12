@@ -53,10 +53,8 @@ extension CreateOrderPresenter: CreateOrderOutput {
     case .success:
       let orderID = responseModel.orderId!
       notifyOrderCreationSuccess(orderID: orderID)
-      break
     case .failure:
       notifyOrderCreationFailed()
-      break
     }
     self.view.close()
   }

@@ -6,12 +6,14 @@ class Order {
 
   // MARK: PRIVATE ATTRIBUTES
 
-  private let identifier: Int
+  let identifier: Int
+  let firstName: String?
 
   // MARK: INITIALIZER
 
-  init(identifier: Int) {
+  init(identifier: Int, firstName: String) {
     self.identifier = identifier
+    self.firstName = firstName
   }
 
   // PUBLIC METHODS

@@ -18,7 +18,8 @@ protocol CreateOrderSceneConfigurator {
 class CreateOrderSceneConfiguratorImp: CreateOrderSceneConfigurator {
   func configure(view: CreateOrderView) {
     let presenter = CreateOrderPresenter(view: view)
-    let interactor = CreateOrderInteractor(output: presenter)
+    let datastore = OrdersRepository()
+    let interactor = CreateOrderInteractor(output: presenter, datastore: datastore)
     presenter.createOrderInput = interactor
   }
 }
