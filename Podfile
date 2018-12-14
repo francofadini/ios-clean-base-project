@@ -1,13 +1,11 @@
 platform :ios, '10.0'
 
+def common_pods
+  pod 'Alamofire'
+end
+
 target 'BaseProject' do
   use_frameworks!
   
-  pod 'Kingfisher', '~> 4.0'
-  
-  target 'BaseProjectTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  common_pods
 end
