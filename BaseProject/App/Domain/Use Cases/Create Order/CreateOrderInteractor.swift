@@ -1,7 +1,14 @@
 import Foundation
 
-protocol CreateOrderDatastore {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (Error) -> Void)
+protocol CreateOrderDatasource {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (DataSourceError) -> Void)
+}
+
+enum DataSourceError {
+  case noInternet
+  case serverError
+  case localError
+  case other
 }
 
 class CreateOrderInteractor: Interactor {
@@ -10,11 +17,11 @@ class CreateOrderInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: CreateOrderOutput
-  private let datastore: CreateOrderDatastore
+  private let datastore: CreateOrderDatasource
 
   // MARK: INITIALIZER
 
-  init(output: CreateOrderOutput, datastore: CreateOrderDatastore) {
+  init(output: CreateOrderOutput, datastore: CreateOrderDatasource) {
     self.output = output
     self.datastore = datastore
   }

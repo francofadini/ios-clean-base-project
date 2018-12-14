@@ -1,6 +1,6 @@
 import Foundation
 
-class Order {
+class Order: Codable {
 
   // MARK: PUBLIC ATTRIBUTES
 

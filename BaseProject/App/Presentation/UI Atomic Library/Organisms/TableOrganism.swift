@@ -1,6 +1,15 @@
 import Foundation
 import UIKit
 
+struct Section {
+  let title: String?
+  let rows: [Row]
+}
+
+public class Row: UIView {
+
+}
+
 public class TableOrganism: UITableViewController {
   private var sections = [Section]()
 
@@ -31,13 +40,4 @@ public class TableOrganism: UITableViewController {
     cell.contentView.addAutorisizingSubview(view: row)
     return cell
   }
-}
-
-struct Section {
-  let title: String?
-  let rows: [Row]
-}
-
-public class Row: UIView {
-
 }
