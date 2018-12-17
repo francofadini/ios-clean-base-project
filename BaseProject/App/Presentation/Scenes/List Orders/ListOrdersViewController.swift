@@ -9,11 +9,11 @@ class ListOrdersViewController: UIViewController {
   //UI
   private var list: ListOrganism<ImageLabelTableViewCell>?
 
-  //Presentation
-  var presenter: ListOrdersPresenter!
-
   // MARK: PUBLIC ATTRIBUTES
 
+  //Presentation
+  var presenter: ListOrdersPresenter!
+  
   // MARK: INITIALIZER
 
   init(configurator: ListOrdersSceneConfigurator = ListOrdersSceneConfiguratorImp()) {

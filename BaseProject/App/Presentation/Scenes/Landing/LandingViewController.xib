@@ -35,6 +35,9 @@
                         <constraint firstAttribute="height" constant="50" id="LQg-2d-cQW"/>
                     </constraints>
                     <state key="normal" title="Login Button"/>
+                    <connections>
+                        <action selector="didTapLoginButton:" destination="-1" eventType="touchUpInside" id="7Jo-yT-fcu"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xld-SW-l7p">
                     <rect key="frame" x="16" y="597" width="343" height="50"/>
@@ -43,6 +46,9 @@
                         <constraint firstAttribute="height" constant="50" id="Fmd-2T-dqh"/>
                     </constraints>
                     <state key="normal" title="Register Button"/>
+                    <connections>
+                        <action selector="didTapRegisterButton:" destination="-1" eventType="touchUpInside" id="CfC-MK-RNI"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
