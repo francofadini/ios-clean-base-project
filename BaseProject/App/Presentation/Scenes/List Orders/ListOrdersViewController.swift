@@ -13,7 +13,7 @@ class ListOrdersViewController: UIViewController {
 
   //Presentation
   var presenter: ListOrdersPresenter!
-  
+
   // MARK: INITIALIZER
 
   init(configurator: ListOrdersSceneConfigurator = ListOrdersSceneConfiguratorImp()) {
@@ -44,6 +44,7 @@ class ListOrdersViewController: UIViewController {
 
   private func configure() {
     self.title = "Ordenes"
+    self.view.backgroundColor = .white
   }
 
   private func addAddOrderButton() {

@@ -3,12 +3,13 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol LoginOutput: Boundary {
-  func onLoggedIn(responseModel: LoginResponse)
+  func onLoggedIn()
+  func onLoginFail(error: LoginError)
 }
 
-// MARK: RESPONSE MODEL
-
-struct LoginResponse: ResponseModel {
-  let status: ResponseStatus
-  let session: [Order]
+enum LoginError {
+  case emptyEmail
+  case emptyPassword
+  case noInternet
+  case other
 }

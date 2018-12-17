@@ -31,8 +31,8 @@ class ListOrdersInteractor: Interactor {
       } else {
         requestResponse = ListOrdersResponse(status: .failure, orders: [Order]())
       }
+      self.output.onOrdersListed(responseModel: requestResponse)
     }
-    self.output.onOrdersListed(responseModel: requestResponse)
   }
 }
 

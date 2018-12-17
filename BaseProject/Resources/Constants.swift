@@ -27,11 +27,17 @@ struct Constants {
       static let configurationLabel = NSLocalizedString("Configuraciones", comment: "General string for configurations")
       static let loadingLabel = NSLocalizedString("Cargando...", comment: "General string for loading label")
       static let confirmLabel = NSLocalizedString("Confirmar", comment: "General string for confirm action")
+
+      struct Errors {
+        static let noInternetErrorMessage = NSLocalizedString("No hay internet", comment: "No internet general error message")
+      }
     }
 
     struct Authentication {
       static let loginLabel = NSLocalizedString("Iniciar Sesión", comment: "Login button label")
       static let registerLabel = NSLocalizedString("Registrarme", comment: "Register button label")
+      static let emailLabel = NSLocalizedString("Email", comment: "General string for email")
+      static let passwordLabel = NSLocalizedString("Contraseña", comment: "General string for password")
       static let recoverPasswordButtonLabel = NSLocalizedString("¿Olvidaste tu contraseña?", comment: "Recover password button label")
       static let termsAndConditionsLabel = NSLocalizedString("Al registrarte, aceptas nuestras condiciones y confirmas que leíste nuestra política de datos.",
                                                              comment: "Terms and Conditions label on register screen")

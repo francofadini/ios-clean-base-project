@@ -5,6 +5,7 @@ import Foundation
 protocol LoginView: class {
   func showLoader()
   func hideLoader()
+  func showError(title: String, message: String)
 }
 
 class LoginPresenter {
@@ -25,8 +26,10 @@ class LoginPresenter {
 
   // MARK: VIEW EVENTS
 
-  func didTapSubmitButton() {
+  func didTapSubmitButton(username: String?, password: String?) {
     self.view.showLoader()
+    self.loginRequest.username = username
+    self.loginRequest.password = password
     self.loginInput.login(requestModel: self.loginRequest)
   }
 
@@ -42,7 +45,30 @@ extension LoginPresenter: LoginOutput {
 
   // MARK: CRETE ORDER OUTPUT
 
-  func onLoggedIn(responseModel: LoginResponse) {
+  func onLoggedIn() {
+    self.view.hideLoader()
+    self.navigator.openMainView()
+  }
 
+  func onLoginFail(error: LoginError) {
+    self.view.hideLoader()
+
+    switch error {
+    case .emptyEmail:
+      self.view.showError(title: NSLocalizedString("Email Inválido",
+                                                   comment: "Invalid email error title"),
+                          message: NSLocalizedString("Ingrese un email válido",
+                                                     comment: "Invalid email error message"))
+    case .emptyPassword:
+      self.view.showError(title: NSLocalizedString("Contraseña Inválida",
+                                                   comment: "Invalid pass error title"),
+                          message: NSLocalizedString("Ingrese una contraseña válida",
+                                                     comment: "Invalid pass error message"))
+    default:
+      self.view.showError(title: NSLocalizedString("Error al iniciar sesion",
+                                                   comment: "Generic login error title"),
+                          message: NSLocalizedString("Ocurrio un error al inisiar sesion",
+                                                     comment: "Generic login error message"))
+    }
   }
 }

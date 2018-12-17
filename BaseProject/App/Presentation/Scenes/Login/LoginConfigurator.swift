@@ -19,8 +19,11 @@ class LoginSceneConfiguratorImp: LoginSceneConfigurator {
   func configure(view: LoginViewController) {
     let navigator = LoginNavigator(viewController: view)
     let presenter = LoginPresenter(view: view, navigator: navigator)
-    let datastore = APILoginService()
-    let interactor = LoginInteractor(output: presenter, datastore: datastore)
+    let loginService = APILoginService()
+    let currentSessionService = CurrentSessionService()
+    let interactor = LoginInteractor(output: presenter,
+                                     loginGateway: loginService,
+                                     sessionPersistantGateway: currentSessionService)
     presenter.loginInput = interactor
     view.presenter = presenter
   }

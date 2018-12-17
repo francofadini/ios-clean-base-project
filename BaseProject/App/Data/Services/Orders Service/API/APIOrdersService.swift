@@ -3,14 +3,7 @@ import Foundation
 class APIOrdersService: OrdersService {
 
   func fetchAllOrders(completion: (OrdersServiceResponse) -> Void) {
-    let requestBuilder: APIRequestBuilder = AlamofireAPIRequestBuilder<Order>(baseURL: "base_url")
-
-    _ = requestBuilder
-      .withEnpoint(endpoint: "endpoint")
-      .withSuccessHandler(responseType: Order.self, handler: { response in
-        print(response)
-      })
-      .buildAndExecute()
+    
   }
 }
 

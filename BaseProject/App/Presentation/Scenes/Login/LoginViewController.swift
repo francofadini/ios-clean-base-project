@@ -41,7 +41,8 @@ class LoginViewController: UIViewController {
   // MARK: VIEW ACTIONS
 
   @objc func didTapSubmitButton() {
-    presenter.didTapSubmitButton()
+    presenter.didTapSubmitButton(username: usernameInput.getValue(),
+                                 password: passwordInput.getValue())
   }
 
   @objc func didTapCloseButton() {
@@ -73,8 +74,10 @@ class LoginViewController: UIViewController {
   }
 
   private func configureInputs() {
-    usernameInput.data.label = "Email"
-    passwordInput.data.label = "Contraseña"
+    usernameInput.style = .defaultEmailLeftAlignedStyle
+    usernameInput.data.placeholder = Constants.Strings.Authentication.emailLabel
+    passwordInput.style = .defaultPasswordLeftAlignedStyle
+    passwordInput.data.placeholder = Constants.Strings.Authentication.passwordLabel
   }
 
   private func buildForm() {
@@ -86,10 +89,23 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginView {
   // MARK: CREATE ORDER VIEW
   func showLoader() {
-
+    self.view.isUserInteractionEnabled = false
+    self.navigationItem.leftBarButtonItem?.isEnabled = false
+    let activityIndicator = UIActivityIndicatorView(style: .white)
+    let activityIndicatorBarButton = UIBarButtonItem(customView: activityIndicator)
+    self.navigationItem.setRightBarButton(activityIndicatorBarButton, animated: true)
+    activityIndicator.startAnimating()
   }
 
   func hideLoader() {
-    
+    self.view.isUserInteractionEnabled = true
+    self.navigationItem.leftBarButtonItem?.isEnabled = true
+    addSubmitButton()
+  }
+
+  func showError(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: Constants.Strings.General.okDefaultAlertLabel, style: .default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
   }
 }
