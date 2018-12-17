@@ -7,3 +7,8 @@ import Foundation
 protocol ResponseModel {
 
 }
+
+enum ResponseStatus {
+  case success
+  case failure
+}

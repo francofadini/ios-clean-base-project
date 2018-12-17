@@ -1,13 +1,13 @@
 import Foundation
+import UIKit
 
 class LandingNavigator: Navigator {
   func openLogin() {
-    let loginVC = LandingViewController()
-    self.push(destination: loginVC)
+    let loginVC = UINavigationController(rootViewController: LoginViewController())
+    self.present(destination: loginVC, completion: nil)
   }
 
   func openRegister() {
-    let registerVC = LandingViewController()
-    self.push(destination: registerVC)
+    
   }
 }

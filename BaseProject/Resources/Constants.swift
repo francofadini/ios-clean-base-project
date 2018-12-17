@@ -30,7 +30,7 @@ struct Constants {
     }
 
     struct Authentication {
-      static let loginLabel = NSLocalizedString("Iniciar sesión", comment: "Login button label")
+      static let loginLabel = NSLocalizedString("Iniciar Sesión", comment: "Login button label")
       static let registerLabel = NSLocalizedString("Registrarme", comment: "Register button label")
       static let recoverPasswordButtonLabel = NSLocalizedString("¿Olvidaste tu contraseña?", comment: "Recover password button label")
       static let termsAndConditionsLabel = NSLocalizedString("Al registrarte, aceptas nuestras condiciones y confirmas que leíste nuestra política de datos.",
