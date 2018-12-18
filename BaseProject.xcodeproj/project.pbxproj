@@ -151,6 +151,12 @@
 		6DBA0A7721C936AF003BA5F1 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7621C936AF003BA5F1 /* RegisterInteractor.swift */; };
 		6DBA0A7821C936AF003BA5F1 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7621C936AF003BA5F1 /* RegisterInteractor.swift */; };
 		6DBA0A7921C936AF003BA5F1 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7621C936AF003BA5F1 /* RegisterInteractor.swift */; };
+		6DBA0A7C21C93953003BA5F1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7B21C93953003BA5F1 /* RegisterService.swift */; };
+		6DBA0A7D21C93953003BA5F1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7B21C93953003BA5F1 /* RegisterService.swift */; };
+		6DBA0A7E21C93953003BA5F1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A7B21C93953003BA5F1 /* RegisterService.swift */; };
+		6DBA0A8121C93982003BA5F1 /* APIRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A8021C93982003BA5F1 /* APIRegisterService.swift */; };
+		6DBA0A8221C93982003BA5F1 /* APIRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A8021C93982003BA5F1 /* APIRegisterService.swift */; };
+		6DBA0A8321C93982003BA5F1 /* APIRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A8021C93982003BA5F1 /* APIRegisterService.swift */; };
 		6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2078C21B9A01E000A6A5A /* Order.swift */; };
 		6DC2079121B9B6DA000A6A5A /* CreateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */; };
 		6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079221B9B993000A6A5A /* Interactor.swift */; };
@@ -228,6 +234,8 @@
 		6DBA0A6E21C9362D003BA5F1 /* RegisterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInput.swift; sourceTree = "<group>"; };
 		6DBA0A7221C93663003BA5F1 /* RegisterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOutput.swift; sourceTree = "<group>"; };
 		6DBA0A7621C936AF003BA5F1 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		6DBA0A7B21C93953003BA5F1 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		6DBA0A8021C93982003BA5F1 /* APIRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegisterService.swift; sourceTree = "<group>"; };
 		6DC2078C21B9A01E000A6A5A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderInteractor.swift; sourceTree = "<group>"; };
 		6DC2079221B9B993000A6A5A /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -423,6 +431,23 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		6DBA0A7A21C93927003BA5F1 /* Register Service */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA0A7F21C93977003BA5F1 /* API */,
+				6DBA0A7B21C93953003BA5F1 /* RegisterService.swift */,
+			);
+			path = "Register Service";
+			sourceTree = "<group>";
+		};
+		6DBA0A7F21C93977003BA5F1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA0A8021C93982003BA5F1 /* APIRegisterService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		6DC2078921B99FE9000A6A5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,8 +579,9 @@
 		6DCAF93121C3F80E00BFB240 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6DBA09D821C82297003BA5F1 /* Session Service */,
 				6DBA09D021C8035C003BA5F1 /* Login Service */,
+				6DBA0A7A21C93927003BA5F1 /* Register Service */,
+				6DBA09D821C82297003BA5F1 /* Session Service */,
 				6DCAF93621C3F8F400BFB240 /* Orders Service */,
 				6DCAF93421C3F8BE00BFB240 /* Service.swift */,
 			);
@@ -1061,6 +1087,7 @@
 				6DBA09E521C92E8F003BA5F1 /* Boundary.swift in Sources */,
 				6DBA09E621C92E8F003BA5F1 /* Constants.swift in Sources */,
 				6DBA09E721C92E8F003BA5F1 /* SessionService.swift in Sources */,
+				6DBA0A8321C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA09E821C92E8F003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09E921C92E8F003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA09EA21C92E8F003BA5F1 /* LoginInteractor.swift in Sources */,
@@ -1087,6 +1114,7 @@
 				6DBA09FE21C92E8F003BA5F1 /* CurrentSessionService.swift in Sources */,
 				6DBA0A7921C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA09FF21C92E8F003BA5F1 /* OrdersRepository.swift in Sources */,
+				6DBA0A7E21C93953003BA5F1 /* RegisterService.swift in Sources */,
 				6DBA0A0021C92E8F003BA5F1 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA0A0121C92E8F003BA5F1 /* Configurator.swift in Sources */,
 				6DBA0A0221C92E8F003BA5F1 /* TextInputAtom.swift in Sources */,
@@ -1122,6 +1150,7 @@
 				6DBA0A2821C93125003BA5F1 /* Boundary.swift in Sources */,
 				6DBA0A2921C93125003BA5F1 /* Constants.swift in Sources */,
 				6DBA0A2A21C93125003BA5F1 /* SessionService.swift in Sources */,
+				6DBA0A8221C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA0A2B21C93125003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA0A2C21C93125003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A2D21C93125003BA5F1 /* LoginInteractor.swift in Sources */,
@@ -1148,6 +1177,7 @@
 				6DBA0A4121C93125003BA5F1 /* CurrentSessionService.swift in Sources */,
 				6DBA0A7821C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA0A4221C93125003BA5F1 /* OrdersRepository.swift in Sources */,
+				6DBA0A7D21C93953003BA5F1 /* RegisterService.swift in Sources */,
 				6DBA0A4321C93125003BA5F1 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA0A4421C93125003BA5F1 /* Configurator.swift in Sources */,
 				6DBA0A4521C93125003BA5F1 /* TextInputAtom.swift in Sources */,
@@ -1183,6 +1213,7 @@
 				6DC207A221B9BE3E000A6A5A /* Boundary.swift in Sources */,
 				6DBA09B621C7E06C003BA5F1 /* Constants.swift in Sources */,
 				6DBA09DA21C822AB003BA5F1 /* SessionService.swift in Sources */,
+				6DBA0A8121C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA09CD21C80179003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09D721C80E61003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA09CA21C7F85E003BA5F1 /* LoginInteractor.swift in Sources */,
@@ -1209,6 +1240,7 @@
 				6DBA09DD21C82325003BA5F1 /* CurrentSessionService.swift in Sources */,
 				6DBA0A7721C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
+				6DBA0A7C21C93953003BA5F1 /* RegisterService.swift in Sources */,
 				6DCAF91E21C2B91A00BFB240 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA09DF21C924CE003BA5F1 /* Configurator.swift in Sources */,
 				6DFF50C021BD2143007B1630 /* TextInputAtom.swift in Sources */,
