@@ -1,5 +1,6 @@
 // swiftlint:disable nesting
 // swiftlint:disable line_length
+// swiftlint:disable identifier_name
 
 import Foundation
 import UIKit
