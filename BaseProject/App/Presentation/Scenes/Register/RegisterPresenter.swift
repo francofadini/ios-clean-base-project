@@ -76,9 +76,9 @@ extension RegisterPresenter: RegisterOutput {
                           message: NSLocalizedString("Asegurese de que las contraseñas coincidan",
                                                      comment: "Not match pass error message"))
     default:
-      self.view.showError(title: NSLocalizedString("Error al iniciar sesion",
+      self.view.showError(title: NSLocalizedString("Error al registrarse",
                                                    comment: "Generic Register error title"),
-                          message: NSLocalizedString("Ocurrio un error al inisiar sesion",
+                          message: NSLocalizedString("Ocurrio un error al registrarse",
                                                      comment: "Generic Register error message"))
     }
   }

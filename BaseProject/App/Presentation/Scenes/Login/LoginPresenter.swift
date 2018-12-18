@@ -67,7 +67,7 @@ extension LoginPresenter: LoginOutput {
     default:
       self.view.showError(title: NSLocalizedString("Error al iniciar sesion",
                                                    comment: "Generic login error title"),
-                          message: NSLocalizedString("Ocurrio un error al inisiar sesion",
+                          message: NSLocalizedString("Ocurrio un error al iniciar sesion",
                                                      comment: "Generic login error message"))
     }
   }
