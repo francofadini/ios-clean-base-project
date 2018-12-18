@@ -25,11 +25,11 @@ class RegisterInteractor: Interactor {
   // MARK: INITIALIZER
 
   init(output: RegisterOutput,
-       loginGateway: RegisterGateway,
+       registerGateway: RegisterGateway,
        sessionPersistantGateway: RegisterSessionPersistantGateway) {
     
     self.output = output
-    self.registerGateway = loginGateway
+    self.registerGateway = registerGateway
     self.sessionPersistantGateway = sessionPersistantGateway
   }
 
@@ -79,11 +79,11 @@ class RegisterInteractor: Interactor {
   }
 }
 
-extension LoginInteractor: RegisterInput {
+extension RegisterInteractor: RegisterInput {
 
-  // MARK: CREATE ORDER INPUT
+  // MARK: REGISTER INPUT
 
-  func register(requestModel: LoginRequest) {
+  func register(requestModel: RegisterRequest) {
     self.execute(requestModel: requestModel)
   }
 }

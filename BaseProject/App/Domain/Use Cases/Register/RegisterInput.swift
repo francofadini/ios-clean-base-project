@@ -3,7 +3,7 @@ import Foundation
 // MARK: INPUT BOUNDRY
 
 protocol RegisterInput: Boundary {
-  func register(requestModel: LoginRequest)
+  func register(requestModel: RegisterRequest)
 }
 
 // MARK: REQUEST MODEL

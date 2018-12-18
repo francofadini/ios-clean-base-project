@@ -14,7 +14,7 @@ class CurrentSessionService: SessionService {
   }
 }
 
-extension CurrentSessionService: SessionPersistantGateway {
+extension CurrentSessionService: LoginSessionPersistantGateway, RegisterSessionPersistantGateway {
 
   // MARK: SESSION PERSISTANT GATEWAY
   
