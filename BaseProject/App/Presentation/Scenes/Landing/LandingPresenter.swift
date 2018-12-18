@@ -27,6 +27,6 @@ class LandingPresenter {
   }
 
   func didTapRegisterButton() {
-    self.navigator.openRegister()
+    self.navigator.presentRegister()
   }
 }
