@@ -8,6 +8,7 @@ struct Section {
 
 public class Row: UIView {
   var accesoryType: UITableViewCell.AccessoryType = .none
+  var selecctionStyle: UITableViewCell.SelectionStyle = .none
 }
 
 public class TableOrganism: UITableViewController {
@@ -43,10 +44,14 @@ public class TableOrganism: UITableViewController {
 
   public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.selectionStyle = .none
     let row = self.sections[indexPath.section].rows[indexPath.row]
     cell.accessoryType = row.accesoryType
+    cell.selectionStyle = row.selecctionStyle
     cell.contentView.addAutorisizingSubview(view: row)
     return cell
+  }
+
+  public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

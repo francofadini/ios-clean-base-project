@@ -41,6 +41,7 @@ class AccountViewController: UIViewController {
   private func configureRows() {
     profileRow.data.label = Constants.Strings.Account.profileTitle
     profileRow.accesoryType = .disclosureIndicator
+    profileRow.selecctionStyle = .default
   }
 
   private func buildTable() {

@@ -30,7 +30,6 @@ public class SimpleRowAtom: Row {
 
   private func postConfigureSubviews() {
     self.label.sizeToFit()
-    self.label.widthAnchor.constraint(equalToConstant: self.label.frame.width).isActive = true
   }
 
   private func buildAtom() {
