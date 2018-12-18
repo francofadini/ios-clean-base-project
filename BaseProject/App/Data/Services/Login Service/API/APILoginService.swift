@@ -22,7 +22,7 @@ class APILoginService: LoginService {
 
     let body = APILoginRequest(username: username, password: password)
 
-    AlamofireAPIRequestBuilder(baseURL: "http://206.81.12.81")
+    AlamofireAPIRequestBuilder(baseURL: BASE_URL)
       .withMethod(method: .post)
       .withHeaders(headers: ["Cookie": ""])
       .withEnpoint(endpoint: "/api/accounts/login/")

@@ -4,6 +4,16 @@
 import Foundation
 import UIKit
 
+// MARK: ENVIROMENT CONSTANTS
+
+#if DEV
+let BASE_URL = "https://dev.clingot.com"
+#elseif QA
+let BASE_URL = "https://stage.clingot.com"
+#else // PROD
+let BASE_URL = "https://app.clingot.com"
+#endif
+
 struct Constants {
 
   struct Colors {
