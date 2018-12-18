@@ -169,6 +169,15 @@
 		6DBA0A9321C93CF2003BA5F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9221C93CF2003BA5F1 /* RegisterViewController.swift */; };
 		6DBA0A9421C93CF2003BA5F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9221C93CF2003BA5F1 /* RegisterViewController.swift */; };
 		6DBA0A9521C93CF2003BA5F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9221C93CF2003BA5F1 /* RegisterViewController.swift */; };
+		6DBA0A9821C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9721C95FF4003BA5F1 /* AutoLoginInput.swift */; };
+		6DBA0A9921C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9721C95FF4003BA5F1 /* AutoLoginInput.swift */; };
+		6DBA0A9A21C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9721C95FF4003BA5F1 /* AutoLoginInput.swift */; };
+		6DBA0A9C21C96029003BA5F1 /* AutologinOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9B21C96029003BA5F1 /* AutologinOutput.swift */; };
+		6DBA0A9D21C96029003BA5F1 /* AutologinOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9B21C96029003BA5F1 /* AutologinOutput.swift */; };
+		6DBA0A9E21C96029003BA5F1 /* AutologinOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9B21C96029003BA5F1 /* AutologinOutput.swift */; };
+		6DBA0AA021C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9F21C9608A003BA5F1 /* AutoLoginInteractor.swift */; };
+		6DBA0AA121C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9F21C9608A003BA5F1 /* AutoLoginInteractor.swift */; };
+		6DBA0AA221C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0A9F21C9608A003BA5F1 /* AutoLoginInteractor.swift */; };
 		6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2078C21B9A01E000A6A5A /* Order.swift */; };
 		6DC2079121B9B6DA000A6A5A /* CreateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */; };
 		6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079221B9B993000A6A5A /* Interactor.swift */; };
@@ -252,6 +261,9 @@
 		6DBA0A8A21C93B7E003BA5F1 /* RegisterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfigurator.swift; sourceTree = "<group>"; };
 		6DBA0A8E21C93B8A003BA5F1 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		6DBA0A9221C93CF2003BA5F1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6DBA0A9721C95FF4003BA5F1 /* AutoLoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginInput.swift; sourceTree = "<group>"; };
+		6DBA0A9B21C96029003BA5F1 /* AutologinOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutologinOutput.swift; sourceTree = "<group>"; };
+		6DBA0A9F21C9608A003BA5F1 /* AutoLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginInteractor.swift; sourceTree = "<group>"; };
 		6DC2078C21B9A01E000A6A5A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderInteractor.swift; sourceTree = "<group>"; };
 		6DC2079221B9B993000A6A5A /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -475,6 +487,16 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		6DBA0A9621C95FD8003BA5F1 /* Auto Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA0A9721C95FF4003BA5F1 /* AutoLoginInput.swift */,
+				6DBA0A9B21C96029003BA5F1 /* AutologinOutput.swift */,
+				6DBA0A9F21C9608A003BA5F1 /* AutoLoginInteractor.swift */,
+			);
+			path = "Auto Login";
+			sourceTree = "<group>";
+		};
 		6DC2078921B99FE9000A6A5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +538,7 @@
 		6DC2079421B9BB4E000A6A5A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA0A9621C95FD8003BA5F1 /* Auto Login */,
 				6DBA0A6D21C9361F003BA5F1 /* Register */,
 				6DBA09C521C7F833003BA5F1 /* Login */,
 				6DCAF91F21C2B94300BFB240 /* List Orders */,
@@ -1119,6 +1142,7 @@
 				6DBA0A8321C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA09E821C92E8F003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09E921C92E8F003BA5F1 /* LoginNavigator.swift in Sources */,
+				6DBA0A9A21C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA09EA21C92E8F003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DBA09EB21C92E8F003BA5F1 /* ListOrdersInteractor.swift in Sources */,
 				6DBA09EC21C92E8F003BA5F1 /* OrdersService.swift in Sources */,
@@ -1150,6 +1174,7 @@
 				6DBA0A0221C92E8F003BA5F1 /* TextInputAtom.swift in Sources */,
 				6DBA0A0321C92E8F003BA5F1 /* CreateOrderViewController.swift in Sources */,
 				6DBA0A0421C92E8F003BA5F1 /* APILoginService.swift in Sources */,
+				6DBA0A9E21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0A0521C92E8F003BA5F1 /* TableOrganism.swift in Sources */,
 				6DBA0A0621C92E8F003BA5F1 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA0A0721C92E8F003BA5F1 /* LoginPresenter.swift in Sources */,
@@ -1163,6 +1188,7 @@
 				6DBA0A0F21C92E8F003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0A1021C92E8F003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A1121C92E8F003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AA221C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9521C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DBA0A1221C92E8F003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0A1321C92E8F003BA5F1 /* RequestModel.swift in Sources */,
@@ -1186,6 +1212,7 @@
 				6DBA0A8221C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA0A2B21C93125003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA0A2C21C93125003BA5F1 /* LoginNavigator.swift in Sources */,
+				6DBA0A9921C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA0A2D21C93125003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DBA0A2E21C93125003BA5F1 /* ListOrdersInteractor.swift in Sources */,
 				6DBA0A2F21C93125003BA5F1 /* OrdersService.swift in Sources */,
@@ -1217,6 +1244,7 @@
 				6DBA0A4521C93125003BA5F1 /* TextInputAtom.swift in Sources */,
 				6DBA0A4621C93125003BA5F1 /* CreateOrderViewController.swift in Sources */,
 				6DBA0A4721C93125003BA5F1 /* APILoginService.swift in Sources */,
+				6DBA0A9D21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0A4821C93125003BA5F1 /* TableOrganism.swift in Sources */,
 				6DBA0A4921C93125003BA5F1 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA0A4A21C93125003BA5F1 /* LoginPresenter.swift in Sources */,
@@ -1230,6 +1258,7 @@
 				6DBA0A5221C93125003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0A5321C93125003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A5421C93125003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AA121C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9421C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DBA0A5521C93125003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0A5621C93125003BA5F1 /* RequestModel.swift in Sources */,
@@ -1253,6 +1282,7 @@
 				6DBA0A8121C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				6DBA09CD21C80179003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09D721C80E61003BA5F1 /* LoginNavigator.swift in Sources */,
+				6DBA0A9821C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA09CA21C7F85E003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DCAF92321C2B9A100BFB240 /* ListOrdersInteractor.swift in Sources */,
 				6DCAF93321C3F82000BFB240 /* OrdersService.swift in Sources */,
@@ -1284,6 +1314,7 @@
 				6DFF50C021BD2143007B1630 /* TextInputAtom.swift in Sources */,
 				6DC207A521B9C00B000A6A5A /* CreateOrderViewController.swift in Sources */,
 				6DBA09D521C8046A003BA5F1 /* APILoginService.swift in Sources */,
+				6DBA0A9C21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */,
 				6DCAF92F21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA09C421C7F807003BA5F1 /* LoginPresenter.swift in Sources */,
@@ -1297,6 +1328,7 @@
 				6DCAF94021C4326B00BFB240 /* APIRequestBuilder.swift in Sources */,
 				6DCAF93E21C42D3400BFB240 /* EndpointBuilder.swift in Sources */,
 				6DBA09BE21C7F3F3003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AA021C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9321C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DCAF92521C2B9A100BFB240 /* ListOrdersInput.swift in Sources */,
 				6DC2079E21B9BD76000A6A5A /* RequestModel.swift in Sources */,
