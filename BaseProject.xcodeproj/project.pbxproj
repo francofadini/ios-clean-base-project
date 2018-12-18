@@ -31,6 +31,7 @@
 		6DBA09D721C80E61003BA5F1 /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09D621C80E61003BA5F1 /* LoginNavigator.swift */; };
 		6DBA09DA21C822AB003BA5F1 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09D921C822AB003BA5F1 /* SessionService.swift */; };
 		6DBA09DD21C82325003BA5F1 /* CurrentSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09DC21C82325003BA5F1 /* CurrentSessionService.swift */; };
+		6DBA09DF21C924CE003BA5F1 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09DE21C924CE003BA5F1 /* Configurator.swift */; };
 		6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2078C21B9A01E000A6A5A /* Order.swift */; };
 		6DC2079121B9B6DA000A6A5A /* CreateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */; };
 		6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079221B9B993000A6A5A /* Interactor.swift */; };
@@ -51,7 +52,7 @@
 		6DCAF92921C2DBC500BFB240 /* ListOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF92821C2DBC500BFB240 /* ListOrganism.swift */; };
 		6DCAF92F21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF92D21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift */; };
 		6DCAF93321C3F82000BFB240 /* OrdersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93221C3F82000BFB240 /* OrdersService.swift */; };
-		6DCAF93521C3F8BE00BFB240 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93421C3F8BE00BFB240 /* BaseService.swift */; };
+		6DCAF93521C3F8BE00BFB240 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93421C3F8BE00BFB240 /* Service.swift */; };
 		6DCAF93921C3F92100BFB240 /* APIOrdersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93821C3F92100BFB240 /* APIOrdersService.swift */; };
 		6DCAF93E21C42D3400BFB240 /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93D21C42D3400BFB240 /* EndpointBuilder.swift */; };
 		6DCAF94021C4326B00BFB240 /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF93F21C4326B00BFB240 /* APIRequestBuilder.swift */; };
@@ -99,6 +100,7 @@
 		6DBA09D621C80E61003BA5F1 /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		6DBA09D921C822AB003BA5F1 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		6DBA09DC21C82325003BA5F1 /* CurrentSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSessionService.swift; sourceTree = "<group>"; };
+		6DBA09DE21C924CE003BA5F1 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		6DC2078C21B9A01E000A6A5A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderInteractor.swift; sourceTree = "<group>"; };
 		6DC2079221B9B993000A6A5A /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -119,7 +121,7 @@
 		6DCAF92821C2DBC500BFB240 /* ListOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrganism.swift; sourceTree = "<group>"; };
 		6DCAF92D21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelTableViewCell.swift; sourceTree = "<group>"; };
 		6DCAF93221C3F82000BFB240 /* OrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersService.swift; sourceTree = "<group>"; };
-		6DCAF93421C3F8BE00BFB240 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		6DCAF93421C3F8BE00BFB240 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		6DCAF93821C3F92100BFB240 /* APIOrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOrdersService.swift; sourceTree = "<group>"; };
 		6DCAF93D21C42D3400BFB240 /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
 		6DCAF93F21C4326B00BFB240 /* APIRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
@@ -253,12 +255,28 @@
 			path = "Current Session";
 			sourceTree = "<group>";
 		};
+		6DBA09E021C926F3003BA5F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA09BB21C7EEC0003BA5F1 /* Navigator.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DBA09E121C9270D003BA5F1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6DCAF91421C1AF3D00BFB240 /* OrdersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		6DC2078921B99FE9000A6A5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				6DFF50BC21BD20C6007B1630 /* UI Atomic Library */,
+				6DBA09E021C926F3003BA5F1 /* Resources */,
 				6DC207A721B9C030000A6A5A /* Scenes */,
-				6DBA09BB21C7EEC0003BA5F1 /* Navigator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -275,9 +293,9 @@
 		6DC2078B21B99FF8000A6A5A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA09E121C9270D003BA5F1 /* Repositories */,
 				6DCAF93C21C42D2100BFB240 /* Network */,
 				6DCAF93121C3F80E00BFB240 /* Services */,
-				6DCAF91421C1AF3D00BFB240 /* OrdersRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -318,6 +336,7 @@
 				6DC2079D21B9BD76000A6A5A /* RequestModel.swift */,
 				6DC2079F21B9BDBB000A6A5A /* ResponseModel.swift */,
 				6DC207A121B9BE3E000A6A5A /* Boundary.swift */,
+				6DBA09DE21C924CE003BA5F1 /* Configurator.swift */,
 			);
 			path = "Architecture Resources";
 			sourceTree = "<group>";
@@ -385,7 +404,7 @@
 				6DBA09D821C82297003BA5F1 /* Session Service */,
 				6DBA09D021C8035C003BA5F1 /* Login Service */,
 				6DCAF93621C3F8F400BFB240 /* Orders Service */,
-				6DCAF93421C3F8BE00BFB240 /* BaseService.swift */,
+				6DCAF93421C3F8BE00BFB240 /* Service.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -707,7 +726,7 @@
 				6DCAF92321C2B9A100BFB240 /* ListOrdersInteractor.swift in Sources */,
 				6DCAF93321C3F82000BFB240 /* OrdersService.swift in Sources */,
 				6D8D371E21BDEE6200B9BE66 /* UIViewControllerExtensions.swift in Sources */,
-				6DCAF93521C3F8BE00BFB240 /* BaseService.swift in Sources */,
+				6DCAF93521C3F8BE00BFB240 /* Service.swift in Sources */,
 				6DC2079A21B9BC62000A6A5A /* CreateOrderOutput.swift in Sources */,
 				6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */,
 				6DBA09CB21C7F85E003BA5F1 /* LoginOutput.swift in Sources */,
@@ -726,6 +745,7 @@
 				6DBA09DD21C82325003BA5F1 /* CurrentSessionService.swift in Sources */,
 				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
 				6DCAF91E21C2B91A00BFB240 /* ListOrdersConfigurator.swift in Sources */,
+				6DBA09DF21C924CE003BA5F1 /* Configurator.swift in Sources */,
 				6DFF50C021BD2143007B1630 /* TextInputAtom.swift in Sources */,
 				6DC207A521B9C00B000A6A5A /* CreateOrderViewController.swift in Sources */,
 				6DBA09D521C8046A003BA5F1 /* APILoginService.swift in Sources */,

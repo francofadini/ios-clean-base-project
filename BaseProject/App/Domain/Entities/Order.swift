@@ -2,8 +2,6 @@ import Foundation
 
 class Order: Codable {
 
-  // MARK: PUBLIC ATTRIBUTES
-
   // MARK: PRIVATE ATTRIBUTES
 
   let identifier: Int
@@ -15,9 +13,4 @@ class Order: Codable {
     self.identifier = identifier
     self.firstName = firstName
   }
-
-  // PUBLIC METHODS
-
-  // PRIVATE METHODS
-
 }

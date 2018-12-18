@@ -1,6 +1,7 @@
 import Foundation
 
 class CurrentSessionService: SessionService {
+
   func saveSession(session: Session) {
     UserDefaults.standard.set(session.token, forKey: "session_token")
   }
@@ -14,6 +15,9 @@ class CurrentSessionService: SessionService {
 }
 
 extension CurrentSessionService: SessionPersistantGateway {
+
+  // MARK: SESSION PERSISTANT GATEWAY
+  
   func saveCurrentSession(session: Session) {
     self.saveSession(session: session)
   }

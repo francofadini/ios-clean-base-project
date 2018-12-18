@@ -2,18 +2,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-  // MARK: OUTLETS
-
   // MARK: PRIVATE ATTRIBUTES
 
-  //UI
   private let form = FormOrganism()
   private let usernameInput = TextInputAtom()
   private let passwordInput = TextInputAtom()
 
-  // MARK: PUBLIC ATTRIBUTES
+  // MARK: INTERNAL ATTRIBUTES
 
-  //Presentation
   var presenter: LoginPresenter!
 
   // MARK: INITIALIZER
@@ -38,7 +34,7 @@ class LoginViewController: UIViewController {
     buildForm()
   }
 
-  // MARK: VIEW ACTIONS
+  // MARK: VIEW EVENTS
 
   @objc func didTapSubmitButton() {
     presenter.didTapSubmitButton(username: usernameInput.getValue(),
@@ -87,7 +83,9 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginView {
-  // MARK: CREATE ORDER VIEW
+
+  // MARK: LOGIN VIEW
+  
   func showLoader() {
     self.view.isUserInteractionEnabled = false
     self.navigationItem.leftBarButtonItem?.isEnabled = false

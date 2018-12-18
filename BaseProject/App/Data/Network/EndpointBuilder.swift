@@ -1,5 +1,9 @@
 import Foundation
 
+/**
+ The endpoint builder is responsable for building and API endpoint with some parameters
+ */
+
 class EndpointBuilder {
 
   private var endpoint: String
@@ -8,6 +12,7 @@ class EndpointBuilder {
     self.endpoint = base
   }
 
+  // Output: endpoint?key=1,2,3,4
   func addIntParameters(values: [Int], for key: String) -> EndpointBuilder {
     if values.count > 0 {
       let formattedFilter = (values.map {String($0)}).joined(separator: ",")
@@ -16,6 +21,7 @@ class EndpointBuilder {
     return self
   }
 
+  // Output: endpoint?key=one,two,three
   func addStringParameters(values: [String], for key: String) -> EndpointBuilder {
     if values.count > 0 {
       let formattedFilter = (values.map {
@@ -26,6 +32,7 @@ class EndpointBuilder {
     return self
   }
 
+  // Output: endpoint?key=one,key=two,key=three
   func applyBatchStringFilters(values: [String], key: String) -> EndpointBuilder {
     for value in values {
       _ = addScapedStringParameter(string: value, key: key)
@@ -33,6 +40,7 @@ class EndpointBuilder {
     return self
   }
 
+  // Output: endpoint?key=one%20gmail.com
   func addScapedStringParameter(string: String?, key: String) -> EndpointBuilder {
     if let value = string, !value.isEmpty {
       if let escpaedFilter = value.addingPercentEncoding(withAllowedCharacters: .alphanumerics) {
@@ -42,6 +50,7 @@ class EndpointBuilder {
     return self
   }
 
+  // Output: endpoint?key=one@gmail.com
   func addPlainStringparameter(string: String?, for key: String) -> EndpointBuilder {
     if let value = string, !value.isEmpty {
       appendParameter(key: key, value: value)

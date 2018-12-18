@@ -9,6 +9,7 @@ protocol LandingView: class {
 class LandingPresenter {
 
   // MARK: PRIVATE ATTRIBUTES
+
   private weak var view: LandingView!
   private var navigator: LandingNavigator!
 
@@ -22,11 +23,10 @@ class LandingPresenter {
   // MARK: VIEW EVENTS
 
   func didTapLoginButton() {
-    self.navigator.openLogin()
+    self.navigator.presentLogin()
   }
 
   func didTapRegisterButton() {
     self.navigator.openRegister()
   }
-
 }

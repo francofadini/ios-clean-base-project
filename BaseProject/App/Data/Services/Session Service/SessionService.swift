@@ -1,6 +1,6 @@
 import Foundation
 
-protocol SessionService {
+protocol SessionService: Service {
   func saveSession(session: Session)
   func loadSession() -> Session?
 }

@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: CONFIGURATOR
 
-protocol LandingSceneConfigurator {
+protocol LandingSceneConfigurator: Configurator {
   func configure(view: LandingViewController)
 }
 

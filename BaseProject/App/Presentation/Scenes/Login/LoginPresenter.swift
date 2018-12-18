@@ -11,9 +11,12 @@ protocol LoginView: class {
 class LoginPresenter {
 
   // MARK: INTERNAL ATTRIBUTES
-  internal var loginInput: LoginInput!
-  internal var loginRequest = LoginRequest()
+
+  var loginInput: LoginInput!
+  var loginRequest = LoginRequest()
+
   // MARK: PRIVATE ATTRIBUTES
+
   private weak var view: LoginView!
   private var navigator: LoginNavigator!
 
@@ -36,9 +39,6 @@ class LoginPresenter {
   func didTapCloseButton() {
     self.navigator.close(completion: nil)
   }
-
-  // MARK: PRIVATE METHODS
-
 }
 
 extension LoginPresenter: LoginOutput {

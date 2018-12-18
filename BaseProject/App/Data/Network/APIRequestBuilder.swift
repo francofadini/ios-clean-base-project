@@ -1,5 +1,9 @@
 import Foundation
 
+/**
+ Interface for protecting the project from third party API libreries, for example Alamofire
+ */
+
 protocol APIRequestBuilder {
   init(baseURL: String)
   func withMethod(method: APIRequestMethod) -> APIRequestBuilder

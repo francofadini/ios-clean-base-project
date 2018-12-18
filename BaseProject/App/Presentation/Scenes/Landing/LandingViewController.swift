@@ -8,9 +8,8 @@ class LandingViewController: UIViewController {
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var registerButton: UIButton!
 
-  // MARK: PUBLIC ATTRIBUTES
+  // MARK: INTERNAL ATTRIBUTES
 
-  //Presentation
   var presenter: LandingPresenter!
 
   // MARK: INITIALIZER
@@ -45,7 +44,7 @@ class LandingViewController: UIViewController {
     self.registerButton.setTitleColor(Constants.Colors.primaryTextColor, for: .normal)
   }
 
-  // MARK: USER EVENTS
+  // MARK: VIEW EVENTS
   
   @IBAction func didTapLoginButton(_ sender: Any) {
     self.presenter.didTapLoginButton()
@@ -57,5 +56,6 @@ class LandingViewController: UIViewController {
 }
 
 extension LandingViewController: LandingView {
-  
+
+  // MARK: LANDING VIEW
 }

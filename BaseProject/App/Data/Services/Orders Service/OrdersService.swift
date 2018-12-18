@@ -5,7 +5,7 @@ struct OrdersServiceResponse {
   let data: [Order]?
 }
 
-protocol OrdersService {
+protocol OrdersService: Service {
   func fetchAllOrders(completion: (OrdersServiceResponse) -> Void)
 }
 

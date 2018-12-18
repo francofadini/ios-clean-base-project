@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LoginService {
+protocol LoginService: Service {
   func login(username: String,
              password: String,
              successHandler: @escaping (Session) -> Void,

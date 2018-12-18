@@ -9,7 +9,7 @@ protocol LoginController {
 
 // MARK: CONFIGURATOR
 
-protocol LoginSceneConfigurator {
+protocol LoginSceneConfigurator: Configurator {
   func configure(view: LoginViewController)
 }
 

@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: API MODELS
+
 struct APILoginRequest: Codable {
   let username: String
   let password: String
@@ -8,6 +10,8 @@ struct APILoginRequest: Codable {
 struct APILoginResponse: Codable {
   let token: String
 }
+
+// MARK: SERVICE
 
 class APILoginService: LoginService {
 

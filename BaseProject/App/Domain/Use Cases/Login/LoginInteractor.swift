@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: DATA GATEWAYS
+
 protocol LoginGateway {
   func login(username: String, password: String, completion: @escaping (Session?, LoginError?) -> Void)
 }
