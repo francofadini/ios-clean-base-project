@@ -77,5 +77,9 @@ struct Constants {
       }
     }
 
+    struct Account {
+      static let accountTitle = NSLocalizedString("Mi Cuenta", comment: "Account title")
+    }
+
   }
 }

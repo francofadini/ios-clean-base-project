@@ -15,7 +15,7 @@ class LandingNavigator: Navigator {
   func presentMainView() {
     DispatchQueue.main.async {
       self.viewController?.dismiss(animated: false, completion: nil)
-      let mainViewNav = UINavigationController(rootViewController: ListOrdersViewController())
+      let mainViewNav = MainNavigationViewController()
       UIApplication.shared.keyWindow?.rootViewController = mainViewNav
     }
   }

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().tintColor = Constants.Colors.primaryTextColor
     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: Constants.Colors.primaryTextColor]
     UINavigationBar.appearance().isTranslucent = false
+    UITabBar.appearance().tintColor = Constants.Colors.primaryColor
   }
 
   func applicationWillResignActive(_ application: UIApplication) {

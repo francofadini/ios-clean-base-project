@@ -9,7 +9,7 @@ class RegisterNavigator: Navigator {
 
   func openMainView() {
     self.viewController?.dismiss(animated: true, completion: nil)
-    let mainViewNav = UINavigationController(rootViewController: ListOrdersViewController())
+    let mainViewNav = MainNavigationViewController()
     UIApplication.shared.keyWindow?.rootViewController = mainViewNav
   }
 }
