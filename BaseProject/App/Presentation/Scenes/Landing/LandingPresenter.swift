@@ -3,10 +3,15 @@ import Foundation
 // MARK: VIEW
 
 protocol LandingView: class {
-
+  func hideButtons()
+  func showButtos()
 }
 
 class LandingPresenter {
+
+  // MARK: INTERNAL
+
+  var autologinInput: AutologinInput!
 
   // MARK: PRIVATE ATTRIBUTES
 
@@ -22,11 +27,26 @@ class LandingPresenter {
 
   // MARK: VIEW EVENTS
 
+  func didLoadView() {
+    self.view.hideButtons()
+    self.autologinInput.autologin(requestModel: AutologinRequest())
+  }
+
   func didTapLoginButton() {
     self.navigator.presentLogin()
   }
 
   func didTapRegisterButton() {
     self.navigator.presentRegister()
+  }
+}
+
+extension LandingPresenter: AutoLoginOutput {
+  func onAutoLoginFail() {
+    self.view.showButtos()
+  }
+
+  func onAutoLoggedIn() {
+      self.navigator.presentMainView()
   }
 }

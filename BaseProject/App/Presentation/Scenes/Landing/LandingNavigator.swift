@@ -11,4 +11,12 @@ class LandingNavigator: Navigator {
     let registerVC = UINavigationController(rootViewController: RegisterViewController())
     self.present(destination: registerVC, completion: nil)
   }
+
+  func presentMainView() {
+    DispatchQueue.main.async {
+      self.viewController?.dismiss(animated: false, completion: nil)
+      let mainViewNav = UINavigationController(rootViewController: ListOrdersViewController())
+      UIApplication.shared.keyWindow?.rootViewController = mainViewNav
+    }
+  }
 }

@@ -28,6 +28,7 @@ class LandingViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     customize()
+    self.presenter.didLoadView()
   }
 
   // MARK: PRIVATE METHODS
@@ -58,4 +59,14 @@ class LandingViewController: UIViewController {
 extension LandingViewController: LandingView {
 
   // MARK: LANDING VIEW
+
+  func showButtos() {
+    self.loginButton.isHidden = false
+    self.registerButton.isHidden = false
+  }
+
+  func hideButtons() {
+    self.loginButton.isHidden = true
+    self.registerButton.isHidden = true
+  }
 }

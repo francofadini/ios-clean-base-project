@@ -22,3 +22,7 @@ extension CurrentSessionService: LoginSessionPersistantGateway, RegisterSessionP
     self.saveSession(session: session)
   }
 }
+
+extension CurrentSessionService: AutoLoginSessionPersistantGateway {
+  //func loadSession() -> Session?
+}
