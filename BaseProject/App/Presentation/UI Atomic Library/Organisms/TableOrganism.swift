@@ -7,11 +7,19 @@ struct Section {
 }
 
 public class Row: UIView {
-
+  var accesoryType: UITableViewCell.AccessoryType = .none
 }
 
 public class TableOrganism: UITableViewController {
   private var sections = [Section]()
+
+  init() {
+    super.init(style: .grouped)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,6 +45,7 @@ public class TableOrganism: UITableViewController {
     let cell = UITableViewCell()
     cell.selectionStyle = .none
     let row = self.sections[indexPath.section].rows[indexPath.row]
+    cell.accessoryType = row.accesoryType
     cell.contentView.addAutorisizingSubview(view: row)
     return cell
   }

@@ -46,7 +46,7 @@ class MainNavigationViewController: UITabBarController {
 
 extension MainNavigationViewController: MainNavigationView {
   func addAccountTab() {
-    let myAccountContainer = ListOrdersViewController()
+    let myAccountContainer = AccountViewController()
     myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.Account.accountTitle, image: #imageLiteral(resourceName: "ic_account"), tag: 0)
     addNavigationViewControllerWith(root: myAccountContainer)
   }
