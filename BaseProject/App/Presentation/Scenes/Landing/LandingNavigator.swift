@@ -8,6 +8,7 @@ class LandingNavigator: Navigator {
   }
 
   func presentRegister() {
-    // Yet not implemented
+    let registerVC = UINavigationController(rootViewController: RegisterViewController())
+    self.present(destination: registerVC, completion: nil)
   }
 }
