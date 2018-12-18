@@ -189,11 +189,11 @@
 		6DBA09B021C7DC02003BA5F1 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA09BD21C7F3F3003BA5F1 /* LandingNavigator.swift */,
 				6DBA09B921C7E9BF003BA5F1 /* LandingConfigurator.swift */,
 				6DBA09B721C7E94E003BA5F1 /* LandingPresenter.swift */,
 				6DBA09B121C7DC1F003BA5F1 /* LandingViewController.swift */,
 				6DBA09B221C7DC1F003BA5F1 /* LandingViewController.xib */,
-				6DBA09BD21C7F3F3003BA5F1 /* LandingNavigator.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -201,10 +201,10 @@
 		6DBA09C021C7F7A5003BA5F1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6DBA09C121C7F7BE003BA5F1 /* LoginViewController.swift */,
-				6DBA09C321C7F807003BA5F1 /* LoginPresenter.swift */,
-				6DBA09CC21C80179003BA5F1 /* LoginConfigurator.swift */,
 				6DBA09D621C80E61003BA5F1 /* LoginNavigator.swift */,
+				6DBA09CC21C80179003BA5F1 /* LoginConfigurator.swift */,
+				6DBA09C321C7F807003BA5F1 /* LoginPresenter.swift */,
+				6DBA09C121C7F7BE003BA5F1 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
