@@ -49,6 +49,7 @@ struct Constants {
       static let registerLabel = NSLocalizedString("Registrarme", comment: "Register button label")
       static let emailLabel = NSLocalizedString("Email", comment: "General string for email")
       static let passwordLabel = NSLocalizedString("Contraseña", comment: "General string for password")
+      static let repeatPasswordLabel = NSLocalizedString("Repetir Contraseña", comment: "General string for repeat password")
       static let recoverPasswordButtonLabel = NSLocalizedString("¿Olvidaste tu contraseña?", comment: "Recover password button label")
       static let termsAndConditionsLabel = NSLocalizedString("Al registrarte, aceptas nuestras condiciones y confirmas que leíste nuestra política de datos.",
                                                              comment: "Terms and Conditions label on register screen")

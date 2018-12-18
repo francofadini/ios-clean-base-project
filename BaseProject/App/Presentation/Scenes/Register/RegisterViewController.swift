@@ -77,7 +77,7 @@ class RegisterViewController: UIViewController {
     passwordInput.style = .defaultPasswordLeftAlignedStyle
     passwordInput.data.placeholder = Constants.Strings.Authentication.passwordLabel
     repeatedPasswordInput.style = .defaultPasswordLeftAlignedStyle
-    repeatedPasswordInput.data.placeholder = Constants.Strings.Authentication.passwordLabel
+    repeatedPasswordInput.data.placeholder = Constants.Strings.Authentication.repeatPasswordLabel
   }
 
   private func buildForm() {
