@@ -43,7 +43,7 @@ class LoginPresenter {
 
 extension LoginPresenter: LoginOutput {
 
-  // MARK: CRETE ORDER OUTPUT
+  // MARK: LOGIN OUTPUT
 
   func onLoggedIn() {
     self.view.hideLoader()

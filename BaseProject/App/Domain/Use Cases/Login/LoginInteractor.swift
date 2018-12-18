@@ -61,7 +61,9 @@ class LoginInteractor: Interactor {
 }
 
 extension LoginInteractor: LoginInput {
-  // MARK: CREATE ORDER INPUT
+
+  // MARK: LOGIN INPUT
+
   func login(requestModel: LoginRequest) {
     self.execute(requestModel: requestModel)
   }
