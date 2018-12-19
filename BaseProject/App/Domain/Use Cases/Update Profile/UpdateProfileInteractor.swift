@@ -3,7 +3,7 @@ import Foundation
 // MARK: DATA GATEWAYS
 
 protocol UpdateProfileGateway {
-  func update(firstName: String, lastName: String, completion: @escaping (Session?, UpdateProfileError?) -> Void)
+  func updateProfile(firstName: String, lastName: String, completion: @escaping (Profile?, UpdateProfileError?) -> Void)
 }
 
 class UpdateProfileInteractor: Interactor {
@@ -35,7 +35,7 @@ class UpdateProfileInteractor: Interactor {
       return
     }
 
-    self.updateProfileGateway.update(firstName: requestModel.firstName!,
+    self.updateProfileGateway.updateProfile(firstName: requestModel.firstName!,
                                      lastName: requestModel.lastName!) { (profile, updateProfileError) in
 
                                       if let error = updateProfileError {
@@ -49,6 +49,7 @@ class UpdateProfileInteractor: Interactor {
                                         }
                                       }
 
+                                      print(profile!)
                                       self.output.onProfileUpdated()
 
     }
