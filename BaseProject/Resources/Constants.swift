@@ -79,7 +79,12 @@ struct Constants {
 
     struct Account {
       static let accountTitle = NSLocalizedString("Mi Cuenta", comment: "Account title")
-      static let profileTitle = NSLocalizedString("Mi Perfil", comment: "Profile title")
+
+      struct Profile {
+        static let profileTitle = NSLocalizedString("Mi Perfil", comment: "Profile title")
+        static let firstNameLabel = NSLocalizedString("Nombre", comment: "First Name label")
+        static let lastNameLabel = NSLocalizedString("Apellido", comment: "Last Name label")
+      }
     }
 
     struct CRUDL {

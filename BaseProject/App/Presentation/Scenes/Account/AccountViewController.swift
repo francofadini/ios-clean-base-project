@@ -40,7 +40,7 @@ class AccountViewController: UIViewController {
 
   private func configureRows() {
     profileRow.style = .defaultCircularImageStyle
-    profileRow.data.label = Constants.Strings.Account.profileTitle
+    profileRow.data.label = Constants.Strings.Account.Profile.profileTitle
     profileRow.data.imagePlaceholder = #imageLiteral(resourceName: "profile_placeholder")
     profileRow.height = 100
     profileRow.accesoryType = .disclosureIndicator
