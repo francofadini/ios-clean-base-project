@@ -8,10 +8,6 @@ struct APIRegisterRequest: Codable {
   let password2: String
 }
 
-struct APIRegisterResponse: Codable {
-  let token: String
-}
-
 // MARK: SERVICE
 
 class APIRegisterService: RegisterService {
@@ -29,9 +25,12 @@ class APIRegisterService: RegisterService {
       .withHeaders(headers: ["Cookie": ""])
       .withEnpoint(endpoint: "/api/accounts/register/")
       .withBody(body: body)
-      .buildAndExecute(responseType: APIRegisterResponse.self, successHandler: { (response) in
+      .buildAndExecute(responseType: APILoginResponse.self, successHandler: { (response) in
 
-        let session = Session(token: response.token)
+        let user = User(identifier: response.user.id,
+                        firstName: response.user.first_name,
+                        lastName: response.user.last_name)
+        let session = Session(token: response.token, user: user)
         successHandler(session)
 
       }, errorHandler: { (statusCode, error) in

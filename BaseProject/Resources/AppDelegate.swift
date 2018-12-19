@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: Constants.Colors.primaryTextColor]
     UINavigationBar.appearance().isTranslucent = false
     UITabBar.appearance().tintColor = Constants.Colors.primaryColor
+    UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000,
+                                                                               vertical: 0),
+                                                                      for: UIBarMetrics.default)
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
