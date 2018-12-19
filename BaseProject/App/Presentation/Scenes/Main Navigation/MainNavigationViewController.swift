@@ -50,4 +50,10 @@ extension MainNavigationViewController: MainNavigationView {
     myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.Account.accountTitle, image: #imageLiteral(resourceName: "ic_account"), tag: 0)
     addNavigationViewControllerWith(root: myAccountContainer)
   }
+
+  func addCRUDLTab() {
+    let myAccountContainer = ListOrdersViewController()
+    myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.CRUDL.crudlTitle, image: #imageLiteral(resourceName: "ic_crudl"), tag: 1)
+    addNavigationViewControllerWith(root: myAccountContainer)
+  }
 }

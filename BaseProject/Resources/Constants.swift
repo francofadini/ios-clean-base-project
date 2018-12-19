@@ -82,5 +82,9 @@ struct Constants {
       static let profileTitle = NSLocalizedString("Mi Perfil", comment: "Profile title")
     }
 
+    struct CRUDL {
+      static let crudlTitle = NSLocalizedString("ABML", comment: "CRUDL title")
+    }
+
   }
 }

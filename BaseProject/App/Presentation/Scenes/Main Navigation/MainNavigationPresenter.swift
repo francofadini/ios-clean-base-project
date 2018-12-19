@@ -4,6 +4,7 @@ import Foundation
 
 protocol MainNavigationView: class {
   func addAccountTab()
+  func addCRUDLTab()
 }
 
 class MainNavigationPresenter {
@@ -21,6 +22,7 @@ class MainNavigationPresenter {
   // MARK: VIEW EVENTS
 
   func didLoadView() {
+    self.view.addCRUDLTab()
     self.view.addAccountTab()
   }
 
