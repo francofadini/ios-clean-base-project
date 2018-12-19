@@ -217,6 +217,15 @@
 		6DBA0AE121CA907E003BA5F1 /* ProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE021CA907E003BA5F1 /* ProfileNavigator.swift */; };
 		6DBA0AE221CA907E003BA5F1 /* ProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE021CA907E003BA5F1 /* ProfileNavigator.swift */; };
 		6DBA0AE321CA907E003BA5F1 /* ProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE021CA907E003BA5F1 /* ProfileNavigator.swift */; };
+		6DBA0AE621CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE521CA90ED003BA5F1 /* UpdateProfileInput.swift */; };
+		6DBA0AE721CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE521CA90ED003BA5F1 /* UpdateProfileInput.swift */; };
+		6DBA0AE821CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE521CA90ED003BA5F1 /* UpdateProfileInput.swift */; };
+		6DBA0AEA21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE921CA911E003BA5F1 /* UpdateProfileOutput.swift */; };
+		6DBA0AEB21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE921CA911E003BA5F1 /* UpdateProfileOutput.swift */; };
+		6DBA0AEC21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AE921CA911E003BA5F1 /* UpdateProfileOutput.swift */; };
+		6DBA0AEE21CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AED21CA914F003BA5F1 /* UpdateProfileInteractor.swift */; };
+		6DBA0AEF21CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AED21CA914F003BA5F1 /* UpdateProfileInteractor.swift */; };
+		6DBA0AF021CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0AED21CA914F003BA5F1 /* UpdateProfileInteractor.swift */; };
 		6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2078C21B9A01E000A6A5A /* Order.swift */; };
 		6DC2079121B9B6DA000A6A5A /* CreateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */; };
 		6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC2079221B9B993000A6A5A /* Interactor.swift */; };
@@ -316,6 +325,9 @@
 		6DBA0AD721CA8F41003BA5F1 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		6DBA0ADB21CA8FEB003BA5F1 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		6DBA0AE021CA907E003BA5F1 /* ProfileNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigator.swift; sourceTree = "<group>"; };
+		6DBA0AE521CA90ED003BA5F1 /* UpdateProfileInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileInput.swift; sourceTree = "<group>"; };
+		6DBA0AE921CA911E003BA5F1 /* UpdateProfileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileOutput.swift; sourceTree = "<group>"; };
+		6DBA0AED21CA914F003BA5F1 /* UpdateProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileInteractor.swift; sourceTree = "<group>"; };
 		6DC2078C21B9A01E000A6A5A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		6DC2079021B9B6DA000A6A5A /* CreateOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderInteractor.swift; sourceTree = "<group>"; };
 		6DC2079221B9B993000A6A5A /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -590,6 +602,16 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		6DBA0AE421CA90CC003BA5F1 /* Update Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA0AE521CA90ED003BA5F1 /* UpdateProfileInput.swift */,
+				6DBA0AE921CA911E003BA5F1 /* UpdateProfileOutput.swift */,
+				6DBA0AED21CA914F003BA5F1 /* UpdateProfileInteractor.swift */,
+			);
+			path = "Update Profile";
+			sourceTree = "<group>";
+		};
 		6DC2078921B99FE9000A6A5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +653,7 @@
 		6DC2079421B9BB4E000A6A5A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA0AE421CA90CC003BA5F1 /* Update Profile */,
 				6DBA0A9621C95FD8003BA5F1 /* Auto Login */,
 				6DBA0A6D21C9361F003BA5F1 /* Register */,
 				6DBA09C521C7F833003BA5F1 /* Login */,
@@ -1279,6 +1302,7 @@
 				6DBA0A0421C92E8F003BA5F1 /* APILoginService.swift in Sources */,
 				6DBA0A9E21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0A0521C92E8F003BA5F1 /* TableOrganism.swift in Sources */,
+				6DBA0AF021CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */,
 				6DBA0A0621C92E8F003BA5F1 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA0A0721C92E8F003BA5F1 /* LoginPresenter.swift in Sources */,
 				6DBA0A0821C92E8F003BA5F1 /* LoginViewController.swift in Sources */,
@@ -1291,10 +1315,12 @@
 				6DBA0AD121CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0ACA21C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
 				6DBA0A0E21C92E8F003BA5F1 /* Session.swift in Sources */,
+				6DBA0AEC21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A0F21C92E8F003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC521C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
 				6DBA0A1021C92E8F003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A1121C92E8F003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AE821CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA221C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9521C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DBA0A1221C92E8F003BA5F1 /* ListOrdersInput.swift in Sources */,
@@ -1362,6 +1388,7 @@
 				6DBA0A4721C93125003BA5F1 /* APILoginService.swift in Sources */,
 				6DBA0A9D21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0A4821C93125003BA5F1 /* TableOrganism.swift in Sources */,
+				6DBA0AEF21CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */,
 				6DBA0A4921C93125003BA5F1 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA0A4A21C93125003BA5F1 /* LoginPresenter.swift in Sources */,
 				6DBA0A4B21C93125003BA5F1 /* LoginViewController.swift in Sources */,
@@ -1374,10 +1401,12 @@
 				6DBA0AD021CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0AC921C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
 				6DBA0A5121C93125003BA5F1 /* Session.swift in Sources */,
+				6DBA0AEB21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A5221C93125003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC421C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
 				6DBA0A5321C93125003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A5421C93125003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AE721CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA121C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9421C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DBA0A5521C93125003BA5F1 /* ListOrdersInput.swift in Sources */,
@@ -1445,6 +1474,7 @@
 				6DBA09D521C8046A003BA5F1 /* APILoginService.swift in Sources */,
 				6DBA0A9C21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */,
+				6DBA0AEE21CA914F003BA5F1 /* UpdateProfileInteractor.swift in Sources */,
 				6DCAF92F21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift in Sources */,
 				6DBA09C421C7F807003BA5F1 /* LoginPresenter.swift in Sources */,
 				6DBA09C221C7F7BE003BA5F1 /* LoginViewController.swift in Sources */,
@@ -1457,10 +1487,12 @@
 				6DBA0ACF21CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0AC821C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
 				6DBA09CF21C80210003BA5F1 /* Session.swift in Sources */,
+				6DBA0AEA21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DCAF94021C4326B00BFB240 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC321C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
 				6DCAF93E21C42D3400BFB240 /* EndpointBuilder.swift in Sources */,
 				6DBA09BE21C7F3F3003BA5F1 /* LandingNavigator.swift in Sources */,
+				6DBA0AE621CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA021C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9321C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6DCAF92521C2B9A100BFB240 /* ListOrdersInput.swift in Sources */,

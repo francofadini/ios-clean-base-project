@@ -8,12 +8,12 @@ protocol ProfileView: class {
   func showError(title: String, message: String)
 }
 
-class ProfilePresenter {
+class ProfilePresenter: ProfileController {
 
   // MARK: INTERNAL ATTRIBUTES
 
-  var profileInput: ProfileInput!
-  var profileRequest = ProfileRequest()
+  var updateProfileInput: UpdateProfileInput!
+  var updateProfileRequest = UpdateProfileRequest()
 
   // MARK: PRIVATE ATTRIBUTES
 
@@ -31,9 +31,9 @@ class ProfilePresenter {
 
   func didTapSubmitButton(firstName: String?, lastName: String?) {
     self.view.showLoader()
-    self.profileRequest.firstName = firstName
-    self.profileRequest.lastName = lastName
-    self.profileInput.profile(requestModel: self.profileRequest)
+    self.updateProfileRequest.firstName = firstName
+    self.updateProfileRequest.lastName = lastName
+    self.updateProfileInput.updateProfile(requestModel: self.updateProfileRequest)
   }
 
   func didTapCloseButton() {
@@ -41,16 +41,16 @@ class ProfilePresenter {
   }
 }
 
-extension ProfilePresenter: ProfileOutput {
+extension ProfilePresenter: UpdateProfileOutput {
 
   // MARK: LOGIN OUTPUT
 
-  func onLoggedIn() {
+  func onProfileUpdated() {
     self.view.hideLoader()
-    self.navigator.openMainView()
+    self.navigator.close(completion: nil)
   }
 
-  func onProfileFail(error: ProfileError) {
+  func onUpdateProfileFail(error: UpdateProfileError) {
     self.view.hideLoader()
 
     switch error {

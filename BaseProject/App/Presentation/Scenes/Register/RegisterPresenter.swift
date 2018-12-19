@@ -8,7 +8,7 @@ protocol RegisterView: class {
   func showError(title: String, message: String)
 }
 
-class RegisterPresenter {
+class RegisterPresenter: RegisterController {
 
   // MARK: INTERNAL ATTRIBUTES
 

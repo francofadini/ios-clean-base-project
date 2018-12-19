@@ -7,11 +7,12 @@ protocol LandingView: class {
   func showButtos()
 }
 
-class LandingPresenter {
+class LandingPresenter: LandingController {
 
   // MARK: INTERNAL
 
   var autologinInput: AutologinInput!
+  var autologinRequest = AutologinRequest()
 
   // MARK: PRIVATE ATTRIBUTES
 
@@ -29,7 +30,7 @@ class LandingPresenter {
 
   func didLoadView() {
     self.view.hideButtons()
-    self.autologinInput.autologin(requestModel: AutologinRequest())
+    self.autologinInput.autologin(requestModel: self.autologinRequest)
   }
 
   func didTapLoginButton() {

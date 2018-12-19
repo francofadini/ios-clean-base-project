@@ -1,5 +1,12 @@
 import Foundation
 
+// MARK: CONTROLLER
+
+protocol LandingController {
+  var autologinInput: AutologinInput! {get set}
+  var autologinRequest: AutologinRequest {get set}
+}
+
 // MARK: CONFIGURATOR
 
 protocol LandingSceneConfigurator: Configurator {
