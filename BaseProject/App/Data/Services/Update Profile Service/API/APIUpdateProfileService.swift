@@ -1,16 +1,18 @@
+// swiftlint:disable identifier_name
+
 import Foundation
 
 // MARK: API MODELS
 
 struct APIUpdateProfileRequest: Codable {
-  let firstName: String
-  let lastName: String
+  let first_name: String
+  let last_name: String
 }
 
 struct APIUpdateProfileResponse: Codable {
-  let identifier: Int
-  let firstName: String
-  let lastName: String
+  let id: Int
+  let first_name: String
+  let last_name: String
 }
 
 // MARK: SERVICE
@@ -29,7 +31,7 @@ class APIUpdateProfileService: UpdateProfileService {
                      successHandler: @escaping (Profile) -> Void,
                      errorHandler: @escaping (UpdateProfileError) -> Void) {
 
-                        let body = APIUpdateProfileRequest(firstName: firstName, lastName: lastName)
+                        let body = APIUpdateProfileRequest(first_name: firstName, last_name: lastName)
 
                         guard let currentSession = currentSessionGateway.loadSession() else {
                           errorHandler(.unauthorized)
@@ -43,9 +45,9 @@ class APIUpdateProfileService: UpdateProfileService {
                           .withBody(body: body)
                           .buildAndExecute(responseType: APIUpdateProfileResponse.self, successHandler: { (response) in
 
-                            let profile = Profile(identifier: response.identifier,
-                                                  firstName: response.firstName,
-                                                  lastName: response.lastName)
+                            let profile = Profile(identifier: response.id,
+                                                  firstName: response.first_name,
+                                                  lastName: response.last_name)
                             successHandler(profile)
 
                           }, errorHandler: { (statusCode, error) in
