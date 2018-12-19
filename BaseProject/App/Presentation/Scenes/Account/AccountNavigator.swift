@@ -3,6 +3,6 @@ import UIKit
 
 class AccountNavigator: Navigator {
   func pushProfile() {
-
+    self.push(destination: ProfileViewController())
   }
 }

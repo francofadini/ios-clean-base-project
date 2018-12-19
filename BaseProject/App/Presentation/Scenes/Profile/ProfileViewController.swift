@@ -29,7 +29,6 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     configure()
     addSubmitButton()
-    addCloseButton()
     configureInputs()
     buildForm()
   }
@@ -48,7 +47,7 @@ class ProfileViewController: UIViewController {
   // MARK: PRIVATE METHODS
 
   private func configure() {
-
+    self.title = Constants.Strings.Account.Profile.profileTitle
   }
 
   private func addSubmitButton() {
@@ -58,15 +57,6 @@ class ProfileViewController: UIViewController {
                                        action: #selector(didTapSubmitButton))
 
     self.navigationItem.rightBarButtonItem = submitButton
-  }
-
-  private func addCloseButton() {
-    let closeButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_close"),
-                                      style: .plain,
-                                      target: self,
-                                      action: #selector(didTapCloseButton))
-
-    self.navigationItem.leftBarButtonItem = closeButton
   }
 
   private func configureInputs() {

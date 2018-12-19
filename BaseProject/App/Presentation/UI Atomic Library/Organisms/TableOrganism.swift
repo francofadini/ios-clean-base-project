@@ -10,6 +10,7 @@ public class Row: UIView {
   var height: CGFloat = 44
   var accesoryType: UITableViewCell.AccessoryType = .none
   var selecctionStyle: UITableViewCell.SelectionStyle = .none
+  var didTapHandler: (() -> Void)?
 }
 
 public class TableOrganism: UITableViewController {
@@ -58,5 +59,7 @@ public class TableOrganism: UITableViewController {
 
   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    let row = self.sections[indexPath.section].rows[indexPath.row]
+    row.didTapHandler?()
   }
 }

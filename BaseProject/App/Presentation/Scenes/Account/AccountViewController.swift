@@ -45,6 +45,9 @@ class AccountViewController: UIViewController {
     profileRow.height = 100
     profileRow.accesoryType = .disclosureIndicator
     profileRow.selecctionStyle = .default
+    profileRow.didTapHandler = {
+      self.presenter.didTapProfileOption()
+    }
   }
 
   private func buildTable() {
