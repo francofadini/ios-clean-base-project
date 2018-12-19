@@ -7,6 +7,7 @@ struct Section {
 }
 
 public class Row: UIView {
+  var height: CGFloat = 44
   var accesoryType: UITableViewCell.AccessoryType = .none
   var selecctionStyle: UITableViewCell.SelectionStyle = .none
 }
@@ -36,6 +37,10 @@ public class TableOrganism: UITableViewController {
 
   public override func numberOfSections(in tableView: UITableView) -> Int {
     return self.sections.count
+  }
+
+  public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return self.sections[indexPath.section].rows[indexPath.row].height
   }
 
   public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,16 +12,11 @@ class ImageLabelTableViewCell: UITableViewCell, ListOrganismCell {
   static var cellIdentifier: String = "ImageLabelTableViewCell"
   static var cellHeight: CGFloat = 100
 
-  private let imageViewAtom = UIImageView()
-  private let label = UILabel()
+  private let imageLabelRow = ImageLabelRowAtom()
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: .default, reuseIdentifier: ImageLabelTableViewCell.cellIdentifier)
-    self.imageViewAtom.widthAnchor.constraint(equalTo: self.imageViewAtom.heightAnchor, multiplier: 1).isActive = true
-    let horizontalStack = UIStackView(arrangedSubviews: [self.imageViewAtom, self.label])
-    horizontalStack.spacing = 10
-    self.contentView.addAutorisizingSubview(view: horizontalStack,
-                                            with: UIEdgeInsets(top: 5.0, left: 20.0, bottom: 5.0, right: 10.0))
+    self.contentView.addAutorisizingSubview(view: imageLabelRow)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -29,8 +24,9 @@ class ImageLabelTableViewCell: UITableViewCell, ListOrganismCell {
   }
 
   func bind(with viewData: ImageLabelCellViewData) -> UITableViewCell {
-    self.label.text = viewData.labelText
-    self.imageViewAtom.image = viewData.placeholder
+    self.imageLabelRow.data.label = viewData.labelText
+    self.imageLabelRow.data.imagePlaceholder = viewData.placeholder
+    self.imageLabelRow.layoutSubviews()
     return self
   }
 }
