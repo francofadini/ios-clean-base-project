@@ -6,7 +6,7 @@ struct PersistableUser: Codable {
   let lastName: String?
 }
 
-class CurrentSessionService: SessionService {
+class CurrentSessionService: SessionService, SessionPersistantGateway {
 
   func saveSession(session: Session) {
     UserDefaults.standard.set(session.token, forKey: "session_token")
@@ -41,17 +41,4 @@ class CurrentSessionService: SessionService {
       return nil
     }
   }
-}
-
-extension CurrentSessionService: LoginSessionPersistantGateway, RegisterSessionPersistantGateway {
-
-  // MARK: SESSION PERSISTANT GATEWAY
-  
-  func saveCurrentSession(session: Session) {
-    self.saveSession(session: session)
-  }
-}
-
-extension CurrentSessionService: AutoLoginSessionPersistantGateway {
-  //func loadSession() -> Session?
 }

@@ -8,7 +8,7 @@ import UIKit
 // MARK: ENVIROMENT CONSTANTS
 
 #if DEV
-let BASE_URL = "https://dev.clingot.com"
+let BASE_URL = "http://192.168.0.38:8000"
 #elseif QA
 let BASE_URL = "https://stage.clingot.com"
 #else // PROD

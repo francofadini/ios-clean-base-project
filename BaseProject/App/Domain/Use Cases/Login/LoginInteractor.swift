@@ -6,10 +6,6 @@ protocol LoginGateway {
   func login(username: String, password: String, completion: @escaping (Session?, LoginError?) -> Void)
 }
 
-protocol LoginSessionPersistantGateway {
-  func saveCurrentSession(session: Session)
-}
-
 class LoginInteractor: Interactor {
   typealias RequestModelType = LoginRequest
 
@@ -17,11 +13,11 @@ class LoginInteractor: Interactor {
 
   private let output: LoginOutput
   private let loginGateway: LoginGateway
-  private let sessionPersistantGateway: LoginSessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantGateway
 
   // MARK: INITIALIZER
 
-  init(output: LoginOutput, loginGateway: LoginGateway, sessionPersistantGateway: LoginSessionPersistantGateway) {
+  init(output: LoginOutput, loginGateway: LoginGateway, sessionPersistantGateway: SessionPersistantGateway) {
     self.output = output
     self.loginGateway = loginGateway
     self.sessionPersistantGateway = sessionPersistantGateway
@@ -54,7 +50,7 @@ class LoginInteractor: Interactor {
         }
       }
 
-      self.sessionPersistantGateway.saveCurrentSession(session: session!)
+      self.sessionPersistantGateway.saveSession(session: session!)
       self.output.onLoggedIn()
     }
   }

@@ -19,9 +19,11 @@ class ProfileSceneConfiguratorImp: ProfileSceneConfigurator {
   func configure(view: ProfileViewController) {
     let navigator = ProfileNavigator(viewController: view)
     let presenter = ProfilePresenter(view: view, navigator: navigator)
-    let profileService = APIUpdateProfileService()
+    let currentSessionService = CurrentSessionService()
+    let profileService = APIUpdateProfileService(currentSessionGateway: currentSessionService)
     let interactor = UpdateProfileInteractor(output: presenter,
-                                             updateProfileGateway: profileService)
+                                             updateProfileGateway: profileService,
+                                             sessionPersistantGateway: currentSessionService)
     presenter.updateProfileInput = interactor
     view.presenter = presenter
   }

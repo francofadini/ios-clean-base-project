@@ -1,7 +1,8 @@
 import Foundation
 
 protocol UpdateProfileService: Service {
-  func updateProfile(firstName: String,
+  func updateProfile(identifier: Int,
+                     firstName: String,
                      lastName: String,
                      successHandler: @escaping (Profile) -> Void,
                      errorHandler: @escaping (UpdateProfileError) -> Void)

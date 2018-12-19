@@ -11,5 +11,6 @@ enum UpdateProfileError {
   case emptyFirstName
   case emptyLastName
   case noInternet
+  case unauthorized
   case other
 }

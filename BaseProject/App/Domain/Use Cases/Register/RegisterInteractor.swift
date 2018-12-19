@@ -9,10 +9,6 @@ protocol RegisterGateway {
                 completion: @escaping (Session?, RegisterError?) -> Void)
 }
 
-protocol RegisterSessionPersistantGateway {
-  func saveCurrentSession(session: Session)
-}
-
 class RegisterInteractor: Interactor {
   typealias RequestModelType = RegisterRequest
 
@@ -20,13 +16,13 @@ class RegisterInteractor: Interactor {
 
   private let output: RegisterOutput
   private let registerGateway: RegisterGateway
-  private let sessionPersistantGateway: RegisterSessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantGateway
 
   // MARK: INITIALIZER
 
   init(output: RegisterOutput,
        registerGateway: RegisterGateway,
-       sessionPersistantGateway: RegisterSessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantGateway) {
     
     self.output = output
     self.registerGateway = registerGateway
@@ -73,7 +69,7 @@ class RegisterInteractor: Interactor {
                                       }
                                     }
 
-                                    self.sessionPersistantGateway.saveCurrentSession(session: session!)
+                                    self.sessionPersistantGateway.saveSession(session: session!)
                                     self.output.onRegistered()
     })
   }

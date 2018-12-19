@@ -1,23 +1,17 @@
 import Foundation
 
-// MARK: DATA GATEWAYS
-
-protocol AutoLoginSessionPersistantGateway {
-  func loadSession() -> Session?
-}
-
 class AutoLoginInteractor: Interactor {
   typealias RequestModelType = AutologinRequest
 
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: AutoLoginOutput
-  private let sessionPersistantGateway: AutoLoginSessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantGateway
 
   // MARK: INITIALIZER
 
   init(output: AutoLoginOutput,
-       sessionPersistantGateway: AutoLoginSessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantGateway) {
 
     self.output = output
     self.sessionPersistantGateway = sessionPersistantGateway

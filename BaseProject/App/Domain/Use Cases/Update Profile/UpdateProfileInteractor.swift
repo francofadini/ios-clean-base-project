@@ -3,7 +3,10 @@ import Foundation
 // MARK: DATA GATEWAYS
 
 protocol UpdateProfileGateway {
-  func updateProfile(firstName: String, lastName: String, completion: @escaping (Profile?, UpdateProfileError?) -> Void)
+  func updateProfile(identifier: Int,
+                     firstName: String,
+                     lastName: String,
+                     completion: @escaping (Profile?, UpdateProfileError?) -> Void)
 }
 
 class UpdateProfileInteractor: Interactor {
@@ -13,12 +16,17 @@ class UpdateProfileInteractor: Interactor {
 
   private let output: UpdateProfileOutput
   private let updateProfileGateway: UpdateProfileGateway
+  private let sessionPersistantGateway: SessionPersistantGateway
 
   // MARK: INITIALIZER
 
-  init(output: UpdateProfileOutput, updateProfileGateway: UpdateProfileGateway) {
+  init(output: UpdateProfileOutput,
+       updateProfileGateway: UpdateProfileGateway,
+       sessionPersistantGateway: SessionPersistantGateway) {
+    
     self.output = output
     self.updateProfileGateway = updateProfileGateway
+    self.sessionPersistantGateway = sessionPersistantGateway
   }
 
   // MARK: INTERACTOR
@@ -35,7 +43,12 @@ class UpdateProfileInteractor: Interactor {
       return
     }
 
-    self.updateProfileGateway.updateProfile(firstName: requestModel.firstName!,
+    guard let session = self.sessionPersistantGateway.loadSession() else {
+      self.output.onUpdateProfileFail(error: .unauthorized)
+      return
+    }
+
+    self.updateProfileGateway.updateProfile(identifier: session.user.identifier, firstName: requestModel.firstName!,
                                      lastName: requestModel.lastName!) { (profile, updateProfileError) in
 
                                       if let error = updateProfileError {

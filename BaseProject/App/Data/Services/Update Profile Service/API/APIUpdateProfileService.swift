@@ -8,6 +8,7 @@ struct APIUpdateProfileRequest: Codable {
 }
 
 struct APIUpdateProfileResponse: Codable {
+  let identifier: Int
   let firstName: String
   let lastName: String
 }
@@ -16,21 +17,35 @@ struct APIUpdateProfileResponse: Codable {
 
 class APIUpdateProfileService: UpdateProfileService {
 
-  func updateProfile(firstName: String,
+  let currentSessionGateway: SessionPersistantGateway
+
+  init(currentSessionGateway: SessionPersistantGateway) {
+    self.currentSessionGateway = currentSessionGateway
+  }
+
+  func updateProfile(identifier: Int,
+                     firstName: String,
                      lastName: String,
                      successHandler: @escaping (Profile) -> Void,
                      errorHandler: @escaping (UpdateProfileError) -> Void) {
 
                         let body = APIUpdateProfileRequest(firstName: firstName, lastName: lastName)
 
+                        guard let currentSession = currentSessionGateway.loadSession() else {
+                          errorHandler(.unauthorized)
+                          return
+                        }
+
                         AlamofireAPIRequestBuilder(baseURL: BASE_URL)
-                          .withMethod(method: .post)
-                          .withHeaders(headers: ["Cookie": ""])
-                          .withEnpoint(endpoint: "/api/accounts/updateProfile/")
+                          .withMethod(method: .put)
+                          .withHeaders(headers: ["Cookie": "", "Authorization": "JWT " + currentSession.token])
+                          .withEnpoint(endpoint: "/api/users/" + String(describing: identifier) + "/")
                           .withBody(body: body)
                           .buildAndExecute(responseType: APIUpdateProfileResponse.self, successHandler: { (response) in
 
-                            let profile = Profile(firstName: response.firstName, lastName: response.lastName)
+                            let profile = Profile(identifier: response.identifier,
+                                                  firstName: response.firstName,
+                                                  lastName: response.lastName)
                             successHandler(profile)
 
                           }, errorHandler: { (statusCode, error) in
@@ -48,18 +63,22 @@ class APIUpdateProfileService: UpdateProfileService {
 }
 
 extension APIUpdateProfileService: UpdateProfileGateway {
-  func updateProfile(firstName: String,
+  func updateProfile(identifier: Int,
+                     firstName: String,
                      lastName: String,
                      completion: @escaping (Profile?, UpdateProfileError?) -> Void) {
 
-                        updateProfile(firstName: firstName, lastName: lastName, successHandler: { (profile) in
+                        updateProfile(identifier: identifier,
+                                      firstName: firstName,
+                                      lastName: lastName,
+                                      successHandler: { (profile) in
 
-                          completion(profile, nil)
+                                        completion(profile, nil)
 
-                        }, errorHandler: { (error) in
+                                      }, errorHandler: { (error) in
 
-                          completion(nil, error)
+                                        completion(nil, error)
 
-                        })
+                                      })
   }
 }
