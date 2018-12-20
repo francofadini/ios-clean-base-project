@@ -7,6 +7,7 @@ class AccountViewController: UIViewController {
 
   private let table = TableOrganism()
   private let profileRow = ImageLabelRowAtom()
+  private let logoutButtonRow = SimpleButtonRowAtom()
 
   // MARK: INTERNAL ATTRIBUTES
 
@@ -48,14 +49,25 @@ class AccountViewController: UIViewController {
     profileRow.didTapHandler = {
       self.presenter.didTapProfileOption()
     }
+
+    logoutButtonRow.data.title = Constants.Strings.Authentication.logoutLabel
+    logoutButtonRow.style.titleTextColor = Constants.Colors.primaryColor
+    logoutButtonRow.data.action = {
+      self.presenter.didTapLogoutButton()
+    }
   }
 
   private func buildTable() {
     table.appendSection(inputs: [profileRow])
+    table.appendSection(inputs: [logoutButtonRow])
     self.addChild(childViewController: table, to: self.view)
   }
 }
 
 extension AccountViewController: AccountView {
-  
+  func showError(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: Constants.Strings.General.okDefaultAlertLabel, style: .default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
+  }
 }

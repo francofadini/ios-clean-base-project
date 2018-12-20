@@ -12,6 +12,9 @@ class AccountSceneConfiguratorImp: AccountSceneConfigurator {
   func configure(view: AccountViewController) {
     let navigator = AccountNavigator(viewController: view)
     let presenter = AccountPresenter(view: view, navigator: navigator)
+    let currentSessionService = CurrentSessionService()
+    let logoutInteractor = LogoutInteractor(output: presenter, sessionPersistantGateway: currentSessionService)
+    presenter.logoutInput = logoutInteractor
     view.presenter = presenter
   }
 }

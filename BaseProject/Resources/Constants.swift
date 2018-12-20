@@ -46,6 +46,7 @@ struct Constants {
 
     struct Authentication {
       static let loginLabel = NSLocalizedString("Iniciar Sesión", comment: "Login button label")
+      static let logoutLabel = NSLocalizedString("Cerrar Sesión", comment: "Logout button label")
       static let registerLabel = NSLocalizedString("Registrarme", comment: "Register button label")
       static let emailLabel = NSLocalizedString("Email", comment: "General string for email")
       static let passwordLabel = NSLocalizedString("Contraseña", comment: "General string for password")
