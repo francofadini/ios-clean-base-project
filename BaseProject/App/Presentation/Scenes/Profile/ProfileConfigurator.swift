@@ -3,6 +3,8 @@ import Foundation
 // MARK: CONTROLLER
 
 protocol ProfileController {
+  var loadProfileInput: LoadProfileInput! {get set}
+  var loadProfileRequest: LoadProfileRequest {get set}
   var updateProfileInput: UpdateProfileInput! {get set}
   var updateProfileRequest: UpdateProfileRequest {get set}
 }
@@ -21,10 +23,13 @@ class ProfileSceneConfiguratorImp: ProfileSceneConfigurator {
     let presenter = ProfilePresenter(view: view, navigator: navigator)
     let currentSessionService = CurrentSessionService()
     let profileService = APIUpdateProfileService(currentSessionGateway: currentSessionService)
-    let interactor = UpdateProfileInteractor(output: presenter,
+    let updateProfileinteractor = UpdateProfileInteractor(output: presenter,
                                              updateProfileGateway: profileService,
                                              sessionPersistantGateway: currentSessionService)
-    presenter.updateProfileInput = interactor
+    presenter.updateProfileInput = updateProfileinteractor
+    let loadProfileInteractor = LoadProfileInteractor(output: presenter,
+                                                      sessionPersistantGateway: currentSessionService)
+    presenter.loadProfileInput = loadProfileInteractor
     view.presenter = presenter
   }
 }

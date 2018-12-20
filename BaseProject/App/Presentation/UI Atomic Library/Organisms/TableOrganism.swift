@@ -7,10 +7,20 @@ struct Section {
 }
 
 public class Row: UIView {
+  var tableView: UITableView?
+  var indexPath: IndexPath?
   var height: CGFloat = 44
   var accesoryType: UITableViewCell.AccessoryType = .none
   var selecctionStyle: UITableViewCell.SelectionStyle = .none
   var didTapHandler: (() -> Void)?
+
+  func reload() {
+    guard let indexPath = self.indexPath else {
+      return
+    }
+
+    self.tableView?.reloadRows(at: [indexPath], with: .automatic)
+  }
 }
 
 public class TableOrganism: UITableViewController {
@@ -51,6 +61,8 @@ public class TableOrganism: UITableViewController {
   public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
     let row = self.sections[indexPath.section].rows[indexPath.row]
+    row.tableView = tableView
+    row.indexPath = indexPath
     cell.accessoryType = row.accesoryType
     cell.selectionStyle = row.selecctionStyle
     cell.contentView.addAutorisizingSubview(view: row)

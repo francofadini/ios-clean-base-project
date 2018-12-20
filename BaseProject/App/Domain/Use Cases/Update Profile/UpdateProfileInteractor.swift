@@ -62,7 +62,11 @@ class UpdateProfileInteractor: Interactor {
                                         }
                                       }
 
-                                      print(profile!)
+                                      let newUser = User(identifier: profile!.identifier,
+                                                         firstName: profile!.firstName,
+                                                         lastName: profile!.lastName)
+                                      let newSession = Session(token: session.token, user: newUser)
+                                      self.sessionPersistantGateway.saveSession(session: newSession)
                                       self.output.onProfileUpdated()
 
     }

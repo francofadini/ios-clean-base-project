@@ -6,6 +6,7 @@ protocol ProfileView: class {
   func showLoader()
   func hideLoader()
   func showError(title: String, message: String)
+  func fillFormWith(firstName: String?, lastName: String?)
 }
 
 class ProfilePresenter: ProfileController {
@@ -14,6 +15,8 @@ class ProfilePresenter: ProfileController {
 
   var updateProfileInput: UpdateProfileInput!
   var updateProfileRequest = UpdateProfileRequest()
+  var loadProfileInput: LoadProfileInput!
+  var loadProfileRequest = LoadProfileRequest()
 
   // MARK: PRIVATE ATTRIBUTES
 
@@ -29,6 +32,10 @@ class ProfilePresenter: ProfileController {
 
   // MARK: VIEW EVENTS
 
+  func didLoadView() {
+    self.loadProfileInput.loadProfile(requestModel: self.loadProfileRequest)
+  }
+
   func didTapSubmitButton(firstName: String?, lastName: String?) {
     self.view.showLoader()
     self.updateProfileRequest.firstName = firstName
@@ -43,7 +50,7 @@ class ProfilePresenter: ProfileController {
 
 extension ProfilePresenter: UpdateProfileOutput {
 
-  // MARK: LOGIN OUTPUT
+  // MARK: UPDATE PROFILE OUTPUT
 
   func onProfileUpdated() {
     self.view.hideLoader()
@@ -70,5 +77,18 @@ extension ProfilePresenter: UpdateProfileOutput {
                           message: NSLocalizedString("Ocurrio un error al actualizar el perfil",
                                                      comment: "Generic update profile error message"))
     }
+  }
+}
+
+extension ProfilePresenter: LoadProfileOutput {
+
+  // MARK: LOAD PROFILE OUTPUT
+
+  func onProfileLoaded(response: LoadProfileResponse) {
+    self.view.fillFormWith(firstName: response.firstName, lastName: response.lastName)
+  }
+
+  func onLoadProfileFail(error: LoadProfileError) {
+    // nothing to do here
   }
 }

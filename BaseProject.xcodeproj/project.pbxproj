@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1EC6D791175CAE4706444210 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C273E710044C70A6C74C4FDD /* Pods_BaseProject.framework */; };
+		6D111D6721CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6421CBD1EF00A2DB6C /* LoadProfileInput.swift */; };
+		6D111D6821CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6421CBD1EF00A2DB6C /* LoadProfileInput.swift */; };
+		6D111D6921CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6421CBD1EF00A2DB6C /* LoadProfileInput.swift */; };
+		6D111D6A21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6521CBD1EF00A2DB6C /* LoadProfileInteractor.swift */; };
+		6D111D6B21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6521CBD1EF00A2DB6C /* LoadProfileInteractor.swift */; };
+		6D111D6C21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6521CBD1EF00A2DB6C /* LoadProfileInteractor.swift */; };
+		6D111D6D21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6621CBD1EF00A2DB6C /* LoadProfileOutput.swift */; };
+		6D111D6E21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6621CBD1EF00A2DB6C /* LoadProfileOutput.swift */; };
+		6D111D6F21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D6621CBD1EF00A2DB6C /* LoadProfileOutput.swift */; };
 		6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371621BDEC5F00B9BE66 /* TableOrganism.swift */; };
 		6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371821BDEC9700B9BE66 /* FormOrganism.swift */; };
 		6D8D371C21BDEE4100B9BE66 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371B21BDEE4100B9BE66 /* UIViewExtensions.swift */; };
@@ -292,6 +301,9 @@
 
 /* Begin PBXFileReference section */
 		101F9FB3B4782ABEAAC213ED /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6D111D6421CBD1EF00A2DB6C /* LoadProfileInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadProfileInput.swift; sourceTree = "<group>"; };
+		6D111D6521CBD1EF00A2DB6C /* LoadProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadProfileInteractor.swift; sourceTree = "<group>"; };
+		6D111D6621CBD1EF00A2DB6C /* LoadProfileOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadProfileOutput.swift; sourceTree = "<group>"; };
 		6D8D371621BDEC5F00B9BE66 /* TableOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOrganism.swift; sourceTree = "<group>"; };
 		6D8D371821BDEC9700B9BE66 /* FormOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOrganism.swift; sourceTree = "<group>"; };
 		6D8D371B21BDEE4100B9BE66 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -437,6 +449,16 @@
 				C531D2DE55731110BDF5046D /* Pods-BaseProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D111D6321CBD1EF00A2DB6C /* Load Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6D111D6421CBD1EF00A2DB6C /* LoadProfileInput.swift */,
+				6D111D6521CBD1EF00A2DB6C /* LoadProfileInteractor.swift */,
+				6D111D6621CBD1EF00A2DB6C /* LoadProfileOutput.swift */,
+			);
+			path = "Load Profile";
 			sourceTree = "<group>";
 		};
 		6D8D371521BDEC3C00B9BE66 /* Organisms */ = {
@@ -718,6 +740,7 @@
 		6DC2079421B9BB4E000A6A5A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				6D111D6321CBD1EF00A2DB6C /* Load Profile */,
 				6DBA0AE421CA90CC003BA5F1 /* Update Profile */,
 				6DBA0A9621C95FD8003BA5F1 /* Auto Login */,
 				6DBA0A6D21C9361F003BA5F1 /* Register */,
@@ -1339,6 +1362,7 @@
 				6DBA09EF21C92E8F003BA5F1 /* CreateOrderOutput.swift in Sources */,
 				6DBA09F021C92E8F003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8921C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				6D111D6F21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				6DBA09F121C92E8F003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA09F221C92E8F003BA5F1 /* Navigator.swift in Sources */,
 				6DBA0B0C21CAA123003BA5F1 /* APILoginResponse.swift in Sources */,
@@ -1390,11 +1414,13 @@
 				6DBA0AEC21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A0F21C92E8F003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC521C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
+				6D111D6921CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DBA0A1021C92E8F003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A1121C92E8F003BA5F1 /* LandingNavigator.swift in Sources */,
 				6DBA0AE821CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA221C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9521C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
+				6D111D6C21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AFA21CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
 				6DBA0A1221C92E8F003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD621CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,
@@ -1432,6 +1458,7 @@
 				6DBA0A3221C93125003BA5F1 /* CreateOrderOutput.swift in Sources */,
 				6DBA0A3321C93125003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8821C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				6D111D6E21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				6DBA0A3421C93125003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA0A3521C93125003BA5F1 /* Navigator.swift in Sources */,
 				6DBA0B0B21CAA123003BA5F1 /* APILoginResponse.swift in Sources */,
@@ -1483,11 +1510,13 @@
 				6DBA0AEB21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A5221C93125003BA5F1 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC421C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
+				6D111D6821CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DBA0A5321C93125003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A5421C93125003BA5F1 /* LandingNavigator.swift in Sources */,
 				6DBA0AE721CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA121C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9421C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
+				6D111D6B21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AF921CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
 				6DBA0A5521C93125003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD521CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,
@@ -1525,6 +1554,7 @@
 				6DC2079A21B9BC62000A6A5A /* CreateOrderOutput.swift in Sources */,
 				6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */,
 				6DBA0A8721C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				6D111D6D21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				6DBA09CB21C7F85E003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA09BC21C7EEC0003BA5F1 /* Navigator.swift in Sources */,
 				6DBA0B0A21CAA123003BA5F1 /* APILoginResponse.swift in Sources */,
@@ -1576,11 +1606,13 @@
 				6DBA0AEA21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DCAF94021C4326B00BFB240 /* APIRequestBuilder.swift in Sources */,
 				6DBA0AC321C98F5A003BA5F1 /* AccountPresenter.swift in Sources */,
+				6D111D6721CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DCAF93E21C42D3400BFB240 /* EndpointBuilder.swift in Sources */,
 				6DBA09BE21C7F3F3003BA5F1 /* LandingNavigator.swift in Sources */,
 				6DBA0AE621CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA021C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
 				6DBA0A9321C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
+				6D111D6A21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AF821CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
 				6DCAF92521C2B9A100BFB240 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD421CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,

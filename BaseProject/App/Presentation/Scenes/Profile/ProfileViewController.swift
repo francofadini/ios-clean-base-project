@@ -31,6 +31,7 @@ class ProfileViewController: UIViewController {
     addSubmitButton()
     configureInputs()
     buildForm()
+    self.presenter.didLoadView()
   }
 
   // MARK: VIEW EVENTS
@@ -95,5 +96,12 @@ extension ProfileViewController: ProfileView {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: Constants.Strings.General.okDefaultAlertLabel, style: .default, handler: nil))
     self.present(alert, animated: true, completion: nil)
+  }
+
+  func fillFormWith(firstName: String?, lastName: String?) {
+    firstNameInput.data.value = firstName
+    firstNameInput.reload()
+    lastNameInput.data.value = lastName
+    lastNameInput.reload()
   }
 }
