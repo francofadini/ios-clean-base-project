@@ -41,4 +41,9 @@ class CurrentSessionService: SessionService, SessionPersistantGateway {
       return nil
     }
   }
+
+  func removeSession() {
+    UserDefaults.standard.removeObject(forKey: "session_token")
+    UserDefaults.standard.removeObject(forKey: "session_user")
+  }
 }
