@@ -37,6 +37,7 @@ public class TextInputAtom: InputRow {
     self.textField.textAlignment = style.textFieldTextAlignment
     self.textField.keyboardType = style.keyboardType
     self.textField.isSecureTextEntry = style.isSecureTextEntry
+    self.textField.autocapitalizationType = style.autocapitalizationType
   }
 
   private func postConfigureSubviews() {
@@ -74,48 +75,53 @@ public struct TextInputData {
   var value: String?
 }
 
-public struct TextInputStyle {
+public class TextInputStyle {
   let labelTextColor: UIColor?
   let labelFont: UIFont?
   let textFieldTextColor: UIColor?
   let textFieldTextAlignment: NSTextAlignment
   let keyboardType: UIKeyboardType
   let isSecureTextEntry: Bool
+  let autocapitalizationType: UITextAutocapitalizationType
+
+  init(labelTextColor: UIColor? = nil,
+       labelFont: UIFont? = nil,
+       textFieldTextColor: UIColor? = nil,
+       textFieldTextAlignment: NSTextAlignment,
+       keyboardType: UIKeyboardType = .default,
+       isSecureTextEntry: Bool = false,
+       autocapitalizationType: UITextAutocapitalizationType = .sentences) {
+
+    self.labelTextColor = labelTextColor
+    self.labelFont = labelFont
+    self.textFieldTextColor = textFieldTextColor
+    self.textFieldTextAlignment = textFieldTextAlignment
+    self.keyboardType = keyboardType
+    self.isSecureTextEntry = isSecureTextEntry
+    self.autocapitalizationType = autocapitalizationType
+  }
 
   public static var defaultRightAlignedStyle: TextInputStyle {
-    return TextInputStyle(labelTextColor: nil,
-                          labelFont: nil,
-                          textFieldTextColor: .darkGray,
-                          textFieldTextAlignment: .right,
-                          keyboardType: .default,
-                          isSecureTextEntry: false)
+    return TextInputStyle(textFieldTextColor: .darkGray,
+                          textFieldTextAlignment: .right)
   }
 
   public static var defaultLeftAlignedStyle: TextInputStyle {
-    return TextInputStyle(labelTextColor: nil,
-                          labelFont: nil,
-                          textFieldTextColor: .darkGray,
-                          textFieldTextAlignment: .left,
-                          keyboardType: .default,
-                          isSecureTextEntry: false)
+    return TextInputStyle(textFieldTextColor: .darkGray,
+                          textFieldTextAlignment: .left)
   }
 
   public static var defaultEmailLeftAlignedStyle: TextInputStyle {
-    return TextInputStyle(labelTextColor: nil,
-                          labelFont: nil,
-                          textFieldTextColor: .darkGray,
+    return TextInputStyle(textFieldTextColor: .darkGray,
                           textFieldTextAlignment: .left,
                           keyboardType: .emailAddress,
-                          isSecureTextEntry: false)
+                          autocapitalizationType: .none)
 
   }
 
   public static var defaultPasswordLeftAlignedStyle: TextInputStyle {
-    return TextInputStyle(labelTextColor: nil,
-                          labelFont: nil,
-                          textFieldTextColor: .darkGray,
+    return TextInputStyle(textFieldTextColor: .darkGray,
                           textFieldTextAlignment: .left,
-                          keyboardType: .default,
                           isSecureTextEntry: true)
   }
 }
