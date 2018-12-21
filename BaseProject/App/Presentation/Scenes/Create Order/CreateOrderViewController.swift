@@ -6,14 +6,12 @@ class CreateOrderViewController: UIViewController {
 
   // MARK: PRIVATE ATTRIBUTES
 
-  //UI
   private let form = FormOrganism()
   private let firstNameInput = TextInputAtom()
 
-  //Presentation
-  private var presenter: CreateOrderPresenter!
-
   // MARK: PUBLIC ATTRIBUTES
+
+  var presenter: CreateOrderPresenter!
 
   // MARK: INITIALIZER
 
@@ -34,12 +32,17 @@ class CreateOrderViewController: UIViewController {
     addSubmitButton()
     configureInputs()
     buildForm()
+    addCloseButton()
   }
 
   // MARK: VIEW ACTIONS
 
   @objc func createOrderButtonAction() {
     self.presenter.onSubmitButtonPressed(firstName: firstNameInput.getValue())
+  }
+
+  @objc func didTapCloseButton() {
+    presenter.didTapCloseButton()
   }
 
   // MARK: PRIVATE METHODS
@@ -64,6 +67,15 @@ class CreateOrderViewController: UIViewController {
   private func buildForm() {
     form.appendSection(inputs: [firstNameInput])
     self.addChild(childViewController: form, to: self.view)
+  }
+
+  private func addCloseButton() {
+    let closeButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_close"),
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(didTapCloseButton))
+
+    self.navigationItem.leftBarButtonItem = closeButton
   }
 }
 

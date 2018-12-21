@@ -37,7 +37,7 @@ class ListOrdersViewController: UIViewController {
   // MARK: VIEW ACTIONS
 
   @objc func didTapAddOrderButton() {
-
+    self.presenter.didTapAddOrderButton()
   }
 
   // MARK: PRIVATE METHODS

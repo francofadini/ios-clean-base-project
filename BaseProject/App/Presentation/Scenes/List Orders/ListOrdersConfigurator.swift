@@ -17,7 +17,8 @@ protocol ListOrdersSceneConfigurator {
 
 class ListOrdersSceneConfiguratorImp: ListOrdersSceneConfigurator {
   func configure(view: ListOrdersViewController) {
-    let presenter = ListOrdersPresenter(view: view)
+    let navigator = ListOrdersNavigator(viewController: view)
+    let presenter = ListOrdersPresenter(view: view, navigator: navigator)
     let datastore = APIOrdersService()
     let interactor = ListOrdersInteractor(output: presenter, datastore: datastore)
     presenter.listOrdersInput = interactor

@@ -15,13 +15,16 @@ class ListOrdersPresenter: ListOrdersController {
   // MARK: INTERNAL ATTRIBUTES
   internal var listOrdersInput: ListOrdersInput!
   internal var listOrdersRequest = ListOrdersRequest()
+
   // MARK: PRIVATE ATTRIBUTES
   private weak var view: ListOrdersView!
+  private var navigator: ListOrdersNavigator
 
   // MARK: INITIALIZER
 
-  init(view: ListOrdersView) {
+  init(view: ListOrdersView, navigator: ListOrdersNavigator) {
     self.view = view
+    self.navigator = navigator
   }
 
   // MARK: VIEW EVENTS
@@ -31,8 +34,11 @@ class ListOrdersPresenter: ListOrdersController {
     self.listOrdersInput.listOrders(requestModel: self.listOrdersRequest)
   }
 
-  // MARK: PRIVATE METHODS
+  func didTapAddOrderButton() {
+    self.navigator.presentCreateOrderView()
+  }
 
+  // MARK: PRIVATE METHODS
 }
 
 extension ListOrdersPresenter: ListOrdersOutput {

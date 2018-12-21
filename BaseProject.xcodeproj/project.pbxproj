@@ -29,6 +29,12 @@
 		6D111D7F21CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D7E21CC298B00A2DB6C /* SimpleButtonRowAtom.swift */; };
 		6D111D8021CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D7E21CC298B00A2DB6C /* SimpleButtonRowAtom.swift */; };
 		6D111D8121CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D111D7E21CC298B00A2DB6C /* SimpleButtonRowAtom.swift */; };
+		6D874D5521CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5421CD70EA00464DAB /* ListOrdersNavigator.swift */; };
+		6D874D5621CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5421CD70EA00464DAB /* ListOrdersNavigator.swift */; };
+		6D874D5721CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5421CD70EA00464DAB /* ListOrdersNavigator.swift */; };
+		6D874D5921CD72E100464DAB /* CreateOrderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */; };
+		6D874D5A21CD72E100464DAB /* CreateOrderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */; };
+		6D874D5B21CD72E100464DAB /* CreateOrderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */; };
 		6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371621BDEC5F00B9BE66 /* TableOrganism.swift */; };
 		6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371821BDEC9700B9BE66 /* FormOrganism.swift */; };
 		6D8D371C21BDEE4100B9BE66 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D371B21BDEE4100B9BE66 /* UIViewExtensions.swift */; };
@@ -320,6 +326,8 @@
 		6D111D7521CC0C7000A2DB6C /* LogoutOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutOutput.swift; sourceTree = "<group>"; };
 		6D111D7921CC0CA800A2DB6C /* LogoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInteractor.swift; sourceTree = "<group>"; };
 		6D111D7E21CC298B00A2DB6C /* SimpleButtonRowAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButtonRowAtom.swift; sourceTree = "<group>"; };
+		6D874D5421CD70EA00464DAB /* ListOrdersNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersNavigator.swift; sourceTree = "<group>"; };
+		6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderNavigator.swift; sourceTree = "<group>"; };
 		6D8D371621BDEC5F00B9BE66 /* TableOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOrganism.swift; sourceTree = "<group>"; };
 		6D8D371821BDEC9700B9BE66 /* FormOrganism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOrganism.swift; sourceTree = "<group>"; };
 		6D8D371B21BDEE4100B9BE66 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -822,6 +830,7 @@
 				6DC207A921B9C06F000A6A5A /* CreateOrderPresenter.swift */,
 				6DC207A321B9C00B000A6A5A /* CreateOrderViewController.swift */,
 				6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */,
+				6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */,
 			);
 			path = "Create Order";
 			sourceTree = "<group>";
@@ -832,6 +841,7 @@
 				6DCAF91D21C2B91A00BFB240 /* ListOrdersConfigurator.swift */,
 				6DCAF91921C2B8FC00BFB240 /* ListOrdersPresenter.swift */,
 				6DCAF91B21C2B90C00BFB240 /* ListOrdersViewController.swift */,
+				6D874D5421CD70EA00464DAB /* ListOrdersNavigator.swift */,
 			);
 			path = "List Orders";
 			sourceTree = "<group>";
@@ -1425,6 +1435,7 @@
 				6DBA0A0321C92E8F003BA5F1 /* CreateOrderViewController.swift in Sources */,
 				6DBA0AAC21C982C8003BA5F1 /* MainNavigationPresenter.swift in Sources */,
 				6DBA0A0421C92E8F003BA5F1 /* APILoginService.swift in Sources */,
+				6D874D5721CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */,
 				6DBA0A9E21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0B1121CAA9C0003BA5F1 /* CommonGateways.swift in Sources */,
 				6DBA0A0521C92E8F003BA5F1 /* TableOrganism.swift in Sources */,
@@ -1448,6 +1459,7 @@
 				6D111D6921CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DBA0A1021C92E8F003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A1121C92E8F003BA5F1 /* LandingNavigator.swift in Sources */,
+				6D874D5B21CD72E100464DAB /* CreateOrderNavigator.swift in Sources */,
 				6D111D7821CC0C7000A2DB6C /* LogoutOutput.swift in Sources */,
 				6DBA0AE821CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA221C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
@@ -1525,6 +1537,7 @@
 				6DBA0A4621C93125003BA5F1 /* CreateOrderViewController.swift in Sources */,
 				6DBA0AAB21C982C8003BA5F1 /* MainNavigationPresenter.swift in Sources */,
 				6DBA0A4721C93125003BA5F1 /* APILoginService.swift in Sources */,
+				6D874D5621CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */,
 				6DBA0A9D21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0B1021CAA9C0003BA5F1 /* CommonGateways.swift in Sources */,
 				6DBA0A4821C93125003BA5F1 /* TableOrganism.swift in Sources */,
@@ -1548,6 +1561,7 @@
 				6D111D6821CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DBA0A5321C93125003BA5F1 /* EndpointBuilder.swift in Sources */,
 				6DBA0A5421C93125003BA5F1 /* LandingNavigator.swift in Sources */,
+				6D874D5A21CD72E100464DAB /* CreateOrderNavigator.swift in Sources */,
 				6D111D7721CC0C7000A2DB6C /* LogoutOutput.swift in Sources */,
 				6DBA0AE721CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA121C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,
@@ -1625,6 +1639,7 @@
 				6DC207A521B9C00B000A6A5A /* CreateOrderViewController.swift in Sources */,
 				6DBA0AAA21C982C8003BA5F1 /* MainNavigationPresenter.swift in Sources */,
 				6DBA09D521C8046A003BA5F1 /* APILoginService.swift in Sources */,
+				6D874D5521CD70EA00464DAB /* ListOrdersNavigator.swift in Sources */,
 				6DBA0A9C21C96029003BA5F1 /* AutologinOutput.swift in Sources */,
 				6DBA0B0F21CAA9C0003BA5F1 /* CommonGateways.swift in Sources */,
 				6D8D371721BDEC5F00B9BE66 /* TableOrganism.swift in Sources */,
@@ -1648,6 +1663,7 @@
 				6D111D6721CBD1EF00A2DB6C /* LoadProfileInput.swift in Sources */,
 				6DCAF93E21C42D3400BFB240 /* EndpointBuilder.swift in Sources */,
 				6DBA09BE21C7F3F3003BA5F1 /* LandingNavigator.swift in Sources */,
+				6D874D5921CD72E100464DAB /* CreateOrderNavigator.swift in Sources */,
 				6D111D7621CC0C7000A2DB6C /* LogoutOutput.swift in Sources */,
 				6DBA0AE621CA90ED003BA5F1 /* UpdateProfileInput.swift in Sources */,
 				6DBA0AA021C9608A003BA5F1 /* AutoLoginInteractor.swift in Sources */,

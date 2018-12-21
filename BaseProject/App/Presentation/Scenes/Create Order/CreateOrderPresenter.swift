@@ -16,11 +16,13 @@ class CreateOrderPresenter: CreateOrderController {
   internal var createOrderRequest = CreateOrderRequest()
   // MARK: PRIVATE ATTRIBUTES
   private weak var view: CreateOrderView!
+  private var navigator: CreateOrderNavigator
 
   // MARK: INITIALIZER
 
-  init(view: CreateOrderView) {
+  init(view: CreateOrderView, navigator: CreateOrderNavigator) {
     self.view = view
+    self.navigator = navigator
   }
 
   // MARK: VIEW EVENTS
@@ -29,6 +31,10 @@ class CreateOrderPresenter: CreateOrderController {
     self.view.showLoader()
     self.createOrderRequest.firstName = firstName
     self.createOrderInput.createOrder(requestModel: self.createOrderRequest)
+  }
+
+  func didTapCloseButton() {
+    self.navigator.close(completion: nil)
   }
 
   // MARK: PRIVATE METHODS
