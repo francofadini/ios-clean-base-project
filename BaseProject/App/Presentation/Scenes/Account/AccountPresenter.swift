@@ -10,7 +10,7 @@ class AccountPresenter {
 
   // MARK: INTERNAL ATTRIBUTES
 
-  var logoutInput: LogoutInput!
+  weak var logoutInput: LogoutInput!
   var logoutRequest = LogoutRequest()
 
   // MARK: PRIVATE ATTRIBUTES

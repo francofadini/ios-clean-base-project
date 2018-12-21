@@ -12,7 +12,7 @@ class LoginPresenter {
 
   // MARK: INTERNAL ATTRIBUTES
 
-  var loginInput: LoginInput!
+  weak var loginInput: LoginInput!
   var loginRequest = LoginRequest()
 
   // MARK: PRIVATE ATTRIBUTES
