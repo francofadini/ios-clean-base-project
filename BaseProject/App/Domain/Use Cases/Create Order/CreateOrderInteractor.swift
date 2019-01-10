@@ -31,15 +31,14 @@ class CreateOrderInteractor: Interactor {
   func execute(requestModel: CreateOrderRequest) {
 
     let firstName = requestModel.firstName
-    var requestResponse: CreateOrderResponse!
 
     self.datastore.creteOrderWith(firstName: firstName, success: { (order) in
-      requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
+      let requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
+      self.output.onOrderCreated(responseModel: requestResponse)
       }, fail: { (_) in
-      requestResponse = CreateOrderResponse(status: .failure, orderId: nil)
+        let requestResponse = CreateOrderResponse(status: .failure, orderId: nil)
+        self.output.onOrderCreated(responseModel: requestResponse)
     })
-
-    self.output.onOrderCreated(responseModel: requestResponse)
   }
 }
 
