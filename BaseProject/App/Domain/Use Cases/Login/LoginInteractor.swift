@@ -11,7 +11,7 @@ class LoginInteractor: Interactor {
 
   // MARK: PRIVATE ATTRIBUTES
 
-  private let output: LoginOutput
+  private weak var output: LoginOutput!
   private let loginGateway: LoginGateway
   private let sessionPersistantGateway: SessionPersistantGateway
 
