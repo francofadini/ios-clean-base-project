@@ -13,15 +13,15 @@ class OrdersRepository {
   }
 }
 
-extension OrdersRepository: CreateOrderDatasource {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (DataSourceError) -> Void) {
+extension OrdersRepository: CreateOrderGateway {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void) {
 
   }
 }
 
-extension OrdersRepository: ListOrdersDatastore {
+extension OrdersRepository: ListOrdersGateway {
 
-  func listOrdersWith(clientID: Int?, completion: ([Order], DataSourceError?) -> Void) {
+  func listOrdersWith(clientID: Int?, completion: ([Order], ListOrdersError?) -> Void) {
     self.remoteService.fetchAllOrders { (remoteResponse) in
       switch remoteResponse.status {
       case .success:

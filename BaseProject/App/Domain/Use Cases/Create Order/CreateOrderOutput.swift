@@ -17,3 +17,9 @@ enum CreateOrderResponseStatus {
   case success
   case failure
 }
+
+enum CreateOrderError {
+  case noInternet
+  case unauthorized
+  case other
+}

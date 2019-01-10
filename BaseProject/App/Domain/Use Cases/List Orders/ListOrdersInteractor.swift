@@ -1,7 +1,7 @@
 import Foundation
 
-protocol ListOrdersDatastore {
-  func listOrdersWith(clientID: Int?, completion: ([Order], DataSourceError?) -> Void)
+protocol ListOrdersGateway {
+  func listOrdersWith(clientID: Int?, completion: ([Order], ListOrdersError?) -> Void)
 }
 
 class ListOrdersInteractor: Interactor {
@@ -10,11 +10,11 @@ class ListOrdersInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: ListOrdersOutput
-  private let datastore: ListOrdersDatastore
+  private let datastore: ListOrdersGateway
 
   // MARK: INITIALIZER
 
-  init(output: ListOrdersOutput, datastore: ListOrdersDatastore) {
+  init(output: ListOrdersOutput, datastore: ListOrdersGateway) {
     self.output = output
     self.datastore = datastore
   }

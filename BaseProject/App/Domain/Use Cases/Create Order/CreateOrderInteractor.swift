@@ -1,14 +1,9 @@
 import Foundation
 
-protocol CreateOrderDatasource {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (DataSourceError) -> Void)
-}
+// MARK: DATA GATEWAYS
 
-enum DataSourceError {
-  case noInternet
-  case serverError
-  case localError
-  case other
+protocol CreateOrderGateway {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void)
 }
 
 class CreateOrderInteractor: Interactor {
@@ -17,11 +12,11 @@ class CreateOrderInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: CreateOrderOutput
-  private let datastore: CreateOrderDatasource
+  private let datastore: CreateOrderGateway
 
   // MARK: INITIALIZER
 
-  init(output: CreateOrderOutput, datastore: CreateOrderDatasource) {
+  init(output: CreateOrderOutput, datastore: CreateOrderGateway) {
     self.output = output
     self.datastore = datastore
   }

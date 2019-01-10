@@ -7,8 +7,8 @@ class APIOrdersService: OrdersService {
   }
 }
 
-extension APIOrdersService: ListOrdersDatastore {
-  func listOrdersWith(clientID: Int?, completion: ([Order], DataSourceError?) -> Void) {
+extension APIOrdersService: ListOrdersGateway {
+  func listOrdersWith(clientID: Int?, completion: ([Order], ListOrdersError?) -> Void) {
     fetchAllOrders { (response) in
       if response.status == .success {
         completion(response.data!, nil)
@@ -20,8 +20,8 @@ extension APIOrdersService: ListOrdersDatastore {
   }
 }
 
-extension APIOrdersService: CreateOrderDatasource {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (DataSourceError) -> Void) {
+extension APIOrdersService: CreateOrderGateway {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void) {
     
   }
 }
