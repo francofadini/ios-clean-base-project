@@ -1,7 +1,17 @@
 import Foundation
 
-class APIOrdersService: OrdersService {
+// MARK: API MODELS
 
+struct APICreateOrderRequest: Codable {
+  let title: String
+}
+
+struct APICreateOrderResponse: Codable {
+  let id: Int
+  let title: String
+}
+
+class APIOrdersService: OrdersService {
   func fetchAllOrders(completion: (OrdersServiceResponse) -> Void) {
     
   }
@@ -22,6 +32,6 @@ extension APIOrdersService: ListOrdersGateway {
 
 extension APIOrdersService: CreateOrderGateway {
   func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void) {
-    
+
   }
 }

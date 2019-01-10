@@ -12,13 +12,13 @@ class CreateOrderInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: CreateOrderOutput
-  private let datastore: CreateOrderGateway
+  private let createOrderGateway: CreateOrderGateway
 
   // MARK: INITIALIZER
 
   init(output: CreateOrderOutput, datastore: CreateOrderGateway) {
     self.output = output
-    self.datastore = datastore
+    self.createOrderGateway = datastore
   }
 
   // MARK: INTERACTOR
@@ -27,7 +27,7 @@ class CreateOrderInteractor: Interactor {
 
     let firstName = requestModel.firstName
 
-    self.datastore.creteOrderWith(firstName: firstName, success: { (order) in
+    self.createOrderGateway.creteOrderWith(firstName: firstName, success: { (order) in
       let requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
       self.output.onOrderCreated(responseModel: requestResponse)
       }, fail: { (_) in
