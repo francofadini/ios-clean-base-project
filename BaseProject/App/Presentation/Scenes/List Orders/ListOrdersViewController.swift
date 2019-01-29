@@ -64,7 +64,7 @@ extension ListOrdersViewController: ListOrdersView {
 
   func showListWith(data: [ImageLabelCellViewData]) {
     if self.list == nil {
-      self.list = ListOrganismBuilder().build()
+      self.list = ListOrganism()
       self.addChild(childViewController: self.list!, to: self.view)
     }
     self.list?.reload(with: data)

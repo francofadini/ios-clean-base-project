@@ -10,7 +10,7 @@ class ImageLabelTableViewCell: UITableViewCell, ListOrganismCell {
   typealias ViewDataType = ImageLabelCellViewData
 
   static var cellIdentifier: String = "ImageLabelTableViewCell"
-  static var cellHeight: CGFloat = 100
+  static var nibName: String?
 
   private let imageLabelRow = ImageLabelRowAtom()
 
