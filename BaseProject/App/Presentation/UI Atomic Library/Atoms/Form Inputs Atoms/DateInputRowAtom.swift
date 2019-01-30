@@ -3,14 +3,14 @@ import UIKit
 
 public class DateInputRowAtom: InputRow<Date> {
 
+  public var data = DateInputData()
+  public var style: DateInputStyle = .defaultStyle
+  public var onDoneAction: ((_ newDate: Date) -> Void)?
+
   private var label = UILabel()
   private var detailLabel = UILabel()
   private var datePicker = UIDatePicker()
   private var dummyTextField = UITextField()
-
-  public var data = DateInputData()
-  public var style: DateInputStyle = .defaultStyle
-  public var onDoneAction: ((_ newDate: Date) -> Void)?
 
   override public func layoutSubviews() {
     super.layoutSubviews()
@@ -115,11 +115,7 @@ public class DateInputRowAtom: InputRow<Date> {
 }
 
 public struct DateInputData {
-  var label: String
-
-  init() {
-    self.label = "-"
-  }
+  var label: String = "-"
 }
 
 public class DateInputStyle {
@@ -130,7 +126,7 @@ public class DateInputStyle {
   let dateFormat: String
   let datePickerMode: UIDatePicker.Mode
 
-  init(labelTextColor: UIColor? = nil,
+  public init(labelTextColor: UIColor? = nil,
        labelFont: UIFont? = nil,
        detailLabelTextColor: UIColor? = nil,
        detailLabelFont: UIFont? = nil,
@@ -144,6 +140,8 @@ public class DateInputStyle {
     self.dateFormat = dateFormat
     self.datePickerMode = datePickerMode
   }
+
+  // MARK: Default styles
 
   public static var defaultStyle: DateInputStyle {
     return DateInputStyle(labelTextColor: .black,

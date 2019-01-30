@@ -10,9 +10,9 @@ public class FormOrganism: TableOrganism {
 }
 
 public class InputRow<InputValueType>: Row {
-  var value: InputValueType?
+  public var value: InputValueType?
 
-  func fill(with value: InputValueType?) {
+  public func fill(with value: InputValueType?) {
     self.value = value
     self.reload()
   }

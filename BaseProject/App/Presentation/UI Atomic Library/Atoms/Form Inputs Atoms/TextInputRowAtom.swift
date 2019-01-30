@@ -3,11 +3,11 @@ import UIKit
 
 public class TextInputRowAtom: InputRow<String>, UITextFieldDelegate {
 
-  private var label = UILabel()
-  private var textField = UITextField()
-
   public var data = TextInputData()
   public var style: TextInputStyle = .defaultRightAlignedStyle
+  
+  private var label = UILabel()
+  private var textField = UITextField()
 
   override public func layoutSubviews() {
     super.layoutSubviews()
