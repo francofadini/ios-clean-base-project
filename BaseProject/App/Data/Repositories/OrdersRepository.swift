@@ -1,7 +1,5 @@
 import Foundation
 
-struct OrdersRepositoryResponse {}
-
 class OrdersRepository {
 
   private let remoteService: OrdersService

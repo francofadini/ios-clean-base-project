@@ -7,6 +7,11 @@ struct APILoginRequest: Codable {
   let password: String
 }
 
+struct APILoginResponse: Codable {
+  let token: String
+  let user: APIUser
+}
+
 // MARK: SERVICE
 
 class APILoginService: LoginService {

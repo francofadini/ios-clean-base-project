@@ -20,7 +20,7 @@ class RegisterSceneConfiguratorImp: RegisterSceneConfigurator {
     let navigator = RegisterNavigator(viewController: view)
     let presenter = RegisterPresenter(view: view, navigator: navigator)
     let registerService = APIRegisterService()
-    let currentSessionService = CurrentSessionService()
+    let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let interactor = RegisterInteractor(output: presenter,
                                      registerGateway: registerService,
                                      sessionPersistantGateway: currentSessionService)

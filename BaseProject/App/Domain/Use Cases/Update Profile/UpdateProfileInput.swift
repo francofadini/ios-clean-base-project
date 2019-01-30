@@ -12,3 +12,7 @@ struct UpdateProfileRequest: RequestModel {
   var firstName: String?
   var lastName: String?
 }
+
+class UpdateProfileUseCase {
+  
+}

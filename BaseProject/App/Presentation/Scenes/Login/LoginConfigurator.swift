@@ -20,7 +20,7 @@ class LoginSceneConfiguratorImp: LoginSceneConfigurator {
     let navigator = LoginNavigator(viewController: view)
     let presenter = LoginPresenter(view: view, navigator: navigator)
     let loginService = APILoginService()
-    let currentSessionService = CurrentSessionService()
+    let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let interactor = LoginInteractor(output: presenter,
                                      loginGateway: loginService,
                                      sessionPersistantGateway: currentSessionService)
