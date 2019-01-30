@@ -5,9 +5,9 @@ class RegisterViewController: UIViewController {
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
-  private let usernameInput = TextInputAtom()
-  private let passwordInput = TextInputAtom()
-  private let repeatedPasswordInput = TextInputAtom()
+  private let usernameInput = TextInputRowAtom()
+  private let passwordInput = TextInputRowAtom()
+  private let repeatedPasswordInput = TextInputRowAtom()
 
   // MARK: INTERNAL ATTRIBUTES
 
@@ -38,9 +38,9 @@ class RegisterViewController: UIViewController {
   // MARK: VIEW EVENTS
 
   @objc func didTapSubmitButton() {
-    presenter.didTapSubmitButton(username: usernameInput.getValue(),
-                                 password: passwordInput.getValue(),
-                                 repeatedPasword: repeatedPasswordInput.getValue())
+    presenter.didTapSubmitButton(username: usernameInput.value,
+                                 password: passwordInput.value,
+                                 repeatedPasword: repeatedPasswordInput.value)
   }
 
   @objc func didTapCloseButton() {

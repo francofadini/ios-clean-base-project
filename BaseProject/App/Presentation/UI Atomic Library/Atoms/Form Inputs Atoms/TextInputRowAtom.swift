@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-public class TextInputAtom: InputRow {
+public class TextInputRowAtom: InputRow<String>, UITextFieldDelegate {
 
   private var label = UILabel()
   private var textField = UITextField()
@@ -16,10 +16,6 @@ public class TextInputAtom: InputRow {
     applyStyle()
     postConfigureSubviews()
     buildAtom()
-  }
-
-  public func getValue() -> String? {
-    return self.textField.text
   }
 
   private func preConfigureSubviews() {}
@@ -52,9 +48,7 @@ public class TextInputAtom: InputRow {
     horizontalStack.spacing = 5
     self.addAutorisizingSubview(view: horizontalStack, with: UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 10))
   }
-}
 
-extension TextInputAtom: UITextFieldDelegate {
   public func textField(_ textField: UITextField,
                         shouldChangeCharactersIn range: NSRange,
                         replacementString string: String) -> Bool {
@@ -62,9 +56,11 @@ extension TextInputAtom: UITextFieldDelegate {
     // Hack for seeing the space when text is right aligned
     if textField.textAlignment == .right, range.location == textField.text?.count, string.elementsEqual(" ") {
       textField.text = textField.text?.appending("\u{00a0}")
+      self.value = textField.text
       return false
     }
 
+    self.value = textField.text
     return true
   }
 }

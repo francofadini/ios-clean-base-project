@@ -7,7 +7,7 @@ class CreateOrderViewController: UIViewController {
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
-  private let firstNameInput = TextInputAtom()
+  private let firstNameInput = TextInputRowAtom()
 
   // MARK: PUBLIC ATTRIBUTES
 
@@ -38,7 +38,7 @@ class CreateOrderViewController: UIViewController {
   // MARK: VIEW ACTIONS
 
   @objc func createOrderButtonAction() {
-    self.presenter.onSubmitButtonPressed(firstName: firstNameInput.getValue())
+    self.presenter.onSubmitButtonPressed(firstName: firstNameInput.value)
   }
 
   @objc func didTapCloseButton() {

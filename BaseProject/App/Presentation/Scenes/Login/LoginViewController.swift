@@ -5,8 +5,8 @@ class LoginViewController: UIViewController {
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
-  private let usernameInput = TextInputAtom()
-  private let passwordInput = TextInputAtom()
+  private let usernameInput = TextInputRowAtom()
+  private let passwordInput = TextInputRowAtom()
 
   // MARK: INTERNAL ATTRIBUTES
 
@@ -37,8 +37,8 @@ class LoginViewController: UIViewController {
   // MARK: VIEW EVENTS
 
   @objc func didTapSubmitButton() {
-    presenter.didTapSubmitButton(username: usernameInput.getValue(),
-                                 password: passwordInput.getValue())
+    presenter.didTapSubmitButton(username: usernameInput.value,
+                                 password: passwordInput.value)
   }
 
   @objc func didTapCloseButton() {

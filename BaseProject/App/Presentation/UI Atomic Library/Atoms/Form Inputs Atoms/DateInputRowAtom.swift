@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-public class DateInputAtom: InputRow {
+public class DateInputRowAtom: InputRow<Date> {
 
   private var label = UILabel()
   private var detailLabel = UILabel()
@@ -19,10 +19,6 @@ public class DateInputAtom: InputRow {
     applyStyle()
     postConfigureSubviews()
     buildAtom()
-  }
-
-  public func getValue() -> Date? {
-    return self.data.value
   }
 
   private func preConfigureSubviews() {
@@ -69,20 +65,24 @@ public class DateInputAtom: InputRow {
 
   @objc private func onDoneButtonPressed() {
 
-    self.data.value = self.datePicker.date
-    bindDateOnDetailLabel(date: self.data.value)
+    self.value = self.datePicker.date
+    bindDateOnDetailLabel(date: self.value!)
 
     if self.dummyTextField.isFirstResponder {
       self.dummyTextField.resignFirstResponder()
     }
 
-    onDoneAction?(self.data.value)
+    onDoneAction?(self.value!)
   }
 
   private func bindData() {
     self.label.text = data.label
-    self.datePicker.setDate(self.data.value, animated: false)
-    bindDateOnDetailLabel(date: self.data.value)
+    if let value = self.value {
+      self.datePicker.setDate(value, animated: false)
+      bindDateOnDetailLabel(date: value)
+    } else {
+      self.detailLabel.text = "-"
+    }
   }
 
   private func bindDateOnDetailLabel(date: Date) {
@@ -116,11 +116,9 @@ public class DateInputAtom: InputRow {
 
 public struct DateInputData {
   var label: String
-  var value: Date
 
   init() {
     self.label = "-"
-    self.value = Date()
   }
 }
 

@@ -5,8 +5,8 @@ class ProfileViewController: UIViewController {
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
-  private let firstNameInput = TextInputAtom()
-  private let lastNameInput = TextInputAtom()
+  private let firstNameInput = TextInputRowAtom()
+  private let lastNameInput = TextInputRowAtom()
 
   // MARK: INTERNAL ATTRIBUTES
 
@@ -37,8 +37,8 @@ class ProfileViewController: UIViewController {
   // MARK: VIEW EVENTS
 
   @objc func didTapSubmitButton() {
-    presenter.didTapSubmitButton(firstName: firstNameInput.getValue(),
-                                 lastName: lastNameInput.getValue())
+    presenter.didTapSubmitButton(firstName: firstNameInput.value,
+                                 lastName: lastNameInput.value)
   }
 
   @objc func didTapCloseButton() {
@@ -99,9 +99,7 @@ extension ProfileViewController: ProfileView {
   }
 
   func fillFormWith(firstName: String?, lastName: String?) {
-    firstNameInput.data.value = firstName
-    firstNameInput.reload()
-    lastNameInput.data.value = lastName
-    lastNameInput.reload()
+    firstNameInput.fill(with: firstName)
+    lastNameInput.fill(with: lastName)
   }
 }
