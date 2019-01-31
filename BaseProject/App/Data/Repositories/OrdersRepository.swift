@@ -1,6 +1,6 @@
 import Foundation
 
-class OrdersRepository {
+class OrdersRepository: Repository {
 
   private let remoteService: OrdersService
   private let localSerivce: LocalOrdersService

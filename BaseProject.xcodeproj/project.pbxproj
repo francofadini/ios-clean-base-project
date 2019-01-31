@@ -42,6 +42,9 @@
 		6DA0A14D22010E2C0094370C /* DateInputRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A14C22010E2C0094370C /* DateInputRowAtom.swift */; };
 		6DA0A14E22010E2C0094370C /* DateInputRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A14C22010E2C0094370C /* DateInputRowAtom.swift */; };
 		6DA0A14F22010E2C0094370C /* DateInputRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A14C22010E2C0094370C /* DateInputRowAtom.swift */; };
+		6DA0A151220292800094370C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A150220292800094370C /* Repository.swift */; };
+		6DA0A152220292800094370C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A150220292800094370C /* Repository.swift */; };
+		6DA0A153220292800094370C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA0A150220292800094370C /* Repository.swift */; };
 		6DBA09B321C7DC1F003BA5F1 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09B121C7DC1F003BA5F1 /* LandingViewController.swift */; };
 		6DBA09B421C7DC1F003BA5F1 /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBA09B221C7DC1F003BA5F1 /* LandingViewController.xib */; };
 		6DBA09B621C7E06C003BA5F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA09B521C7E06C003BA5F1 /* Constants.swift */; };
@@ -333,6 +336,7 @@
 		6D8D371B21BDEE4100B9BE66 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		6D8D371D21BDEE6200B9BE66 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		6DA0A14C22010E2C0094370C /* DateInputRowAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputRowAtom.swift; sourceTree = "<group>"; };
+		6DA0A150220292800094370C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6DBA09B121C7DC1F003BA5F1 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		6DBA09B221C7DC1F003BA5F1 /* LandingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		6DBA09B521C7E06C003BA5F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -804,6 +808,7 @@
 				6DC2079F21B9BDBB000A6A5A /* ResponseModel.swift */,
 				6DC207A121B9BE3E000A6A5A /* Boundary.swift */,
 				6DBA09DE21C924CE003BA5F1 /* Configurator.swift */,
+				6DA0A150220292800094370C /* Repository.swift */,
 			);
 			path = "Architecture Resources";
 			sourceTree = "<group>";
@@ -1394,6 +1399,7 @@
 				6DBA0A9A21C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA09EA21C92E8F003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DBA09EB21C92E8F003BA5F1 /* ListOrdersInteractor.swift in Sources */,
+				6DA0A153220292800094370C /* Repository.swift in Sources */,
 				6DBA09EC21C92E8F003BA5F1 /* OrdersService.swift in Sources */,
 				6DBA09ED21C92E8F003BA5F1 /* UIViewControllerExtensions.swift in Sources */,
 				6DA0A14F22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
@@ -1496,6 +1502,7 @@
 				6DBA0A9921C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA0A2D21C93125003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DBA0A2E21C93125003BA5F1 /* ListOrdersInteractor.swift in Sources */,
+				6DA0A152220292800094370C /* Repository.swift in Sources */,
 				6DBA0A2F21C93125003BA5F1 /* OrdersService.swift in Sources */,
 				6DBA0A3021C93125003BA5F1 /* UIViewControllerExtensions.swift in Sources */,
 				6DA0A14E22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
@@ -1598,6 +1605,7 @@
 				6DBA0A9821C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
 				6DBA09CA21C7F85E003BA5F1 /* LoginInteractor.swift in Sources */,
 				6DCAF92321C2B9A100BFB240 /* ListOrdersInteractor.swift in Sources */,
+				6DA0A151220292800094370C /* Repository.swift in Sources */,
 				6DCAF93321C3F82000BFB240 /* OrdersService.swift in Sources */,
 				6D8D371E21BDEE6200B9BE66 /* UIViewControllerExtensions.swift in Sources */,
 				6DA0A14D22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
