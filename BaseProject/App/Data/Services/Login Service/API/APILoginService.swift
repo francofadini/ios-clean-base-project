@@ -49,17 +49,3 @@ class APILoginService: LoginService {
       })
   }
 }
-
-extension APILoginService: LoginGateway {
-  func login(username: String, password: String, completion: @escaping (Session?, LoginError?) -> Void) {
-    login(username: username, password: password, successHandler: { (session) in
-
-      completion(session, nil)
-
-    }, errorHandler: { (error) in
-
-      completion(nil, error)
-      
-    })
-  }
-}
