@@ -40,7 +40,11 @@ class LoginInteractor: Interactor {
 
                             }, errorHandler: { (loginError) in
 
-                              self.output.onLoginFail(error: loginError)
+                              if loginError == .noInternet {
+                                self.output.onLoginFail(error: .noInternet)
+                              }
+                               
+                              self.output.onLoginFail(error: .other)
 
                             })
   }

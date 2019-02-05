@@ -19,7 +19,7 @@ class APILoginService: LoginService {
   func login(username: String,
              password: String,
              successHandler: @escaping (Session) -> Void,
-             errorHandler: @escaping (LoginError) -> Void) {
+             errorHandler: @escaping (LoginServiceError) -> Void) {
 
     let body = APILoginRequest(username: username, password: password)
 
@@ -38,7 +38,6 @@ class APILoginService: LoginService {
 
       }, errorHandler: { (statusCode, error) in
 
-        print(String(describing: statusCode))
         if error == .noInternet {
           errorHandler(.noInternet)
           return
