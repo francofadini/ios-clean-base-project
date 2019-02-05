@@ -13,4 +13,8 @@ class Session {
     self.token = token
     self.user = user
   }
+
+  func updateUser(with profile: Profile) {
+    self.user.update(with: profile)
+  }
 }

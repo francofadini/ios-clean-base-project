@@ -29,7 +29,7 @@ class APIUpdateProfileService: UpdateProfileService {
                      firstName: String,
                      lastName: String,
                      successHandler: @escaping (Profile) -> Void,
-                     errorHandler: @escaping (UpdateProfileError) -> Void) {
+                     errorHandler: @escaping (UpdateProfileServiceError) -> Void) {
 
                         let body = APIUpdateProfileRequest(first_name: firstName, last_name: lastName)
 
@@ -53,6 +53,7 @@ class APIUpdateProfileService: UpdateProfileService {
                           }, errorHandler: { (statusCode, error) in
 
                             print(String(describing: statusCode))
+                            
                             if error == .noInternet {
                               errorHandler(.noInternet)
                               return
@@ -61,26 +62,5 @@ class APIUpdateProfileService: UpdateProfileService {
                             errorHandler(.other)
 
                           })
-  }
-}
-
-extension APIUpdateProfileService: UpdateProfileGateway {
-  func updateProfile(identifier: Int,
-                     firstName: String,
-                     lastName: String,
-                     completion: @escaping (Profile?, UpdateProfileError?) -> Void) {
-
-                        updateProfile(identifier: identifier,
-                                      firstName: firstName,
-                                      lastName: lastName,
-                                      successHandler: { (profile) in
-
-                                        completion(profile, nil)
-
-                                      }, errorHandler: { (error) in
-
-                                        completion(nil, error)
-
-                                      })
   }
 }

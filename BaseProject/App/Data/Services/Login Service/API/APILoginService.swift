@@ -38,6 +38,8 @@ class APILoginService: LoginService {
 
       }, errorHandler: { (statusCode, error) in
 
+        print(String(describing: statusCode))
+
         if error == .noInternet {
           errorHandler(.noInternet)
           return

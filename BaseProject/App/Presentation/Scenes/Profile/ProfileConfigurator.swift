@@ -24,7 +24,7 @@ class ProfileSceneConfiguratorImp: ProfileSceneConfigurator {
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let profileService = APIUpdateProfileService(currentSessionGateway: currentSessionService)
     let updateProfileinteractor = UpdateProfileInteractor(output: presenter,
-                                             updateProfileGateway: profileService,
+                                             updateProfileService: profileService,
                                              sessionPersistantGateway: currentSessionService)
     presenter.updateProfileInput = updateProfileinteractor
     let loadProfileInteractor = LoadProfileInteractor(output: presenter,

@@ -4,9 +4,9 @@ class User {
 
   // MARK: ATTRIBUTES
 
-  let identifier: Int
-  let firstName: String?
-  let lastName: String?
+  var identifier: Int
+  var firstName: String?
+  var lastName: String?
 
   // MARK: INITIALIZER
 
@@ -14,5 +14,11 @@ class User {
     self.identifier = identifier
     self.firstName = firstName
     self.lastName = lastName
+  }
+
+  func update(with profile: Profile) {
+    self.identifier = profile.identifier
+    self.firstName = profile.firstName
+    self.lastName = profile.lastName
   }
 }

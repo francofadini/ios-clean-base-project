@@ -5,5 +5,11 @@ protocol UpdateProfileService: Service {
                      firstName: String,
                      lastName: String,
                      successHandler: @escaping (Profile) -> Void,
-                     errorHandler: @escaping (UpdateProfileError) -> Void)
+                     errorHandler: @escaping (UpdateProfileServiceError) -> Void)
+}
+
+enum UpdateProfileServiceError {
+    case noInternet
+    case unauthorized
+    case other
 }
