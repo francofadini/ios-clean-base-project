@@ -6,21 +6,21 @@ class AutoLoginInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: AutoLoginOutput
-  private let sessionPersistantGateway: SessionPersistantService
+  private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: AutoLoginOutput,
-       sessionPersistantGateway: SessionPersistantService) {
+       sessionPersistantService: SessionPersistantService) {
 
     self.output = output
-    self.sessionPersistantGateway = sessionPersistantGateway
+    self.sessionPersistantService = sessionPersistantService
   }
 
   // MARK: INTERACTOR
 
   func execute(requestModel: AutologinRequest) {
-    if sessionPersistantGateway.loadSession() != nil {
+    if sessionPersistantService.loadSession() != nil {
       self.output.onAutoLoggedIn()
       return
     }

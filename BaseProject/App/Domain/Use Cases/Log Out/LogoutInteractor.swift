@@ -6,21 +6,21 @@ class LogoutInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: LogoutOutput
-  private let sessionPersistantGateway: SessionPersistantService
+  private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: LogoutOutput,
-       sessionPersistantGateway: SessionPersistantService) {
+       sessionPersistantService: SessionPersistantService) {
 
     self.output = output
-    self.sessionPersistantGateway = sessionPersistantGateway
+    self.sessionPersistantService = sessionPersistantService
   }
 
   // MARK: INTERACTOR
 
   func execute(requestModel: LogoutRequest) {
-    self.sessionPersistantGateway.removeSession()
+    self.sessionPersistantService.removeSession()
     let response = LogoutResponse()
     self.output.onLogoutSuccess(response: response)
   }

@@ -21,7 +21,7 @@ class LandingSceneConfiguratorImp: LandingSceneConfigurator {
     let sessionService = CurrentSessionPersistantServiceLocator.defaultService
     let presenter = LandingPresenter(view: view, navigator: navigator)
     let autologinInteractor = AutoLoginInteractor(output: presenter,
-                                                  sessionPersistantGateway: sessionService)
+                                                  sessionPersistantService: sessionService)
     presenter.autologinInput = autologinInteractor
     view.presenter = presenter
   }

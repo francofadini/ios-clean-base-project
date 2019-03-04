@@ -14,7 +14,7 @@ class AccountSceneConfiguratorImp: AccountSceneConfigurator {
     let presenter = AccountPresenter(view: view, navigator: navigator)
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let logoutInteractor = LogoutInteractor(output: presenter,
-                                            sessionPersistantGateway: currentSessionService)
+                                            sessionPersistantService: currentSessionService)
     presenter.logoutInput = logoutInteractor
     view.presenter = presenter
   }

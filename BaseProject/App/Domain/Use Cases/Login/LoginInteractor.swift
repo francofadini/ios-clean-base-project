@@ -7,14 +7,14 @@ class LoginInteractor: Interactor {
 
   private weak var output: LoginOutput!
   private let loginService: LoginService
-  private let sessionPersistantGateway: SessionPersistantService
+  private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
-  init(output: LoginOutput, loginService: LoginService, sessionPersistantGateway: SessionPersistantService) {
+  init(output: LoginOutput, loginService: LoginService, sessionPersistantService: SessionPersistantService) {
     self.output = output
     self.loginService = loginService
-    self.sessionPersistantGateway = sessionPersistantGateway
+    self.sessionPersistantService = sessionPersistantService
   }
 
   // MARK: INTERACTOR
@@ -35,7 +35,7 @@ class LoginInteractor: Interactor {
                             password: requestModel.password!,
                             successHandler: { (session) in
 
-                              self.sessionPersistantGateway.saveSession(session: session)
+                              self.sessionPersistantService.saveSession(session: session)
                               self.output.onLoggedIn()
 
                             }, errorHandler: { (loginError) in

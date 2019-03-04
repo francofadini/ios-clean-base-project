@@ -7,17 +7,17 @@ class UpdateProfileInteractor: Interactor {
 
   private let output: UpdateProfileOutput
   private let updateProfileService: UpdateProfileService
-  private let sessionPersistantGateway: SessionPersistantService
+  private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: UpdateProfileOutput,
        updateProfileService: UpdateProfileService,
-       sessionPersistantGateway: SessionPersistantService) {
+       sessionPersistantService: SessionPersistantService) {
     
     self.output = output
     self.updateProfileService = updateProfileService
-    self.sessionPersistantGateway = sessionPersistantGateway
+    self.sessionPersistantService = sessionPersistantService
   }
 
   // MARK: INTERACTOR
@@ -34,7 +34,7 @@ class UpdateProfileInteractor: Interactor {
       return
     }
 
-    guard let session = self.sessionPersistantGateway.loadSession() else {
+    guard let session = self.sessionPersistantService.loadSession() else {
       self.output.onUpdateProfileFail(error: .unauthorized)
       return
     }
@@ -45,7 +45,7 @@ class UpdateProfileInteractor: Interactor {
                                             successHandler: { (profile) in
 
                                                 session.updateUser(with: profile)
-                                                self.sessionPersistantGateway.saveSession(session: session)
+                                                self.sessionPersistantService.saveSession(session: session)
                                                 self.output.onProfileUpdated()
 
                                             }, errorHandler: { (error) in

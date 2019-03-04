@@ -6,22 +6,22 @@ class LoadProfileInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: LoadProfileOutput
-  private let sessionPersistantGateway: SessionPersistantService
+  private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: LoadProfileOutput,
-       sessionPersistantGateway: SessionPersistantService) {
+       sessionPersistantService: SessionPersistantService) {
     
     self.output = output
-    self.sessionPersistantGateway = sessionPersistantGateway
+    self.sessionPersistantService = sessionPersistantService
   }
 
   // MARK: INTERACTOR
 
   func execute(requestModel: LoadProfileRequest) {
 
-    guard let session = self.sessionPersistantGateway.loadSession() else {
+    guard let session = self.sessionPersistantService.loadSession() else {
       self.output.onLoadProfileFail(error: .unauthorized)
       return
     }

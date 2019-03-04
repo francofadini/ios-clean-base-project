@@ -23,7 +23,7 @@ class RegisterSceneConfiguratorImp: RegisterSceneConfigurator {
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let interactor = RegisterInteractor(output: presenter,
                                      registerGateway: registerService,
-                                     sessionPersistantGateway: currentSessionService)
+                                     sessionPersistantService: currentSessionService)
     presenter.registerInput = interactor
     view.presenter = presenter
   }
