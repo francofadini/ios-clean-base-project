@@ -46,18 +46,3 @@ class APIRegisterService: RegisterService {
       })
   }
 }
-
-extension APIRegisterService: RegisterGateway {
-  
-  func register(username: String,
-                password: String,
-                repeatedPassword: String,
-                completion: @escaping (Session?, RegisterError?) -> Void) {
-
-    register(username: username, password: password, repeatedPassword: repeatedPassword, successHandler: { (session) in
-      completion(session, nil)
-    }, errorHandler: { (error) in
-      completion(nil, error)
-    })
-  }
-}

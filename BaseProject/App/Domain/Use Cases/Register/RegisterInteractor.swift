@@ -1,31 +1,22 @@
 import Foundation
 
-// MARK: DATA GATEWAYS
-
-protocol RegisterGateway {
-  func register(username: String,
-                password: String,
-                repeatedPassword: String,
-                completion: @escaping (Session?, RegisterError?) -> Void)
-}
-
 class RegisterInteractor: Interactor {
   typealias RequestModelType = RegisterRequest
 
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: RegisterOutput
-  private let registerGateway: RegisterGateway
+  private let registerService: RegisterService
   private let sessionPersistantService: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: RegisterOutput,
-       registerGateway: RegisterGateway,
+       registerService: RegisterService,
        sessionPersistantService: SessionPersistantService) {
     
     self.output = output
-    self.registerGateway = registerGateway
+    self.registerService = registerService
     self.sessionPersistantService = sessionPersistantService
   }
 
@@ -52,26 +43,27 @@ class RegisterInteractor: Interactor {
       self.output.onRegistrationFail(error: .passwordsNotMatch)
       return
     }
-
-    self.registerGateway.register(username: requestModel.username!,
+    
+    self.registerService.register(username: requestModel.username!,
                                   password: requestModel.password!,
                                   repeatedPassword: requestModel.repeatedPassword!,
-                                  completion: { (session, registerError) in
-
-                                    if let error = registerError {
-                                      switch error {
-                                      case .noInternet:
-                                        self.output.onRegistrationFail(error: .noInternet)
-                                        return
-                                      default:
-                                        self.output.onRegistrationFail(error: .other)
-                                        return
-                                      }
-                                    }
-
-                                    self.sessionPersistantService.saveSession(session: session!)
+                                  successHandler: { (session) in
+                                    
+                                    self.sessionPersistantService.saveSession(session: session)
                                     self.output.onRegistered()
-    })
+                                    
+                                  }, errorHandler: { (registerError) in
+                                    
+                                    switch registerError {
+                                    case .noInternet:
+                                      self.output.onRegistrationFail(error: .noInternet)
+                                      return
+                                    default:
+                                      self.output.onRegistrationFail(error: .other)
+                                      return
+                                    }
+                                    
+                                  })
   }
 }
 
