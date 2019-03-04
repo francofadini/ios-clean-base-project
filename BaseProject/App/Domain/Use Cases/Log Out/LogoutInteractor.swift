@@ -6,12 +6,12 @@ class LogoutInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: LogoutOutput
-  private let sessionPersistantGateway: SessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: LogoutOutput,
-       sessionPersistantGateway: SessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantService) {
 
     self.output = output
     self.sessionPersistantGateway = sessionPersistantGateway

@@ -6,7 +6,7 @@ struct PersistableUser: Codable {
   let lastName: String?
 }
 
-class UserDefaultsSessionService: SessionPersistantService, SessionPersistantGateway {
+class UserDefaultsSessionService: SessionPersistantService {
 
   func saveSession(session: Session) {
     UserDefaults.standard.set(session.token, forKey: "session_token")

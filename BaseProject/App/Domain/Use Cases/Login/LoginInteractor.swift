@@ -7,11 +7,11 @@ class LoginInteractor: Interactor {
 
   private weak var output: LoginOutput!
   private let loginService: LoginService
-  private let sessionPersistantGateway: SessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantService
 
   // MARK: INITIALIZER
 
-  init(output: LoginOutput, loginService: LoginService, sessionPersistantGateway: SessionPersistantGateway) {
+  init(output: LoginOutput, loginService: LoginService, sessionPersistantGateway: SessionPersistantService) {
     self.output = output
     self.loginService = loginService
     self.sessionPersistantGateway = sessionPersistantGateway

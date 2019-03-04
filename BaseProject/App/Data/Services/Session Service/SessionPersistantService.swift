@@ -7,4 +7,5 @@ class CurrentSessionPersistantServiceLocator {
 protocol SessionPersistantService: Service {
   func saveSession(session: Session)
   func loadSession() -> Session?
+  func removeSession()
 }

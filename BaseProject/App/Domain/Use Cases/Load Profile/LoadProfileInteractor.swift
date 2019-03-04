@@ -6,12 +6,12 @@ class LoadProfileInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: LoadProfileOutput
-  private let sessionPersistantGateway: SessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: LoadProfileOutput,
-       sessionPersistantGateway: SessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantService) {
     
     self.output = output
     self.sessionPersistantGateway = sessionPersistantGateway

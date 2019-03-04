@@ -7,13 +7,13 @@ class UpdateProfileInteractor: Interactor {
 
   private let output: UpdateProfileOutput
   private let updateProfileService: UpdateProfileService
-  private let sessionPersistantGateway: SessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: UpdateProfileOutput,
        updateProfileService: UpdateProfileService,
-       sessionPersistantGateway: SessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantService) {
     
     self.output = output
     self.updateProfileService = updateProfileService

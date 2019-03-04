@@ -16,13 +16,13 @@ class RegisterInteractor: Interactor {
 
   private let output: RegisterOutput
   private let registerGateway: RegisterGateway
-  private let sessionPersistantGateway: SessionPersistantGateway
+  private let sessionPersistantGateway: SessionPersistantService
 
   // MARK: INITIALIZER
 
   init(output: RegisterOutput,
        registerGateway: RegisterGateway,
-       sessionPersistantGateway: SessionPersistantGateway) {
+       sessionPersistantGateway: SessionPersistantService) {
     
     self.output = output
     self.registerGateway = registerGateway

@@ -19,9 +19,9 @@ struct APIUpdateProfileResponse: Codable {
 
 class APIUpdateProfileService: UpdateProfileService {
 
-  let currentSessionGateway: SessionPersistantGateway
+  let currentSessionGateway: SessionPersistantService
 
-  init(currentSessionGateway: SessionPersistantGateway) {
+  init(currentSessionGateway: SessionPersistantService) {
     self.currentSessionGateway = currentSessionGateway
   }
 
