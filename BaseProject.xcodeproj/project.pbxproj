@@ -301,6 +301,9 @@
 		6DCAF94321C43CF700BFB240 /* AlamofireAPIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF94221C43CF700BFB240 /* AlamofireAPIRequestBuilder.swift */; };
 		6DFF50BB21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */; };
 		6DFF50C021BD2143007B1630 /* TextInputRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BF21BD2143007B1630 /* TextInputRowAtom.swift */; };
+		EE11C579222F418E00CC5B0E /* Order.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE11C577222F418E00CC5B0E /* Order.xcdatamodeld */; };
+		EE11C57A222F418E00CC5B0E /* Order.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE11C577222F418E00CC5B0E /* Order.xcdatamodeld */; };
+		EE11C57B222F418E00CC5B0E /* Order.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE11C577222F418E00CC5B0E /* Order.xcdatamodeld */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -428,6 +431,7 @@
 		C273E710044C70A6C74C4FDD /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C531D2DE55731110BDF5046D /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		CAC67CD6FF51DF9DDDD198F8 /* Pods_BaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE11C578222F418E00CC5B0E /* Order.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Order.xcdatamodel; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -874,6 +878,7 @@
 		6DCAF93121C3F80E00BFB240 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EE11C576222F417E00CC5B0E /* Core Data Models */,
 				6DBA0B0321CA9D85003BA5F1 /* API Models */,
 				6DBA0AF121CA9598003BA5F1 /* Update Profile Service */,
 				6DBA09D021C8035C003BA5F1 /* Login Service */,
@@ -974,6 +979,14 @@
 			children = (
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		EE11C576222F417E00CC5B0E /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE11C577222F418E00CC5B0E /* Order.xcdatamodeld */,
+			);
+			path = "Core Data Models";
 			sourceTree = "<group>";
 		};
 		EEB0E6A921725E3600CAF99E = {
@@ -1439,6 +1452,7 @@
 				6DBA09FD21C92E8F003BA5F1 /* AppDelegate.swift in Sources */,
 				6DBA09FE21C92E8F003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
 				6D111D8121CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
+				EE11C57B222F418E00CC5B0E /* Order.xcdatamodeld in Sources */,
 				6DBA0A7921C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA09FF21C92E8F003BA5F1 /* OrdersRepository.swift in Sources */,
 				6DBA0A7E21C93953003BA5F1 /* RegisterService.swift in Sources */,
@@ -1543,6 +1557,7 @@
 				6DBA0A4021C93125003BA5F1 /* AppDelegate.swift in Sources */,
 				6DBA0A4121C93125003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
 				6D111D8021CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
+				EE11C57A222F418E00CC5B0E /* Order.xcdatamodeld in Sources */,
 				6DBA0A7821C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA0A4221C93125003BA5F1 /* OrdersRepository.swift in Sources */,
 				6DBA0A7D21C93953003BA5F1 /* RegisterService.swift in Sources */,
@@ -1647,6 +1662,7 @@
 				EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */,
 				6DBA09DD21C82325003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
 				6D111D7F21CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
+				EE11C579222F418E00CC5B0E /* Order.xcdatamodeld in Sources */,
 				6DBA0A7721C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
 				6DBA0A7C21C93953003BA5F1 /* RegisterService.swift in Sources */,
@@ -2056,6 +2072,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE11C577222F418E00CC5B0E /* Order.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE11C578222F418E00CC5B0E /* Order.xcdatamodel */,
+			);
+			currentVersion = EE11C578222F418E00CC5B0E /* Order.xcdatamodel */;
+			path = Order.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEB0E6AA21725E3600CAF99E /* Project object */;
 }

@@ -1,4 +1,3 @@
-// swiftlint:disable identifier_name
 import Foundation
 
 class APIListOrdersService: ListOrdersService {
