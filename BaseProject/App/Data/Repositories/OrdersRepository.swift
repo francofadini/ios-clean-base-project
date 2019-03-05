@@ -11,8 +11,8 @@ class OrdersRepository: Repository {
   }
 }
 
-extension OrdersRepository: CreateOrderGateway {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void) {
+extension OrdersRepository: CreateOrderService {
+  func creteOrderWith(firstName: String?, success: (Order) -> Void, failure: (CreateOrderError) -> Void) {
 
   }
 }

@@ -305,6 +305,12 @@
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
 		EEB0E6CB21725E3700CAF99E /* BaseProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6CA21725E3700CAF99E /* BaseProjectTests.swift */; };
+		EED20E0F222EC23C0049D139 /* CreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E0E222EC23C0049D139 /* CreateOrderService.swift */; };
+		EED20E10222EC23C0049D139 /* CreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E0E222EC23C0049D139 /* CreateOrderService.swift */; };
+		EED20E11222EC23C0049D139 /* CreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E0E222EC23C0049D139 /* CreateOrderService.swift */; };
+		EED20E13222EC3070049D139 /* APICreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E12222EC3070049D139 /* APICreateOrderService.swift */; };
+		EED20E14222EC3070049D139 /* APICreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E12222EC3070049D139 /* APICreateOrderService.swift */; };
+		EED20E15222EC3070049D139 /* APICreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED20E12222EC3070049D139 /* APICreateOrderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -429,6 +435,8 @@
 		EEB0E6C621725E3700CAF99E /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6CA21725E3700CAF99E /* BaseProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProjectTests.swift; sourceTree = "<group>"; };
 		EEB0E6CC21725E3700CAF99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED20E0E222EC23C0049D139 /* CreateOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderService.swift; sourceTree = "<group>"; };
+		EED20E12222EC3070049D139 /* APICreateOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICreateOrderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -882,6 +890,7 @@
 			children = (
 				6DCAF93721C3F8FF00BFB240 /* API */,
 				6DCAF93221C3F82000BFB240 /* OrdersService.swift */,
+				EED20E0E222EC23C0049D139 /* CreateOrderService.swift */,
 			);
 			path = "Orders Service";
 			sourceTree = "<group>";
@@ -890,6 +899,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCAF93821C3F92100BFB240 /* APIOrdersService.swift */,
+				EED20E12222EC3070049D139 /* APICreateOrderService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1381,6 +1391,7 @@
 				6DBA0A9121C93B8A003BA5F1 /* RegisterPresenter.swift in Sources */,
 				6DBA09E721C92E8F003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8321C93982003BA5F1 /* APIRegisterService.swift in Sources */,
+				EED20E15222EC3070049D139 /* APICreateOrderService.swift in Sources */,
 				6DBA09E821C92E8F003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09E921C92E8F003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9A21C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1395,6 +1406,7 @@
 				6DBA09F021C92E8F003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8921C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
 				6D111D6F21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
+				EED20E11222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7C21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
 				6DBA09F121C92E8F003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA09F221C92E8F003BA5F1 /* Navigator.swift in Sources */,
@@ -1483,6 +1495,7 @@
 				6DBA0A9021C93B8A003BA5F1 /* RegisterPresenter.swift in Sources */,
 				6DBA0A2A21C93125003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8221C93982003BA5F1 /* APIRegisterService.swift in Sources */,
+				EED20E14222EC3070049D139 /* APICreateOrderService.swift in Sources */,
 				6DBA0A2B21C93125003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA0A2C21C93125003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9921C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1497,6 +1510,7 @@
 				6DBA0A3321C93125003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8821C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
 				6D111D6E21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
+				EED20E10222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7B21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
 				6DBA0A3421C93125003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA0A3521C93125003BA5F1 /* Navigator.swift in Sources */,
@@ -1585,6 +1599,7 @@
 				6DBA0A8F21C93B8A003BA5F1 /* RegisterPresenter.swift in Sources */,
 				6DBA09DA21C822AB003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8121C93982003BA5F1 /* APIRegisterService.swift in Sources */,
+				EED20E13222EC3070049D139 /* APICreateOrderService.swift in Sources */,
 				6DBA09CD21C80179003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09D721C80E61003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9821C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1599,6 +1614,7 @@
 				6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */,
 				6DBA0A8721C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
 				6D111D6D21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
+				EED20E0F222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7A21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
 				6DBA09CB21C7F85E003BA5F1 /* LoginOutput.swift in Sources */,
 				6DBA09BC21C7EEC0003BA5F1 /* Navigator.swift in Sources */,

@@ -30,9 +30,3 @@ extension APIOrdersService: ListOrdersGateway {
     }
   }
 }
-
-extension APIOrdersService: CreateOrderGateway {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void) {
-
-  }
-}

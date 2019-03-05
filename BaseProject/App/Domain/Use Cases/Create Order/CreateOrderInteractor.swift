@@ -1,24 +1,18 @@
 import Foundation
 
-// MARK: DATA GATEWAYS
-
-protocol CreateOrderGateway {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, fail: (CreateOrderError) -> Void)
-}
-
 class CreateOrderInteractor: Interactor {
   typealias RequestModelType = CreateOrderRequest
 
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: CreateOrderOutput
-  private let createOrderGateway: CreateOrderGateway
+  private let createOrderService: CreateOrderService
 
   // MARK: INITIALIZER
 
-  init(output: CreateOrderOutput, datastore: CreateOrderGateway) {
+  init(output: CreateOrderOutput, createOrderService: CreateOrderService) {
     self.output = output
-    self.createOrderGateway = datastore
+    self.createOrderService = createOrderService
   }
 
   // MARK: INTERACTOR
@@ -27,10 +21,10 @@ class CreateOrderInteractor: Interactor {
 
     let firstName = requestModel.firstName
 
-    self.createOrderGateway.creteOrderWith(firstName: firstName, success: { (order) in
+    self.createOrderService.creteOrderWith(firstName: firstName, success: { (order) in
       let requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
       self.output.onOrderCreated(responseModel: requestResponse)
-      }, fail: { (_) in
+      }, failure: { (_) in
         let requestResponse = CreateOrderResponse(status: .failure, orderId: nil)
         self.output.onOrderCreated(responseModel: requestResponse)
     })
