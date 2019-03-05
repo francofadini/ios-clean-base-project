@@ -3,17 +3,14 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol CreateOrderOutput: Boundary {
-  func onOrderCreated(responseModel: CreateOrderResponse)
+  func success(order: Order)
+  func failure(error: CreateOrderError)
 }
 
 // MARK: RESPONSE MODEL
 
-struct CreateOrderResponse: ResponseModel {
-  let status: CreateOrderResponseStatus
-  let orderId: Int?
-}
-
-enum CreateOrderResponseStatus {
-  case success
-  case failure
+enum CreateOrderError: ResponseModel {
+  case noInternet
+  case unauthorized
+  case other
 }

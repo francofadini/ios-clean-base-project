@@ -7,7 +7,9 @@ protocol RegisterOutput: Boundary {
   func onRegistrationFail(error: RegisterError)
 }
 
-enum RegisterError {
+// MARK: RESPONSE MODEL
+
+enum RegisterError: ResponseModel {
   case emptyEmail
   case emptyPassword
   case emptyRepeatedPassword

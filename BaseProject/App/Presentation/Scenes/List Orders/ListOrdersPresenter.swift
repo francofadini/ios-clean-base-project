@@ -44,8 +44,14 @@ class ListOrdersPresenter: ListOrdersController {
 extension ListOrdersPresenter: ListOrdersOutput {
 
   // MARK: LIST ORDERS OUTPUT
-
-  func onOrdersListed(responseModel: ListOrdersResponse) {
+  
+  func success(orders: [Order]) {
+    self.view.hideLoader()
+    let viewDataList = [ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: "Hola!")]
+    self.view.showListWith(data: viewDataList)
+  }
+  
+  func failure(error: ListOrdersError) {
     self.view.hideLoader()
     let viewDataList = [ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: "Hola!")]
     self.view.showListWith(data: viewDataList)

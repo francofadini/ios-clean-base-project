@@ -21,13 +21,12 @@ class CreateOrderInteractor: Interactor {
 
     let firstName = requestModel.firstName
 
-    self.createOrderService.creteOrderWith(firstName: firstName, success: { (order) in
-      let requestResponse = CreateOrderResponse(status: .success, orderId: order.identifier)
-      self.output.onOrderCreated(responseModel: requestResponse)
-      }, failure: { (_) in
-        let requestResponse = CreateOrderResponse(status: .failure, orderId: nil)
-        self.output.onOrderCreated(responseModel: requestResponse)
-    })
+    self.createOrderService.creteOrderWith(firstName: firstName,
+                                           success: { (order) in
+                                            self.output.success(order: order)
+                                          }, failure: { (createOrderError) in
+                                            self.output.failure(error: createOrderError)
+                                          })
   }
 }
 

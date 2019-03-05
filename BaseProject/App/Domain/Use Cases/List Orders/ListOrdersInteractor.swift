@@ -26,19 +26,10 @@ class ListOrdersInteractor: Interactor {
     let clientID = requestModel.clientID
     self.listOrdersService.listOrdersWith(clientID: clientID,
                                           success: { (orders) in
-                                            
-                                            let requestResponse = ListOrdersResponse(status: .success,
-                                                                                     orders: orders)
-                                            
-                                            self.output.onOrdersListed(responseModel: requestResponse)
-    },
-                                          failure: { (listOrdersError) in
-                                            
-                                            let requestResponse = ListOrdersResponse(status: .failure,
-                                                                                     orders: [Order]())
-                                            
-                                            self.output.onOrdersListed(responseModel: requestResponse)
-    })
+                                            self.output.success(orders: orders)
+                                          }, failure: { (listOrdersError) in
+                                            self.output.failure(error: listOrdersError)
+                                          })
   }
 }
 

@@ -14,7 +14,7 @@ struct LoadProfileResponse: ResponseModel {
   let lastName: String?
 }
 
-enum LoadProfileError {
+enum LoadProfileError: ResponseModel {
   case unauthorized
   case other
 }

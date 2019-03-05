@@ -52,16 +52,15 @@ class CreateOrderPresenter: CreateOrderController {
 extension CreateOrderPresenter: CreateOrderOutput {
 
   // MARK: CRETE ORDER OUTPUT
-
-  func onOrderCreated(responseModel: CreateOrderResponse) {
+  func success(order: Order) {
     self.view.hideLoader()
-    switch responseModel.status {
-    case .success:
-      let orderID = responseModel.orderId!
-      notifyOrderCreationSuccess(orderID: orderID)
-    case .failure:
-      notifyOrderCreationFailed()
-    }
+    notifyOrderCreationSuccess(orderID: order.identifier)
+    self.view.close()
+  }
+  
+  func failure(error: CreateOrderError) {
+    self.view.hideLoader()
+    notifyOrderCreationFailed()
     self.view.close()
   }
 }

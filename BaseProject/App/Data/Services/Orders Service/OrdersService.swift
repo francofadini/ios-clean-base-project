@@ -7,11 +7,3 @@ protocol ListOrdersService: Service {
 protocol OrdersPersistanceService {
   func saveOrders(orders: [Order])
 }
-
-enum ListOrdersError {
-  case serverError
-  case localError
-  case noInternet
-  case unauthorized
-  case other
-}

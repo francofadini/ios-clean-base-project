@@ -5,9 +5,3 @@ protocol CreateOrderService {
                       success: (Order) -> Void,
                       failure: (CreateOrderError) -> Void)
 }
-
-enum CreateOrderError {
-  case noInternet
-  case unauthorized
-  case other
-}

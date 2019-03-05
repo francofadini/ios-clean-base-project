@@ -13,6 +13,6 @@ struct LogoutResponse: ResponseModel {
 
 }
 
-enum LogoutError {
+enum LogoutError: ResponseModel {
   case other
 }

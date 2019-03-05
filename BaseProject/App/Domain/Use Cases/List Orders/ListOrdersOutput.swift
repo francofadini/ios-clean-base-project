@@ -3,12 +3,16 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol ListOrdersOutput: Boundary {
-  func onOrdersListed(responseModel: ListOrdersResponse)
+  func success(orders: [Order])
+  func failure(error: ListOrdersError)
 }
 
 // MARK: RESPONSE MODEL
 
-struct ListOrdersResponse: ResponseModel {
-  let status: ResponseStatus
-  let orders: [Order]
+enum ListOrdersError: ResponseModel {
+  case serverError
+  case localError
+  case noInternet
+  case unauthorized
+  case other
 }

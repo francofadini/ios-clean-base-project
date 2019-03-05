@@ -7,7 +7,9 @@ protocol UpdateProfileOutput: Boundary {
   func onUpdateProfileFail(error: UpdateProfileError)
 }
 
-enum UpdateProfileError {
+// MARK: RESPONSE MODEL
+
+enum UpdateProfileError: ResponseModel {
   case emptyFirstName
   case emptyLastName
   case noInternet

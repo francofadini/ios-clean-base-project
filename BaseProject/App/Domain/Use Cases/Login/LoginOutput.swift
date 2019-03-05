@@ -7,7 +7,9 @@ protocol LoginOutput: Boundary {
   func onLoginFail(error: LoginError)
 }
 
-enum LoginError {
+// MARK: RESPONSE MODEL
+
+enum LoginError: ResponseModel {
   case emptyEmail
   case emptyPassword
   case noInternet
