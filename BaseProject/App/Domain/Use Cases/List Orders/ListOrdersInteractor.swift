@@ -10,13 +10,13 @@ class ListOrdersInteractor: Interactor {
   // MARK: PRIVATE ATTRIBUTES
 
   private let output: ListOrdersOutput
-  private let datastore: ListOrdersGateway
+  private let listOrdersService: ListOrdersService
 
   // MARK: INITIALIZER
 
-  init(output: ListOrdersOutput, datastore: ListOrdersGateway) {
+  init(output: ListOrdersOutput, listOrdersService: ListOrdersService) {
     self.output = output
-    self.datastore = datastore
+    self.listOrdersService = listOrdersService
   }
 
   // MARK: INTERACTOR
@@ -24,15 +24,21 @@ class ListOrdersInteractor: Interactor {
   func execute(requestModel: ListOrdersRequest) {
 
     let clientID = requestModel.clientID
-    var requestResponse: ListOrdersResponse!
-    self.datastore.listOrdersWith(clientID: clientID) { (orders, error) in
-      if error == nil {
-        requestResponse = ListOrdersResponse(status: .success, orders: orders)
-      } else {
-        requestResponse = ListOrdersResponse(status: .failure, orders: [Order]())
-      }
-      self.output.onOrdersListed(responseModel: requestResponse)
-    }
+    self.listOrdersService.listOrdersWith(clientID: clientID,
+                                          success: { (orders) in
+                                            
+                                            let requestResponse = ListOrdersResponse(status: .success,
+                                                                                     orders: orders)
+                                            
+                                            self.output.onOrdersListed(responseModel: requestResponse)
+    },
+                                          failure: { (listOrdersError) in
+                                            
+                                            let requestResponse = ListOrdersResponse(status: .failure,
+                                                                                     orders: [Order]())
+                                            
+                                            self.output.onOrdersListed(responseModel: requestResponse)
+    })
   }
 }
 

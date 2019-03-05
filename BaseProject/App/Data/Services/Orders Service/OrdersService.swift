@@ -1,14 +1,17 @@
 import Foundation
 
-struct OrdersServiceResponse {
-  let status: ServiceResponseStatus
-  let data: [Order]?
+protocol ListOrdersService: Service {
+  func listOrdersWith(clientID: Int?, success: ([Order]) -> Void, failure: (ListOrdersError) -> Void)
 }
 
-protocol OrdersService: Service {
-  func fetchAllOrders(completion: (OrdersServiceResponse) -> Void)
-}
-
-protocol LocalOrdersService: OrdersService {
+protocol OrdersPersistanceService {
   func saveOrders(orders: [Order])
+}
+
+enum ListOrdersError {
+  case serverError
+  case localError
+  case noInternet
+  case unauthorized
+  case other
 }
