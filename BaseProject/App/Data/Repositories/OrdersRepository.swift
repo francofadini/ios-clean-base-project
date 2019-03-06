@@ -12,7 +12,7 @@ class OrdersRepository: Repository {
 }
 
 extension OrdersRepository: CreateOrderService {
-  func creteOrderWith(firstName: String?, success: (Order) -> Void, failure: (CreateOrderError) -> Void) {
+  func creteOrderWith(name: String?, success: (Order) -> Void, failure: (CreateOrderError) -> Void) {
 
   }
 }

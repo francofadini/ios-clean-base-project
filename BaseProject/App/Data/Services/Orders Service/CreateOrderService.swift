@@ -1,7 +1,7 @@
 import Foundation
 
 protocol CreateOrderService {
-  func creteOrderWith(firstName: String?,
+  func creteOrderWith(name: String?,
                       success: (Order) -> Void,
                       failure: (CreateOrderError) -> Void)
 }

@@ -19,7 +19,7 @@ class CreateOrderSceneConfiguratorImp: CreateOrderSceneConfigurator {
   func configure(view: CreateOrderViewController) {
     let navigator = CreateOrderNavigator(viewController: view)
     let presenter = CreateOrderPresenter(view: view, navigator: navigator)
-    let createOrderService = APICreateOrderService()
+    let createOrderService = CoreDataCreateOrderService()
     let interactor = CreateOrderInteractor(output: presenter, createOrderService: createOrderService)
     presenter.createOrderInput = interactor
     view.presenter = presenter

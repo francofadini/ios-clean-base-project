@@ -19,9 +19,7 @@ class CreateOrderInteractor: Interactor {
 
   func execute(requestModel: CreateOrderRequest) {
 
-    let firstName = requestModel.firstName
-
-    self.createOrderService.creteOrderWith(firstName: firstName,
+    self.createOrderService.creteOrderWith(name: requestModel.firstName,
                                            success: { (order) in
                                             self.output.success(order: order)
                                           }, failure: { (createOrderError) in

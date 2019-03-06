@@ -39,8 +39,8 @@ class CreateOrderPresenter: CreateOrderController {
 
   // MARK: PRIVATE METHODS
 
-  private func notifyOrderCreationSuccess(orderID: Int) {
-    self.view.showToast(text: "La orden Nro " + String(describing: orderID) + "fué creada con éxito")
+  private func notifyOrderCreationSuccess(orderID: String) {
+    self.view.showToast(text: "La orden Nro " + orderID + "fué creada con éxito")
   }
 
   private func notifyOrderCreationFailed() {
@@ -61,6 +61,6 @@ extension CreateOrderPresenter: CreateOrderOutput {
   func failure(error: CreateOrderError) {
     self.view.hideLoader()
     notifyOrderCreationFailed()
-    self.view.close()
+    self.navigator.close(completion: nil)
   }
 }
