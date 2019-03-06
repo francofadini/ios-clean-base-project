@@ -37,6 +37,22 @@ class ListOrdersViewController: UIViewController {
   
   private func setupList() {
     self.list = ListOrganism()
+    addDeleteAction()
+    addEditAction()
+    self.addChild(childViewController: self.list!, to: self.view)
+  }
+  
+  private func addEditAction() {
+    self.list.addEditAction(action: UITableViewRowAction(
+      style: .normal,
+      title: Constants.Strings.General.editLabel,
+      handler: { (_, indexPath) in
+        let position = indexPath.row
+        self.presenter.didTapEditOrderButton(at: position)
+    }))
+  }
+  
+  private func addDeleteAction() {
     self.list.addEditAction(action: UITableViewRowAction(
       style: .destructive,
       title: Constants.Strings.General.deleteLabel,
@@ -44,7 +60,6 @@ class ListOrdersViewController: UIViewController {
         let position = indexPath.row
         self.presenter.didTapDeleteOrderButton(at: position)
     }))
-    self.addChild(childViewController: self.list!, to: self.view)
   }
 
   private func addAddOrderButton() {

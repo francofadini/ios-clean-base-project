@@ -39,6 +39,10 @@ class ListOrdersPresenter {
     self.navigator.presentCreateOrderView(orderCreationListener: self)
   }
   
+  func didTapEditOrderButton(at index: Int) {
+    let order = self.orders[index]
+  }
+  
   func didTapDeleteOrderButton(at index: Int) {
     let order = self.orders[index]
     let deleteOrderRequest = DeleteOrderRequest(orderId: order.identifier)

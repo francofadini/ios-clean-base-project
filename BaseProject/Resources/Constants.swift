@@ -40,6 +40,7 @@ struct Constants {
       static let confirmLabel = NSLocalizedString("Confirmar", comment: "General string for confirm action")
       static let sendLabel = NSLocalizedString("Enviar", comment: "General label for send")
       static let createLabel = NSLocalizedString("Crear", comment: "General label for create")
+      static let editLabel = NSLocalizedString("Editar", comment: "General label for edit")
 
       struct Errors {
         static let noInternetErrorMessage = NSLocalizedString("No hay internet", comment: "No internet general error message")
