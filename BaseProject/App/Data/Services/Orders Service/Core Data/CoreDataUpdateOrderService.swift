@@ -5,7 +5,7 @@ import CoreData
 class CoreDataUpdateOrderService: UpdateOrderService {
   func updateOrder(order: Order,
                    success: (Order) -> Void,
-                   failure: () -> Void) {
+                   failure: (UpdateOrderError) -> Void) {
     
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -24,10 +24,10 @@ class CoreDataUpdateOrderService: UpdateOrderService {
           return
         }
       }
-      failure()
+      failure(.other)
     } catch let error as NSError {
       print("Could not update. \(error), \(error.userInfo)")
-      failure()
+      failure(.other)
     }
   }
 }

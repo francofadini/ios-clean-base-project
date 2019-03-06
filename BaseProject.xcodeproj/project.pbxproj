@@ -337,6 +337,15 @@
 		EE9CC4B922308378001899B5 /* CoreDataUpdateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B822308378001899B5 /* CoreDataUpdateOrderService.swift */; };
 		EE9CC4BA22308378001899B5 /* CoreDataUpdateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B822308378001899B5 /* CoreDataUpdateOrderService.swift */; };
 		EE9CC4BB22308378001899B5 /* CoreDataUpdateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B822308378001899B5 /* CoreDataUpdateOrderService.swift */; };
+		EE9CC4BE22308430001899B5 /* UpdateOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4BD22308430001899B5 /* UpdateOrderInput.swift */; };
+		EE9CC4BF22308430001899B5 /* UpdateOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4BD22308430001899B5 /* UpdateOrderInput.swift */; };
+		EE9CC4C022308430001899B5 /* UpdateOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4BD22308430001899B5 /* UpdateOrderInput.swift */; };
+		EE9CC4C22230843B001899B5 /* UpdateOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C12230843B001899B5 /* UpdateOrderOutput.swift */; };
+		EE9CC4C32230843B001899B5 /* UpdateOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C12230843B001899B5 /* UpdateOrderOutput.swift */; };
+		EE9CC4C42230843B001899B5 /* UpdateOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C12230843B001899B5 /* UpdateOrderOutput.swift */; };
+		EE9CC4C622308443001899B5 /* UpdateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C522308443001899B5 /* UpdateOrderInteractor.swift */; };
+		EE9CC4C722308443001899B5 /* UpdateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C522308443001899B5 /* UpdateOrderInteractor.swift */; };
+		EE9CC4C822308443001899B5 /* UpdateOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4C522308443001899B5 /* UpdateOrderInteractor.swift */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -476,6 +485,9 @@
 		EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderInteractor.swift; sourceTree = "<group>"; };
 		EE9CC4B422308330001899B5 /* UpdateOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderService.swift; sourceTree = "<group>"; };
 		EE9CC4B822308378001899B5 /* CoreDataUpdateOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUpdateOrderService.swift; sourceTree = "<group>"; };
+		EE9CC4BD22308430001899B5 /* UpdateOrderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderInput.swift; sourceTree = "<group>"; };
+		EE9CC4C12230843B001899B5 /* UpdateOrderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderOutput.swift; sourceTree = "<group>"; };
+		EE9CC4C522308443001899B5 /* UpdateOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOrderInteractor.swift; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -812,6 +824,7 @@
 		6DC2079421B9BB4E000A6A5A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				EE9CC4BC22308421001899B5 /* Update Order */,
 				EE9CC4A722307644001899B5 /* Delete Order */,
 				6D111D7021CC0B6400A2DB6C /* Log Out */,
 				6D111D6321CBD1EF00A2DB6C /* Load Profile */,
@@ -1034,6 +1047,16 @@
 				EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */,
 			);
 			path = "Delete Order";
+			sourceTree = "<group>";
+		};
+		EE9CC4BC22308421001899B5 /* Update Order */ = {
+			isa = PBXGroup;
+			children = (
+				EE9CC4BD22308430001899B5 /* UpdateOrderInput.swift */,
+				EE9CC4C12230843B001899B5 /* UpdateOrderOutput.swift */,
+				EE9CC4C522308443001899B5 /* UpdateOrderInteractor.swift */,
+			);
+			path = "Update Order";
 			sourceTree = "<group>";
 		};
 		EEB0E6A921725E3600CAF99E = {
@@ -1475,6 +1498,7 @@
 				6DBA09EF21C92E8F003BA5F1 /* CreateOrderOutput.swift in Sources */,
 				6DBA09F021C92E8F003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8921C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				EE9CC4C42230843B001899B5 /* UpdateOrderOutput.swift in Sources */,
 				6D111D6F21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				EED20E11222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7C21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
@@ -1533,6 +1557,7 @@
 				6DBA0A0D21C92E8F003BA5F1 /* CreateOrderSceneConfigurator.swift in Sources */,
 				6DBA0AD121CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0ACA21C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
+				EE9CC4C022308430001899B5 /* UpdateOrderInput.swift in Sources */,
 				6DBA0A0E21C92E8F003BA5F1 /* Session.swift in Sources */,
 				6DBA0AEC21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A0F21C92E8F003BA5F1 /* APIRequestBuilder.swift in Sources */,
@@ -1547,6 +1572,7 @@
 				6DBA0A9521C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6D111D6C21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AFA21CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
+				EE9CC4C822308443001899B5 /* UpdateOrderInteractor.swift in Sources */,
 				6DBA0A1221C92E8F003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD621CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,
 				EE9CC496222F4C89001899B5 /* BaseProject.xcdatamodeld in Sources */,
@@ -1591,6 +1617,7 @@
 				6DBA0A3221C93125003BA5F1 /* CreateOrderOutput.swift in Sources */,
 				6DBA0A3321C93125003BA5F1 /* FormOrganism.swift in Sources */,
 				6DBA0A8821C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				EE9CC4C32230843B001899B5 /* UpdateOrderOutput.swift in Sources */,
 				6D111D6E21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				EED20E10222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7B21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
@@ -1649,6 +1676,7 @@
 				6DBA0A5021C93125003BA5F1 /* CreateOrderSceneConfigurator.swift in Sources */,
 				6DBA0AD021CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0AC921C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
+				EE9CC4BF22308430001899B5 /* UpdateOrderInput.swift in Sources */,
 				6DBA0A5121C93125003BA5F1 /* Session.swift in Sources */,
 				6DBA0AEB21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DBA0A5221C93125003BA5F1 /* APIRequestBuilder.swift in Sources */,
@@ -1663,6 +1691,7 @@
 				6DBA0A9421C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6D111D6B21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AF921CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
+				EE9CC4C722308443001899B5 /* UpdateOrderInteractor.swift in Sources */,
 				6DBA0A5521C93125003BA5F1 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD521CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,
 				EE9CC495222F4C89001899B5 /* BaseProject.xcdatamodeld in Sources */,
@@ -1707,6 +1736,7 @@
 				6DC2079A21B9BC62000A6A5A /* CreateOrderOutput.swift in Sources */,
 				6D8D371921BDEC9700B9BE66 /* FormOrganism.swift in Sources */,
 				6DBA0A8721C93B57003BA5F1 /* RegisterNavigator.swift in Sources */,
+				EE9CC4C22230843B001899B5 /* UpdateOrderOutput.swift in Sources */,
 				6D111D6D21CBD1EF00A2DB6C /* LoadProfileOutput.swift in Sources */,
 				EED20E0F222EC23C0049D139 /* CreateOrderService.swift in Sources */,
 				6D111D7A21CC0CA800A2DB6C /* LogoutInteractor.swift in Sources */,
@@ -1765,6 +1795,7 @@
 				6DFF50BB21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift in Sources */,
 				6DBA0ACF21CA8372003BA5F1 /* ImageLabelRowAtom.swift in Sources */,
 				6DBA0AC821C992B8003BA5F1 /* SimpleRowAtom.swift in Sources */,
+				EE9CC4BE22308430001899B5 /* UpdateOrderInput.swift in Sources */,
 				6DBA09CF21C80210003BA5F1 /* Session.swift in Sources */,
 				6DBA0AEA21CA911E003BA5F1 /* UpdateProfileOutput.swift in Sources */,
 				6DCAF94021C4326B00BFB240 /* APIRequestBuilder.swift in Sources */,
@@ -1779,6 +1810,7 @@
 				6DBA0A9321C93CF2003BA5F1 /* RegisterViewController.swift in Sources */,
 				6D111D6A21CBD1EF00A2DB6C /* LoadProfileInteractor.swift in Sources */,
 				6DBA0AF821CA95F4003BA5F1 /* APIUpdateProfileService.swift in Sources */,
+				EE9CC4C622308443001899B5 /* UpdateOrderInteractor.swift in Sources */,
 				6DCAF92521C2B9A100BFB240 /* ListOrdersInput.swift in Sources */,
 				6DBA0AD421CA8A45003BA5F1 /* ProfileViewController.swift in Sources */,
 				EE9CC494222F4C89001899B5 /* BaseProject.xcdatamodeld in Sources */,
