@@ -316,6 +316,12 @@
 		EE9CC49C222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
 		EE9CC49D222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
 		EE9CC49E222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
+		EE9CC4A0223073E7001899B5 /* DeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */; };
+		EE9CC4A1223073E7001899B5 /* DeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */; };
+		EE9CC4A2223073E7001899B5 /* DeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */; };
+		EE9CC4A42230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
+		EE9CC4A52230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
+		EE9CC4A62230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -448,6 +454,8 @@
 		EE9CC493222F4C89001899B5 /* BaseProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseProject.xcdatamodel; sourceTree = "<group>"; };
 		EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOrdersPersistanceService.swift; sourceTree = "<group>"; };
 		EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderService.swift; sourceTree = "<group>"; };
+		EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteOrderService.swift; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -898,6 +906,7 @@
 				6DCAF93721C3F8FF00BFB240 /* API */,
 				6DCAF93221C3F82000BFB240 /* ListOrdersService.swift */,
 				EED20E0E222EC23C0049D139 /* CreateOrderService.swift */,
+				EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */,
 			);
 			path = "Orders Service";
 			sourceTree = "<group>";
@@ -989,6 +998,7 @@
 				EE9CC485222F44FC001899B5 /* CoreDataCreateOrderService.swift */,
 				EE9CC489222F48ED001899B5 /* CoreDataListOrdersService.swift */,
 				EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */,
+				EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -1442,6 +1452,7 @@
 				6DBA0AC121C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DBA09F521C92E8F003BA5F1 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA821C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4A2223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFE21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB421C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
 				6DBA09F621C92E8F003BA5F1 /* Order.swift in Sources */,
@@ -1461,6 +1472,7 @@
 				6DBA09FF21C92E8F003BA5F1 /* OrdersRepository.swift in Sources */,
 				EE9CC48C222F48ED001899B5 /* CoreDataListOrdersService.swift in Sources */,
 				6DBA0A7E21C93953003BA5F1 /* RegisterService.swift in Sources */,
+				EE9CC4A62230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */,
 				6DBA0A0021C92E8F003BA5F1 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA0A0121C92E8F003BA5F1 /* Configurator.swift in Sources */,
 				6DBA0A0221C92E8F003BA5F1 /* TextInputRowAtom.swift in Sources */,
@@ -1551,6 +1563,7 @@
 				6DBA0AC021C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DBA0A3821C93125003BA5F1 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA721C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4A1223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFD21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB321C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
 				6DBA0A3921C93125003BA5F1 /* Order.swift in Sources */,
@@ -1570,6 +1583,7 @@
 				6DBA0A4221C93125003BA5F1 /* OrdersRepository.swift in Sources */,
 				EE9CC48B222F48ED001899B5 /* CoreDataListOrdersService.swift in Sources */,
 				6DBA0A7D21C93953003BA5F1 /* RegisterService.swift in Sources */,
+				EE9CC4A52230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */,
 				6DBA0A4321C93125003BA5F1 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA0A4421C93125003BA5F1 /* Configurator.swift in Sources */,
 				6DBA0A4521C93125003BA5F1 /* TextInputRowAtom.swift in Sources */,
@@ -1660,6 +1674,7 @@
 				6DBA0ABF21C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DCAF91A21C2B8FC00BFB240 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA621C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4A0223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFC21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB221C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
 				6DC2078D21B9A01E000A6A5A /* Order.swift in Sources */,
@@ -1679,6 +1694,7 @@
 				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
 				EE9CC48A222F48ED001899B5 /* CoreDataListOrdersService.swift in Sources */,
 				6DBA0A7C21C93953003BA5F1 /* RegisterService.swift in Sources */,
+				EE9CC4A42230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */,
 				6DCAF91E21C2B91A00BFB240 /* ListOrdersConfigurator.swift in Sources */,
 				6DBA09DF21C924CE003BA5F1 /* Configurator.swift in Sources */,
 				6DFF50C021BD2143007B1630 /* TextInputRowAtom.swift in Sources */,

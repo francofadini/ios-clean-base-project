@@ -28,7 +28,6 @@ class CoreDataCreateOrderService: CreateOrderService {
     let orderID = coreDataOrder.objectID.uriRepresentation().absoluteString
     let order = Order(identifier: orderID, firstName: name)
     
-    // 4
     do {
       try managedContext.save()
       success(order)
