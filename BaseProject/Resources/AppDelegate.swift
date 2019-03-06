@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     customize()
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.window?.rootViewController = LandingViewController()
+    self.window?.rootViewController = LandingSceneConfigurator.configure()
     self.window?.makeKeyAndVisible()
     return true
   }

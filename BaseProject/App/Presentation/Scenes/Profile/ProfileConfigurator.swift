@@ -11,14 +11,9 @@ protocol ProfileController {
 
 // MARK: CONFIGURATOR
 
-protocol ProfileSceneConfigurator: Configurator {
-  func configure(view: ProfileViewController)
-}
-
-// MARK: DEFAULT CONFIGURATOR
-
-class ProfileSceneConfiguratorImp: ProfileSceneConfigurator {
-  func configure(view: ProfileViewController) {
+class ProfileSceneConfigurator {
+  static func configure() -> ProfileViewController {
+    let view = ProfileViewController()
     let navigator = ProfileNavigator(viewController: view)
     let presenter = ProfilePresenter(view: view, navigator: navigator)
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
@@ -31,5 +26,6 @@ class ProfileSceneConfiguratorImp: ProfileSceneConfigurator {
                                                       sessionPersistantService: currentSessionService)
     presenter.loadProfileInput = loadProfileInteractor
     view.presenter = presenter
+    return view
   }
 }

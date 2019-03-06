@@ -12,17 +12,6 @@ class LoginViewController: UIViewController {
 
   var presenter: LoginPresenter!
 
-  // MARK: INITIALIZER
-
-  init(configurator: LoginSceneConfigurator = LoginSceneConfiguratorImp()) {
-    super.init(nibName: nil, bundle: nil)
-    configurator.configure(view: self)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-
   // MARK: VIEW LIFE CYCLE
 
   override func viewDidLoad() {

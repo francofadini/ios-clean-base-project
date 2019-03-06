@@ -8,25 +8,12 @@ class MainNavigationViewController: UITabBarController {
 
   // MARK: PRIVATE ATTRIBUTES
 
-  private let configurator: MainNavigationSceneConfigurator
   private var viewControllersList = [UIViewController]()
-
-  // MARK: INITIALIZER
-
-  init(configurator: MainNavigationSceneConfigurator = MainNavigationSceneConfiguratorImp()) {
-    self.configurator = configurator
-    super.init(nibName: nil, bundle: nil)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
 
   // MARK: VIEW LIFE CYCLE
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    configurator.configure(view: self)
     customize()
     self.presenter.didLoadView()
   }
@@ -46,13 +33,13 @@ class MainNavigationViewController: UITabBarController {
 
 extension MainNavigationViewController: MainNavigationView {
   func addAccountTab() {
-    let myAccountContainer = AccountViewController()
+    let myAccountContainer = AccountSceneConfigurator.configure()
     myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.Account.accountTitle, image: #imageLiteral(resourceName: "ic_account"), tag: 0)
     addNavigationViewControllerWith(root: myAccountContainer)
   }
 
   func addCRUDLTab() {
-    let myAccountContainer = ListOrdersViewController()
+    let myAccountContainer = ListOrdersSceneConfigurator.configure()
     myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.CRUDL.crudlTitle, image: #imageLiteral(resourceName: "ic_crudl"), tag: 1)
     addNavigationViewControllerWith(root: myAccountContainer)
   }

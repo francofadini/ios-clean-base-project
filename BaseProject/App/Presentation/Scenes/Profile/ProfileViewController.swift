@@ -12,17 +12,6 @@ class ProfileViewController: UIViewController {
 
   var presenter: ProfilePresenter!
 
-  // MARK: INITIALIZER
-
-  init(configurator: ProfileSceneConfigurator = ProfileSceneConfiguratorImp()) {
-    super.init(nibName: nil, bundle: nil)
-    configurator.configure(view: self)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-
   // MARK: VIEW LIFE CYCLE
 
   override func viewDidLoad() {

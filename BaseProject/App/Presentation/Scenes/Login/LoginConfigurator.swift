@@ -9,14 +9,9 @@ protocol LoginController {
 
 // MARK: CONFIGURATOR
 
-protocol LoginSceneConfigurator: Configurator {
-  func configure(view: LoginViewController)
-}
-
-// MARK: DEFAULT CONFIGURATOR
-
-class LoginSceneConfiguratorImp: LoginSceneConfigurator {
-  func configure(view: LoginViewController) {
+class LoginSceneConfigurator {
+  static func configure() -> LoginViewController {
+    let view = LoginViewController()
     let navigator = LoginNavigator(viewController: view)
     let presenter = LoginPresenter(view: view, navigator: navigator)
     let loginService = APILoginService()
@@ -26,5 +21,6 @@ class LoginSceneConfiguratorImp: LoginSceneConfigurator {
                                      sessionPersistantService: currentSessionService)
     presenter.loginInput = interactor
     view.presenter = presenter
+    return view
   }
 }

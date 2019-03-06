@@ -12,17 +12,6 @@ class LandingViewController: UIViewController {
 
   var presenter: LandingPresenter!
 
-  // MARK: INITIALIZER
-
-  init(configurator: LandingSceneConfigurator = LandingSceneConfiguratorImp()) {
-    super.init(nibName: nil, bundle: nil)
-    configurator.configure(view: self)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-
   // MARK: VIEW LIFE CYCLE
 
   override func viewDidLoad() {

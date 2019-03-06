@@ -3,19 +3,19 @@ import UIKit
 
 class LandingNavigator: Navigator {
   func presentLogin() {
-    let loginVC = UINavigationController(rootViewController: LoginViewController())
-    self.present(destination: loginVC, completion: nil)
+    let loginVC = LoginSceneConfigurator.configure()
+    self.present(destination: UINavigationController(rootViewController: loginVC), completion: nil)
   }
 
   func presentRegister() {
-    let registerVC = UINavigationController(rootViewController: RegisterViewController())
-    self.present(destination: registerVC, completion: nil)
+    let registerVC = RegisterSceneConfigurator.configure()
+    self.present(destination: UINavigationController(rootViewController: registerVC), completion: nil)
   }
 
   func presentMainView() {
     DispatchQueue.main.async {
       self.viewController?.dismiss(animated: false, completion: nil)
-      let mainViewNav = MainNavigationViewController()
+      let mainViewNav = MainNavigationSceneConfigurator.configure()
       UIApplication.shared.keyWindow?.rootViewController = mainViewNav
     }
   }

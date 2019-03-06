@@ -9,14 +9,9 @@ protocol RegisterController {
 
 // MARK: CONFIGURATOR
 
-protocol RegisterSceneConfigurator: Configurator {
-  func configure(view: RegisterViewController)
-}
-
-// MARK: DEFAULT CONFIGURATOR
-
-class RegisterSceneConfiguratorImp: RegisterSceneConfigurator {
-  func configure(view: RegisterViewController) {
+class RegisterSceneConfigurator {
+  static func configure() -> RegisterViewController {
+    let view = RegisterViewController()
     let navigator = RegisterNavigator(viewController: view)
     let presenter = RegisterPresenter(view: view, navigator: navigator)
     let registerService = APIRegisterService()
@@ -26,5 +21,6 @@ class RegisterSceneConfiguratorImp: RegisterSceneConfigurator {
                                      sessionPersistantService: currentSessionService)
     presenter.registerInput = interactor
     view.presenter = presenter
+    return view
   }
 }

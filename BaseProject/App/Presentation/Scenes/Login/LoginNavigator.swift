@@ -9,7 +9,7 @@ class LoginNavigator: Navigator {
 
   func openMainView() {
     self.viewController?.dismiss(animated: true, completion: nil)
-    let mainViewNav = MainNavigationViewController()
+    let mainViewNav = MainNavigationSceneConfigurator.configure()
     UIApplication.shared.keyWindow?.rootViewController = mainViewNav
   }
 }

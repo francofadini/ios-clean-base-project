@@ -2,14 +2,9 @@ import Foundation
 
 // MARK: CONFIGURATOR
 
-protocol AccountSceneConfigurator: Configurator {
-  func configure(view: AccountViewController)
-}
-
-// MARK: DEFAULT CONFIGURATOR
-
-class AccountSceneConfiguratorImp: AccountSceneConfigurator {
-  func configure(view: AccountViewController) {
+class AccountSceneConfigurator {
+  static func configure() -> AccountViewController {
+    let view = AccountViewController()
     let navigator = AccountNavigator(viewController: view)
     let presenter = AccountPresenter(view: view, navigator: navigator)
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
@@ -17,5 +12,6 @@ class AccountSceneConfiguratorImp: AccountSceneConfigurator {
                                             sessionPersistantService: currentSessionService)
     presenter.logoutInput = logoutInteractor
     view.presenter = presenter
+    return view
   }
 }

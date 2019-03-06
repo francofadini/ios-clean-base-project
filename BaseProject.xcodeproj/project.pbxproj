@@ -601,13 +601,6 @@
 			path = "Current Session";
 			sourceTree = "<group>";
 		};
-		6DBA09E021C926F3003BA5F1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		6DBA09E121C9270D003BA5F1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,7 +738,6 @@
 			isa = PBXGroup;
 			children = (
 				6DFF50BC21BD20C6007B1630 /* UI Atomic Library */,
-				6DBA09E021C926F3003BA5F1 /* Resources */,
 				6DC207A721B9C030000A6A5A /* Scenes */,
 			);
 			path = Presentation;

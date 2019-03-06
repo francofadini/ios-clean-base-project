@@ -3,12 +3,13 @@ import UIKit
 
 class AccountNavigator: Navigator {
   func pushProfile() {
-    self.push(destination: ProfileViewController())
+    let profileVC = ProfileSceneConfigurator.configure()
+    self.push(destination: profileVC)
   }
 
   func showLanding() {
     self.viewController?.dismiss(animated: true, completion: nil)
-    let mainViewNav = LandingViewController()
+    let mainViewNav = LandingSceneConfigurator.configure()
     UIApplication.shared.keyWindow?.rootViewController = mainViewNav
   }
 }

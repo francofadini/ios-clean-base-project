@@ -9,14 +9,9 @@ protocol LandingController {
 
 // MARK: CONFIGURATOR
 
-protocol LandingSceneConfigurator: Configurator {
-  func configure(view: LandingViewController)
-}
-
-// MARK: DEFAULT CONFIGURATOR
-
-class LandingSceneConfiguratorImp: LandingSceneConfigurator {
-  func configure(view: LandingViewController) {
+class LandingSceneConfigurator {
+  static func configure() -> LandingViewController {
+    let view = LandingViewController()
     let navigator = LandingNavigator(viewController: view)
     let sessionService = CurrentSessionPersistantServiceLocator.defaultService
     let presenter = LandingPresenter(view: view, navigator: navigator)
@@ -24,5 +19,6 @@ class LandingSceneConfiguratorImp: LandingSceneConfigurator {
                                                   sessionPersistantService: sessionService)
     presenter.autologinInput = autologinInteractor
     view.presenter = presenter
+    return view
   }
 }
