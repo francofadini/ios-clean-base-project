@@ -322,6 +322,15 @@
 		EE9CC4A42230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
 		EE9CC4A52230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
 		EE9CC4A62230743E001899B5 /* CoreDataDeleteOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */; };
+		EE9CC4A922307659001899B5 /* DeleteOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A822307659001899B5 /* DeleteOrderInput.swift */; };
+		EE9CC4AA22307659001899B5 /* DeleteOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A822307659001899B5 /* DeleteOrderInput.swift */; };
+		EE9CC4AB22307659001899B5 /* DeleteOrderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4A822307659001899B5 /* DeleteOrderInput.swift */; };
+		EE9CC4AD22307663001899B5 /* DeleteOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4AC22307663001899B5 /* DeleteOrderOutput.swift */; };
+		EE9CC4AE22307663001899B5 /* DeleteOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4AC22307663001899B5 /* DeleteOrderOutput.swift */; };
+		EE9CC4AF22307663001899B5 /* DeleteOrderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4AC22307663001899B5 /* DeleteOrderOutput.swift */; };
+		EE9CC4B122307671001899B5 /* DeleteOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */; };
+		EE9CC4B222307671001899B5 /* DeleteOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */; };
+		EE9CC4B322307671001899B5 /* DeleteOrderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -456,6 +465,9 @@
 		EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		EE9CC49F223073E7001899B5 /* DeleteOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderService.swift; sourceTree = "<group>"; };
 		EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteOrderService.swift; sourceTree = "<group>"; };
+		EE9CC4A822307659001899B5 /* DeleteOrderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderInput.swift; sourceTree = "<group>"; };
+		EE9CC4AC22307663001899B5 /* DeleteOrderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderOutput.swift; sourceTree = "<group>"; };
+		EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOrderInteractor.swift; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -792,6 +804,7 @@
 		6DC2079421B9BB4E000A6A5A /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				EE9CC4A722307644001899B5 /* Delete Order */,
 				6D111D7021CC0B6400A2DB6C /* Log Out */,
 				6D111D6321CBD1EF00A2DB6C /* Load Profile */,
 				6DBA0AE421CA90CC003BA5F1 /* Update Profile */,
@@ -1001,6 +1014,16 @@
 				EE9CC4A32230743E001899B5 /* CoreDataDeleteOrderService.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		EE9CC4A722307644001899B5 /* Delete Order */ = {
+			isa = PBXGroup;
+			children = (
+				EE9CC4A822307659001899B5 /* DeleteOrderInput.swift */,
+				EE9CC4AC22307663001899B5 /* DeleteOrderOutput.swift */,
+				EE9CC4B022307671001899B5 /* DeleteOrderInteractor.swift */,
+			);
+			path = "Delete Order";
 			sourceTree = "<group>";
 		};
 		EEB0E6A921725E3600CAF99E = {
@@ -1427,6 +1450,7 @@
 				6DBA09E721C92E8F003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8321C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				EED20E15222EC3070049D139 /* APICreateOrderService.swift in Sources */,
+				EE9CC4AB22307659001899B5 /* DeleteOrderInput.swift in Sources */,
 				6DBA09E821C92E8F003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09E921C92E8F003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9A21C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1452,6 +1476,7 @@
 				6DBA0AC121C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DBA09F521C92E8F003BA5F1 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA821C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4B322307671001899B5 /* DeleteOrderInteractor.swift in Sources */,
 				EE9CC4A2223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFE21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB421C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
@@ -1467,6 +1492,7 @@
 				6DBA0A7521C93663003BA5F1 /* RegisterOutput.swift in Sources */,
 				6DBA09FD21C92E8F003BA5F1 /* AppDelegate.swift in Sources */,
 				6DBA09FE21C92E8F003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
+				EE9CC4AF22307663001899B5 /* DeleteOrderOutput.swift in Sources */,
 				6D111D8121CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
 				6DBA0A7921C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA09FF21C92E8F003BA5F1 /* OrdersRepository.swift in Sources */,
@@ -1538,6 +1564,7 @@
 				6DBA0A2A21C93125003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8221C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				EED20E14222EC3070049D139 /* APICreateOrderService.swift in Sources */,
+				EE9CC4AA22307659001899B5 /* DeleteOrderInput.swift in Sources */,
 				6DBA0A2B21C93125003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA0A2C21C93125003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9921C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1563,6 +1590,7 @@
 				6DBA0AC021C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DBA0A3821C93125003BA5F1 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA721C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4B222307671001899B5 /* DeleteOrderInteractor.swift in Sources */,
 				EE9CC4A1223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFD21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB321C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
@@ -1578,6 +1606,7 @@
 				6DBA0A7421C93663003BA5F1 /* RegisterOutput.swift in Sources */,
 				6DBA0A4021C93125003BA5F1 /* AppDelegate.swift in Sources */,
 				6DBA0A4121C93125003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
+				EE9CC4AE22307663001899B5 /* DeleteOrderOutput.swift in Sources */,
 				6D111D8021CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
 				6DBA0A7821C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DBA0A4221C93125003BA5F1 /* OrdersRepository.swift in Sources */,
@@ -1649,6 +1678,7 @@
 				6DBA09DA21C822AB003BA5F1 /* SessionPersistantService.swift in Sources */,
 				6DBA0A8121C93982003BA5F1 /* APIRegisterService.swift in Sources */,
 				EED20E13222EC3070049D139 /* APICreateOrderService.swift in Sources */,
+				EE9CC4A922307659001899B5 /* DeleteOrderInput.swift in Sources */,
 				6DBA09CD21C80179003BA5F1 /* LoginConfigurator.swift in Sources */,
 				6DBA09D721C80E61003BA5F1 /* LoginNavigator.swift in Sources */,
 				6DBA0A9821C95FF4003BA5F1 /* AutoLoginInput.swift in Sources */,
@@ -1674,6 +1704,7 @@
 				6DBA0ABF21C98EFF003BA5F1 /* AccountConfigurator.swift in Sources */,
 				6DCAF91A21C2B8FC00BFB240 /* ListOrdersPresenter.swift in Sources */,
 				6DBA0AA621C98193003BA5F1 /* MainNavigationViewController.swift in Sources */,
+				EE9CC4B122307671001899B5 /* DeleteOrderInteractor.swift in Sources */,
 				EE9CC4A0223073E7001899B5 /* DeleteOrderService.swift in Sources */,
 				6DBA0AFC21CA989B003BA5F1 /* Profile.swift in Sources */,
 				6DBA0AB221C98463003BA5F1 /* MainNavigationConfigurator.swift in Sources */,
@@ -1689,6 +1720,7 @@
 				6DBA0A7321C93663003BA5F1 /* RegisterOutput.swift in Sources */,
 				EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */,
 				6DBA09DD21C82325003BA5F1 /* UserDefaultsSessionService.swift in Sources */,
+				EE9CC4AD22307663001899B5 /* DeleteOrderOutput.swift in Sources */,
 				6D111D7F21CC298B00A2DB6C /* SimpleButtonRowAtom.swift in Sources */,
 				6DBA0A7721C936AF003BA5F1 /* RegisterInteractor.swift in Sources */,
 				6DCAF91521C1AF3D00BFB240 /* OrdersRepository.swift in Sources */,
