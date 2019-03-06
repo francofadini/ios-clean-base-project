@@ -4,9 +4,8 @@ import Foundation
 
 class MainNavigationSceneConfigurator {
   static func configure() -> MainNavigationViewController {
-    let view = MainNavigationViewController()
-    let presenter = MainNavigationPresenter(view: view)
-    view.presenter = presenter
+    let presenter = MainNavigationPresenter()
+    let view = MainNavigationViewController(presenter: presenter)
     return view
   }
 }

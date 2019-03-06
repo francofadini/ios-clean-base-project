@@ -4,18 +4,29 @@ class MainNavigationViewController: UITabBarController {
 
   // MARK: INTERNAL ATTRIBUTES
 
-  var presenter: MainNavigationPresenter!
+  var presenter: MainNavigationPresenter
 
   // MARK: PRIVATE ATTRIBUTES
 
   private var viewControllersList = [UIViewController]()
+  
+  // MARK: INITIALIZER
+  
+  init(presenter: MainNavigationPresenter) {
+    self.presenter = presenter
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   // MARK: VIEW LIFE CYCLE
 
   override func viewDidLoad() {
     super.viewDidLoad()
     customize()
-    self.presenter.didLoadView()
+    self.presenter.didLoadView(view: self)
   }
 
   // MARK: PRIVATE METHODS

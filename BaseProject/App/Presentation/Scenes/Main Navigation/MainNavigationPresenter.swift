@@ -13,15 +13,10 @@ class MainNavigationPresenter {
 
   private weak var view: MainNavigationView!
 
-  // MARK: INITIALIZER
-
-  init(view: MainNavigationView) {
-    self.view = view
-  }
-
   // MARK: VIEW EVENTS
 
-  func didLoadView() {
+  func didLoadView(view: MainNavigationView) {
+    self.view = view
     self.view.addCRUDLTab()
     self.view.addAccountTab()
   }
