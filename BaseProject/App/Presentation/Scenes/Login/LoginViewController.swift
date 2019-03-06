@@ -2,15 +2,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+  // MARK: INTERNAL ATTRIBUTES
+  
+  var presenter: LoginPresenter!
+  
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
   private let usernameInput = TextInputRowAtom()
   private let passwordInput = TextInputRowAtom()
-
-  // MARK: INTERNAL ATTRIBUTES
-
-  var presenter: LoginPresenter!
 
   // MARK: VIEW LIFE CYCLE
 

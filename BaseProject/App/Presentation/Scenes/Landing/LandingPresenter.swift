@@ -9,7 +9,7 @@ protocol LandingView: class {
 
 class LandingPresenter: LandingController {
 
-  // MARK: INTERNAL
+  // MARK: INTERNAL ATTRIBUTES
 
   var autologinInput: AutologinInput!
   var autologinRequest = AutologinRequest()

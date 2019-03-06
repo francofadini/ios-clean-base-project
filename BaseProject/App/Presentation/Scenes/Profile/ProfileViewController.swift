@@ -2,15 +2,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+  // MARK: INTERNAL ATTRIBUTES
+  
+  var presenter: ProfilePresenter!
+  
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
   private let firstNameInput = TextInputRowAtom()
   private let lastNameInput = TextInputRowAtom()
-
-  // MARK: INTERNAL ATTRIBUTES
-
-  var presenter: ProfilePresenter!
 
   // MARK: VIEW LIFE CYCLE
 

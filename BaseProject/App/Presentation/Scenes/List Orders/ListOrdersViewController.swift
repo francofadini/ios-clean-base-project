@@ -4,15 +4,13 @@ class ListOrdersViewController: UIViewController {
 
   // MARK: OUTLETS
 
-  // MARK: PRIVATE ATTRIBUTES
-
-  //UI
-  private var list: ListOrganism<ImageLabelTableViewCell>?
-
-  // MARK: PUBLIC ATTRIBUTES
-
-  //Presentation
+  // MARK: INTERNAL ATTRIBUTES
+  
   var presenter: ListOrdersPresenter!
+  
+  // MARK: PRIVATE ATTRIBUTES
+  
+  private var list: ListOrganism<ImageLabelTableViewCell>?
 
   // MARK: VIEW LIFE CYCLE
 

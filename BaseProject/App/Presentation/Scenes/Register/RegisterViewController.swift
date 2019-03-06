@@ -2,16 +2,17 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+  
+  // MARK: INTERNAL ATTRIBUTES
+  
+  var presenter: RegisterPresenter!
+  
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
   private let usernameInput = TextInputRowAtom()
   private let passwordInput = TextInputRowAtom()
   private let repeatedPasswordInput = TextInputRowAtom()
-
-  // MARK: INTERNAL ATTRIBUTES
-
-  var presenter: RegisterPresenter!
 
   // MARK: VIEW LIFE CYCLE
 

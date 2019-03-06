@@ -3,15 +3,15 @@ import  UIKit
 
 class AccountViewController: UIViewController {
 
+  // MARK: INTERNAL ATTRIBUTES
+  
+  var presenter: AccountPresenter!
+  
   // MARK: PRIVATE ATTRIBUTES
 
   private let table = TableOrganism()
   private let profileRow = ImageLabelRowAtom()
   private let logoutButtonRow = SimpleButtonRowAtom()
-
-  // MARK: INTERNAL ATTRIBUTES
-
-  var presenter: AccountPresenter!
 
   // MARK: VIEW LIFE CYCLE
 

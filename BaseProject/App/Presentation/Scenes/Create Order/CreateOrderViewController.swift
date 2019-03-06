@@ -4,14 +4,15 @@ class CreateOrderViewController: UIViewController {
 
   // MARK: OUTLETS
 
+  
+  // MARK: INTERNAL ATTRIBUTES
+  
+  var presenter: CreateOrderPresenter!
+  
   // MARK: PRIVATE ATTRIBUTES
 
   private let form = FormOrganism()
   private let firstNameInput = TextInputRowAtom()
-
-  // MARK: PUBLIC ATTRIBUTES
-
-  var presenter: CreateOrderPresenter!
 
   // MARK: VIEW LIFE CYCLE
 
