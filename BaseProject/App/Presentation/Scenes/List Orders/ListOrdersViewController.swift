@@ -30,7 +30,7 @@ class ListOrdersViewController: UIViewController {
   // MARK: PRIVATE METHODS
 
   private func configure() {
-    self.title = "Ordenes"
+    self.title = Constants.Strings.Orders.ordersTitle
     self.view.backgroundColor = .white
   }
 

@@ -4,7 +4,6 @@ class CreateOrderViewController: UIViewController {
 
   // MARK: OUTLETS
 
-  
   // MARK: INTERNAL ATTRIBUTES
   
   var presenter: CreateOrderPresenter!
@@ -38,7 +37,7 @@ class CreateOrderViewController: UIViewController {
   // MARK: PRIVATE METHODS
 
   private func configure() {
-    self.title = "Crear Orden"
+    self.title = Constants.Strings.Orders.createOrderTitle
   }
 
   private func addSubmitButton() {
@@ -51,7 +50,7 @@ class CreateOrderViewController: UIViewController {
   }
 
   private func configureInputs() {
-    firstNameInput.data.label = "Nombre"
+    firstNameInput.data.label = Constants.Strings.Orders.orderNameLabel
   }
 
   private func buildForm() {

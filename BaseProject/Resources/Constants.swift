@@ -88,8 +88,10 @@ struct Constants {
       }
     }
 
-    struct CRUDL {
-      static let crudlTitle = NSLocalizedString("ABML", comment: "CRUDL title")
+    struct Orders {
+      static let ordersTitle = NSLocalizedString("Ordenes", comment: "Orders title")
+      static let createOrderTitle = NSLocalizedString("Crear Orden", comment: "Create order title")
+      static let orderNameLabel = NSLocalizedString("Nombre", comment: "Order name label")
     }
 
   }

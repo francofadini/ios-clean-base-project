@@ -49,9 +49,9 @@ extension MainNavigationViewController: MainNavigationView {
     addNavigationViewControllerWith(root: myAccountContainer)
   }
 
-  func addCRUDLTab() {
+  func addOrdersTab() {
     let myAccountContainer = ListOrdersSceneConfigurator.configure()
-    myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.CRUDL.crudlTitle, image: #imageLiteral(resourceName: "ic_crudl"), tag: 1)
+    myAccountContainer.tabBarItem = UITabBarItem(title: Constants.Strings.Orders.ordersTitle, image: #imageLiteral(resourceName: "ic_crudl"), tag: 1)
     addNavigationViewControllerWith(root: myAccountContainer)
   }
 }

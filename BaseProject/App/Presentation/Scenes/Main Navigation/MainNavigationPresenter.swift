@@ -4,7 +4,7 @@ import Foundation
 
 protocol MainNavigationView: class {
   func addAccountTab()
-  func addCRUDLTab()
+  func addOrdersTab()
 }
 
 class MainNavigationPresenter {
@@ -17,7 +17,7 @@ class MainNavigationPresenter {
 
   func didLoadView(view: MainNavigationView) {
     self.view = view
-    self.view.addCRUDLTab()
+    self.view.addOrdersTab()
     self.view.addAccountTab()
   }
 
