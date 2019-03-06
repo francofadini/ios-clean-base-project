@@ -31,7 +31,7 @@ struct Constants {
     struct General {
       static let acceptLabel = NSLocalizedString("Aceptar", comment: "General string for accept action")
       static let cancelLabel = NSLocalizedString("Cancelar", comment: "General string for cancel action")
-      static let removeLabel = NSLocalizedString("Eliminar", comment: "General string for remove action")
+      static let deleteLabel = NSLocalizedString("Eliminar", comment: "General string for remove action")
       static let saveLabel = NSLocalizedString("Guardar", comment: "General string for save action")
       static let selectLabel = NSLocalizedString("Seleccionar", comment: "General string for select action")
       static let okDefaultAlertLabel = NSLocalizedString("OK", comment: "General string for ok action")
@@ -39,6 +39,7 @@ struct Constants {
       static let loadingLabel = NSLocalizedString("Cargando...", comment: "General string for loading label")
       static let confirmLabel = NSLocalizedString("Confirmar", comment: "General string for confirm action")
       static let sendLabel = NSLocalizedString("Enviar", comment: "General label for send")
+      static let createLabel = NSLocalizedString("Crear", comment: "General label for create")
 
       struct Errors {
         static let noInternetErrorMessage = NSLocalizedString("No hay internet", comment: "No internet general error message")

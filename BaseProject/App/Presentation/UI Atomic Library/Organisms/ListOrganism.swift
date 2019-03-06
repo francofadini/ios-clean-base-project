@@ -11,6 +11,8 @@ public protocol ListOrganismCell {
 public class ListOrganism<Cell: UITableViewCell & ListOrganismCell>: UITableViewController {
   var data = [Cell.ViewDataType]()
   var cellHeight: CGFloat = 44.0
+  
+  private var editActions = [UITableViewRowAction]()
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,9 +46,22 @@ public class ListOrganism<Cell: UITableViewCell & ListOrganismCell>: UITableView
   public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
   }
+  
+  public override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return editActions.count > 0
+  }
+  
+  public override func tableView(_ tableView: UITableView,
+                                 editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    return editActions
+  }
 
   public func reload(with data: [Cell.ViewDataType]) {
     self.data = data
     self.tableView.reloadData()
+  }
+  
+  public func addEditAction(action: UITableViewRowAction) {
+    self.editActions.append(action)
   }
 }

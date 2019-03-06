@@ -10,7 +10,7 @@ class ListOrdersViewController: UIViewController {
   
   // MARK: PRIVATE ATTRIBUTES
   
-  private var list: ListOrganism<SimpleTableViewCell>?
+  private var list: ListOrganism<SimpleTableViewCell>!
 
   // MARK: VIEW LIFE CYCLE
 
@@ -32,6 +32,19 @@ class ListOrdersViewController: UIViewController {
   private func configure() {
     self.title = Constants.Strings.Orders.ordersTitle
     self.view.backgroundColor = .white
+    setupList()
+  }
+  
+  private func setupList() {
+    self.list = ListOrganism()
+    self.list.addEditAction(action: UITableViewRowAction(
+      style: .destructive,
+      title: Constants.Strings.General.deleteLabel,
+      handler: { (_, indexPath) in
+        let position = indexPath.row
+        self.presenter.didTapDeleteOrderButton(at: position)
+    }))
+    self.addChild(childViewController: self.list!, to: self.view)
   }
 
   private func addAddOrderButton() {
@@ -50,11 +63,7 @@ extension ListOrdersViewController: ListOrdersView {
   func hideLoader() {}
 
   func relaodListWith(data: [SimpleCellViewData]) {
-    if self.list == nil {
-      self.list = ListOrganism()
-      self.addChild(childViewController: self.list!, to: self.view)
-    }
-    self.list?.reload(with: data)
+    self.list.reload(with: data)
   }
 
   func showToast(text: String) {}

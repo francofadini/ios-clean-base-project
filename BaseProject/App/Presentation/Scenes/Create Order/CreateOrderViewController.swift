@@ -41,7 +41,7 @@ class CreateOrderViewController: UIViewController {
   }
 
   private func addSubmitButton() {
-    let submitButton = UIBarButtonItem(title: Constants.Strings.General.sendLabel,
+    let submitButton = UIBarButtonItem(title: Constants.Strings.General.createLabel,
                                        style: .done,
                                        target: self,
                                        action: #selector(createOrderButtonAction))

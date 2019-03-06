@@ -3,7 +3,9 @@ import UIKit
 import CoreData
 
 class CoreDataDeleteOrderService: DeleteOrderService {
-  func delteOrder(with id: String, success: () -> Void, failure: () -> Void) {
+  func delteOrder(with identifier: String,
+                  success: () -> Void,
+                  failure: () -> Void) {
     guard let appDelegate =
       UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -18,7 +20,7 @@ class CoreDataDeleteOrderService: DeleteOrderService {
     do {
       let coreDataOrders = try managedContext.fetch(fetchRequest)
       for coreDataOrder in coreDataOrders {
-        if coreDataOrder.objectID.uriRepresentation().absoluteString == id {
+        if coreDataOrder.objectID.uriRepresentation().absoluteString == identifier {
           managedContext.delete(coreDataOrder)
           success()
           return

@@ -1,12 +1,5 @@
 import Foundation
 
-// MARK: CONTROLLER
-
-protocol ListOrdersController {
-  var listOrdersInput: ListOrdersInput! {get set}
-  var listOrdersRequest: ListOrdersRequest {get set}
-}
-
 // MARK: CONFIGURATOR
 
 class ListOrdersSceneConfigurator {
@@ -20,8 +13,11 @@ class ListOrdersSceneConfigurator {
     let listOrdersService = OrdersRepository(remote: remoteListOrdersService,
                                              local: localListOrdersService,
                                              ordersPersistanceService: ordersPersistanceService)
-    let interactor = ListOrdersInteractor(output: presenter, listOrdersService: listOrdersService)
-    presenter.listOrdersInput = interactor
+    let listOrdersInteractor = ListOrdersInteractor(output: presenter, listOrdersService: listOrdersService)
+    let deleteOrderService = CoreDataDeleteOrderService()
+    let deleteOrderInteractor = DeleteOrderInteractor(output: presenter, deleteOrderService: deleteOrderService)
+    presenter.listOrdersInput = listOrdersInteractor
+    presenter.deleteOrderInput = deleteOrderInteractor
     view.presenter = presenter
     return view
   }

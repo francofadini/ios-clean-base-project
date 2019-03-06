@@ -25,11 +25,10 @@ class CoreDataCreateOrderService: CreateOrderService {
       coreDataOrder.setValue(name, forKeyPath: "name")
     }
     
-    let orderID = coreDataOrder.objectID.uriRepresentation().absoluteString
-    let order = Order(identifier: orderID, firstName: name)
-    
     do {
       try managedContext.save()
+      let orderID = coreDataOrder.objectID.uriRepresentation().absoluteString
+      let order = Order(identifier: orderID, firstName: name)
       success(order)
     } catch let error as NSError {
       print("Could not save. \(error), \(error.userInfo)")

@@ -10,11 +10,11 @@ protocol ListOrdersView: class {
   func close()
 }
 
-class ListOrdersPresenter: ListOrdersController {
+class ListOrdersPresenter {
 
   // MARK: INTERNAL ATTRIBUTES
-  internal var listOrdersInput: ListOrdersInput!
-  internal var listOrdersRequest = ListOrdersRequest()
+  var listOrdersInput: ListOrdersInput!
+  var deleteOrderInput: DeleteOrderInput!
 
   // MARK: PRIVATE ATTRIBUTES
   private weak var view: ListOrdersView!
@@ -32,11 +32,17 @@ class ListOrdersPresenter: ListOrdersController {
 
   func viewDidLoad() {
     self.view.showLoader()
-    self.listOrdersInput.listOrders(requestModel: self.listOrdersRequest)
+    self.listOrdersInput.listOrders(requestModel: ListOrdersRequest())
   }
 
   func didTapAddOrderButton() {
     self.navigator.presentCreateOrderView(orderCreationListener: self)
+  }
+  
+  func didTapDeleteOrderButton(at index: Int) {
+    let order = self.orders[index]
+    let deleteOrderRequest = DeleteOrderRequest(orderId: order.identifier)
+    self.deleteOrderInput.deleteOrder(requestModel: deleteOrderRequest)
   }
 
   // MARK: PRIVATE METHODS
@@ -46,6 +52,13 @@ class ListOrdersPresenter: ListOrdersController {
       return SimpleCellViewData(labelText: order.firstName)
     }
     self.view.relaodListWith(data: viewDataList)
+  }
+  
+  private func deleteOrder(with identifier: String) {
+    guard let orderToDelete = self.orders.enumerated().filter({$0.element.identifier == identifier}).first else {
+      return
+    }
+    self.orders.remove(at: orderToDelete.offset)
   }
 }
 
@@ -68,5 +81,18 @@ extension ListOrdersPresenter: OrderCreationListener {
   func onOrderCreated(order: Order) {
     self.orders.insert(order, at: 0)
     reloadList()
+  }
+}
+
+extension ListOrdersPresenter: DeleteOrderOutput {
+  func success(response: DeleteOrderResponse) {
+    deleteOrder(with: response.orderId)
+    reloadList()
+  }
+  
+  func failure(error: DeleteOrderError) {
+    let errorMessage = NSLocalizedString("Ocurrio un problema al eliminar la orden",
+                                         comment: "Delete order error message")
+    self.view.showToast(text: errorMessage)
   }
 }
