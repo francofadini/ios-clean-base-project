@@ -5,7 +5,7 @@ import Foundation
 protocol ListOrdersView: class {
   func showLoader()
   func hideLoader()
-  func relaodListWith(data: [ImageLabelCellViewData])
+  func relaodListWith(data: [SimpleCellViewData])
   func showToast(text: String)
   func close()
 }
@@ -42,8 +42,8 @@ class ListOrdersPresenter: ListOrdersController {
   // MARK: PRIVATE METHODS
   
   private func reloadList() {
-    let viewDataList = orders.map { (order) -> ImageLabelCellViewData in
-      return ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: order.firstName)
+    let viewDataList = orders.map { (order) -> SimpleCellViewData in
+      return SimpleCellViewData(labelText: order.firstName)
     }
     self.view.relaodListWith(data: viewDataList)
   }

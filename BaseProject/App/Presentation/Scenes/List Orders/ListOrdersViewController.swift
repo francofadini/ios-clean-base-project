@@ -10,7 +10,7 @@ class ListOrdersViewController: UIViewController {
   
   // MARK: PRIVATE ATTRIBUTES
   
-  private var list: ListOrganism<ImageLabelTableViewCell>?
+  private var list: ListOrganism<SimpleTableViewCell>?
 
   // MARK: VIEW LIFE CYCLE
 
@@ -49,7 +49,7 @@ extension ListOrdersViewController: ListOrdersView {
   func showLoader() {}
   func hideLoader() {}
 
-  func relaodListWith(data: [ImageLabelCellViewData]) {
+  func relaodListWith(data: [SimpleCellViewData]) {
     if self.list == nil {
       self.list = ListOrganism()
       self.addChild(childViewController: self.list!, to: self.view)

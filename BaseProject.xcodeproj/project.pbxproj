@@ -313,6 +313,9 @@
 		EE9CC498222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */; };
 		EE9CC499222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */; };
 		EE9CC49A222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */; };
+		EE9CC49C222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
+		EE9CC49D222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
+		EE9CC49E222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */; };
 		EEB0E6B621725E3600CAF99E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0E6B521725E3600CAF99E /* AppDelegate.swift */; };
 		EEB0E6BD21725E3700CAF99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BC21725E3700CAF99E /* Assets.xcassets */; };
 		EEB0E6C021725E3700CAF99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB0E6BE21725E3700CAF99E /* LaunchScreen.storyboard */; };
@@ -444,6 +447,7 @@
 		EE9CC489222F48ED001899B5 /* CoreDataListOrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataListOrdersService.swift; sourceTree = "<group>"; };
 		EE9CC493222F4C89001899B5 /* BaseProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseProject.xcdatamodel; sourceTree = "<group>"; };
 		EE9CC497222F6CCD001899B5 /* CoreDataOrdersPersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOrdersPersistanceService.swift; sourceTree = "<group>"; };
+		EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		EEB0E6B221725E3600CAF99E /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB0E6B521725E3600CAF99E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB0E6BC21725E3700CAF99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -867,17 +871,10 @@
 		6DCAF92721C2DB7C00BFB240 /* List Cells Molecules */ = {
 			isa = PBXGroup;
 			children = (
-				6DCAF92C21C2DC5300BFB240 /* Image Label Cell */,
+				6DCAF92D21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift */,
+				EE9CC49B222F6F05001899B5 /* SimpleTableViewCell.swift */,
 			);
 			path = "List Cells Molecules";
-			sourceTree = "<group>";
-		};
-		6DCAF92C21C2DC5300BFB240 /* Image Label Cell */ = {
-			isa = PBXGroup;
-			children = (
-				6DCAF92D21C2DC8B00BFB240 /* ImageLabelTableViewCell.swift */,
-			);
-			path = "Image Label Cell";
 			sourceTree = "<group>";
 		};
 		6DCAF93121C3F80E00BFB240 /* Services */ = {
@@ -1428,6 +1425,7 @@
 				6DA0A153220292800094370C /* Repository.swift in Sources */,
 				6DBA09EC21C92E8F003BA5F1 /* ListOrdersService.swift in Sources */,
 				6DBA09ED21C92E8F003BA5F1 /* UIViewControllerExtensions.swift in Sources */,
+				EE9CC49E222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */,
 				6DA0A14F22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
 				6DBA09EE21C92E8F003BA5F1 /* Service.swift in Sources */,
 				6DBA09EF21C92E8F003BA5F1 /* CreateOrderOutput.swift in Sources */,
@@ -1536,6 +1534,7 @@
 				6DA0A152220292800094370C /* Repository.swift in Sources */,
 				6DBA0A2F21C93125003BA5F1 /* ListOrdersService.swift in Sources */,
 				6DBA0A3021C93125003BA5F1 /* UIViewControllerExtensions.swift in Sources */,
+				EE9CC49D222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */,
 				6DA0A14E22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
 				6DBA0A3121C93125003BA5F1 /* Service.swift in Sources */,
 				6DBA0A3221C93125003BA5F1 /* CreateOrderOutput.swift in Sources */,
@@ -1644,6 +1643,7 @@
 				6DA0A151220292800094370C /* Repository.swift in Sources */,
 				6DCAF93321C3F82000BFB240 /* ListOrdersService.swift in Sources */,
 				6D8D371E21BDEE6200B9BE66 /* UIViewControllerExtensions.swift in Sources */,
+				EE9CC49C222F6F05001899B5 /* SimpleTableViewCell.swift in Sources */,
 				6DA0A14D22010E2C0094370C /* DateInputRowAtom.swift in Sources */,
 				6DCAF93521C3F8BE00BFB240 /* Service.swift in Sources */,
 				6DC2079A21B9BC62000A6A5A /* CreateOrderOutput.swift in Sources */,
