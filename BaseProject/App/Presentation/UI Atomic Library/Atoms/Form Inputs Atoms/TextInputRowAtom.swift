@@ -53,14 +53,13 @@ public class TextInputRowAtom: InputRow<String>, UITextFieldDelegate {
                         shouldChangeCharactersIn range: NSRange,
                         replacementString string: String) -> Bool {
 
+    self.value = textField.text! + string
+    
     // Hack for seeing the space when text is right aligned
     if textField.textAlignment == .right, range.location == textField.text?.count, string.elementsEqual(" ") {
       textField.text = textField.text?.appending("\u{00a0}")
-      self.value = textField.text
       return false
     }
-
-    self.value = textField.text
     return true
   }
 }

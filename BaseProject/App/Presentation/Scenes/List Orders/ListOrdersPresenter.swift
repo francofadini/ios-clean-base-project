@@ -19,6 +19,7 @@ class ListOrdersPresenter: ListOrdersController {
   // MARK: PRIVATE ATTRIBUTES
   private weak var view: ListOrdersView!
   private var navigator: ListOrdersNavigator
+  private var orders = [Order]()
 
   // MARK: INITIALIZER
 
@@ -35,10 +36,17 @@ class ListOrdersPresenter: ListOrdersController {
   }
 
   func didTapAddOrderButton() {
-    self.navigator.presentCreateOrderView()
+    self.navigator.presentCreateOrderView(orderCreationListener: self)
   }
 
   // MARK: PRIVATE METHODS
+  
+  private func reloadList() {
+    let viewDataList = orders.map { (order) -> ImageLabelCellViewData in
+      return ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: order.firstName)
+    }
+    self.view.showListWith(data: viewDataList)
+  }
 }
 
 extension ListOrdersPresenter: ListOrdersOutput {
@@ -47,13 +55,18 @@ extension ListOrdersPresenter: ListOrdersOutput {
   
   func success(orders: [Order]) {
     self.view.hideLoader()
-    let viewDataList = [ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: "Hola!")]
-    self.view.showListWith(data: viewDataList)
+    self.orders = orders
+    reloadList()
   }
   
   func failure(error: ListOrdersError) {
     self.view.hideLoader()
-    let viewDataList = [ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: "Hola!")]
-    self.view.showListWith(data: viewDataList)
+  }
+}
+
+extension ListOrdersPresenter: OrderCreationListener {
+  func onOrderCreated(order: Order) {
+    self.orders.insert(order, at: 0)
+    reloadList()
   }
 }

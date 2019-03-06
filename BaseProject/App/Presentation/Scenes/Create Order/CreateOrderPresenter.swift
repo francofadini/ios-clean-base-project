@@ -9,6 +9,12 @@ protocol CreateOrderView: class {
   func close()
 }
 
+// MARK: ORDER CREATION LISTENER
+
+protocol OrderCreationListener {
+  func onOrderCreated(order: Order)
+}
+
 class CreateOrderPresenter: CreateOrderController {
 
   // MARK: INTERNAL ATTRIBUTES
@@ -17,12 +23,14 @@ class CreateOrderPresenter: CreateOrderController {
   // MARK: PRIVATE ATTRIBUTES
   private weak var view: CreateOrderView!
   private var navigator: CreateOrderNavigator
+  private let orderCreationListener: OrderCreationListener
 
   // MARK: INITIALIZER
 
-  init(view: CreateOrderView, navigator: CreateOrderNavigator) {
+  init(view: CreateOrderView, navigator: CreateOrderNavigator, orderCreationListener: OrderCreationListener) {
     self.view = view
     self.navigator = navigator
+    self.orderCreationListener = orderCreationListener
   }
 
   // MARK: VIEW EVENTS
@@ -39,7 +47,7 @@ class CreateOrderPresenter: CreateOrderController {
 
   // MARK: PRIVATE METHODS
 
-  private func notifyOrderCreationSuccess(orderID: String) {
+  private func showOrderCreationSuccessMessage(orderID: String) {
     self.view.showToast(text: "La orden Nro " + orderID + "fué creada con éxito")
   }
 
@@ -54,13 +62,13 @@ extension CreateOrderPresenter: CreateOrderOutput {
   // MARK: CRETE ORDER OUTPUT
   func success(order: Order) {
     self.view.hideLoader()
-    notifyOrderCreationSuccess(orderID: order.identifier)
-    self.view.close()
+    showOrderCreationSuccessMessage(orderID: order.identifier)
+    self.orderCreationListener.onOrderCreated(order: order)
+    self.navigator.close(completion: nil)
   }
   
   func failure(error: CreateOrderError) {
     self.view.hideLoader()
     notifyOrderCreationFailed()
-    self.navigator.close(completion: nil)
   }
 }
