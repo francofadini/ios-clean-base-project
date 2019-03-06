@@ -45,12 +45,12 @@ extension LoginPresenter: LoginOutput {
 
   // MARK: LOGIN OUTPUT
 
-  func onLoggedIn() {
+  func success(response: LoginResponse) {
     self.view.hideLoader()
     self.navigator.openMainView()
   }
 
-  func onLoginFail(error: LoginError) {
+  func failure(error: LoginError) {
     self.view.hideLoader()
 
     switch error {

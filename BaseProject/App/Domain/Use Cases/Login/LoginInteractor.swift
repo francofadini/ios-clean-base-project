@@ -22,12 +22,12 @@ class LoginInteractor: Interactor {
   func execute(requestModel: LoginRequest) {
 
     if requestModel.username == nil || requestModel.username!.isEmpty {
-      self.output.onLoginFail(error: .emptyEmail)
+      self.output.failure(error: .emptyEmail)
       return
     }
 
     if requestModel.password == nil || requestModel.password!.isEmpty {
-      self.output.onLoginFail(error: .emptyPassword)
+      self.output.failure(error: .emptyPassword)
       return
     }
 
@@ -36,15 +36,15 @@ class LoginInteractor: Interactor {
                             successHandler: { (session) in
 
                               self.sessionPersistantService.saveSession(session: session)
-                              self.output.onLoggedIn()
+                              self.output.success(response: LoginResponse())
 
                             }, errorHandler: { (loginError) in
 
                               if loginError == .noInternet {
-                                self.output.onLoginFail(error: .noInternet)
+                                self.output.failure(error: .noInternet)
                               }
                                
-                              self.output.onLoginFail(error: .other)
+                              self.output.failure(error: .other)
 
                             })
   }

@@ -22,7 +22,7 @@ class LogoutInteractor: Interactor {
   func execute(requestModel: LogoutRequest) {
     self.sessionPersistantService.removeSession()
     let response = LogoutResponse()
-    self.output.onLogoutSuccess(response: response)
+    self.output.success(response: response)
   }
 }
 

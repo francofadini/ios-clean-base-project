@@ -25,22 +25,22 @@ class RegisterInteractor: Interactor {
   func execute(requestModel: RegisterRequest) {
 
     if requestModel.username == nil || requestModel.username!.isEmpty {
-      self.output.onRegistrationFail(error: .emptyEmail)
+      self.output.failure(error: .emptyEmail)
       return
     }
 
     if requestModel.password == nil || requestModel.password!.isEmpty {
-      self.output.onRegistrationFail(error: .emptyPassword)
+      self.output.failure(error: .emptyPassword)
       return
     }
 
     if requestModel.repeatedPassword == nil || requestModel.repeatedPassword!.isEmpty {
-      self.output.onRegistrationFail(error: .emptyRepeatedPassword)
+      self.output.failure(error: .emptyRepeatedPassword)
       return
     }
 
     if !requestModel.password!.elementsEqual(requestModel.repeatedPassword!) {
-      self.output.onRegistrationFail(error: .passwordsNotMatch)
+      self.output.failure(error: .passwordsNotMatch)
       return
     }
     
@@ -50,16 +50,16 @@ class RegisterInteractor: Interactor {
                                   successHandler: { (session) in
                                     
                                     self.sessionPersistantService.saveSession(session: session)
-                                    self.output.onRegistered()
+                                    self.output.success(response: RegisterResponse())
                                     
                                   }, errorHandler: { (registerError) in
                                     
                                     switch registerError {
                                     case .noInternet:
-                                      self.output.onRegistrationFail(error: .noInternet)
+                                      self.output.failure(error: .noInternet)
                                       return
                                     default:
-                                      self.output.onRegistrationFail(error: .other)
+                                      self.output.failure(error: .other)
                                       return
                                     }
                                     

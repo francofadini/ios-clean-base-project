@@ -3,8 +3,8 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol LoadProfileOutput: Boundary {
-  func onProfileLoaded(response: LoadProfileResponse)
-  func onLoadProfileFail(error: LoadProfileError)
+  func success(response: LoadProfileResponse)
+  func failure(error: LoadProfileError)
 }
 
 // MARK: RESPONSE MODEL

@@ -38,14 +38,14 @@ class AccountPresenter {
 }
 
 extension AccountPresenter: LogoutOutput {
-  func onLogoutFail(error: LoadProfileError) {
+  func failure(error: LoadProfileError) {
     self.view.showError(title: NSLocalizedString("No se pudo cerrar sesión",
                                                  comment: "Logout error title"),
                         message: NSLocalizedString("Ocurrio un error al cerrar sesión",
                                                    comment: "Logout error message"))
   }
 
-  func onLogoutSuccess(response: LogoutResponse) {
+  func success(response: LogoutResponse) {
     self.navigator.showLanding()
   }
 }

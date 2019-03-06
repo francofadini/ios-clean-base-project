@@ -21,11 +21,11 @@ class AutoLoginInteractor: Interactor {
 
   func execute(requestModel: AutologinRequest) {
     if sessionPersistantService.loadSession() != nil {
-      self.output.onAutoLoggedIn()
+      self.output.success(response: AutoLoginResponse())
       return
     }
 
-    self.output.onAutoLoginFail()
+    self.output.failure(error: .other)
   }
 }
 

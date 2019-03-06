@@ -84,11 +84,11 @@ extension ProfilePresenter: LoadProfileOutput {
 
   // MARK: LOAD PROFILE OUTPUT
 
-  func onProfileLoaded(response: LoadProfileResponse) {
+  func success(response: LoadProfileResponse) {
     self.view.fillFormWith(firstName: response.firstName, lastName: response.lastName)
   }
 
-  func onLoadProfileFail(error: LoadProfileError) {
+  func failure(error: LoadProfileError) {
     // nothing to do here
   }
 }

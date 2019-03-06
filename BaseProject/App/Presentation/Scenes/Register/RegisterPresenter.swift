@@ -46,12 +46,12 @@ extension RegisterPresenter: RegisterOutput {
 
   // MARK: REGISTER OUTPUT
 
-  func onRegistered() {
+  func success(response: RegisterResponse) {
     self.view.hideLoader()
     self.navigator.openMainView()
   }
 
-  func onRegistrationFail(error: RegisterError) {
+  func failure(error: RegisterError) {
     self.view.hideLoader()
 
     switch error {

@@ -3,11 +3,15 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol RegisterOutput: Boundary {
-  func onRegistered()
-  func onRegistrationFail(error: RegisterError)
+  func success(response: RegisterResponse)
+  func failure(error: RegisterError)
 }
 
 // MARK: RESPONSE MODEL
+
+struct RegisterResponse {
+  
+}
 
 enum RegisterError: ResponseModel {
   case emptyEmail

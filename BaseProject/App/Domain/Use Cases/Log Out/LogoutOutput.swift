@@ -3,8 +3,8 @@ import Foundation
 // MARK: OUTPUT BOUNDRY
 
 protocol LogoutOutput: Boundary {
-  func onLogoutSuccess(response: LogoutResponse)
-  func onLogoutFail(error: LoadProfileError)
+  func success(response: LogoutResponse)
+  func failure(error: LoadProfileError)
 }
 
 // MARK: RESPONSE MODEL

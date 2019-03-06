@@ -604,7 +604,6 @@
 		6DBA09E021C926F3003BA5F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DBA09BB21C7EEC0003BA5F1 /* Navigator.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -810,6 +809,7 @@
 		6DC2079621B9BBA2000A6A5A /* Architecture Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA09BB21C7EEC0003BA5F1 /* Navigator.swift */,
 				6DC2079221B9B993000A6A5A /* Interactor.swift */,
 				6DC2079D21B9BD76000A6A5A /* RequestModel.swift */,
 				6DC2079F21B9BDBB000A6A5A /* ResponseModel.swift */,
@@ -886,7 +886,7 @@
 		6DCAF93121C3F80E00BFB240 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EE11C576222F417E00CC5B0E /* Core Data Models */,
+				EE11C576222F417E00CC5B0E /* Core Data */,
 				6DBA0B0321CA9D85003BA5F1 /* API Models */,
 				6DBA0AF121CA9598003BA5F1 /* Update Profile Service */,
 				6DBA09D021C8035C003BA5F1 /* Login Service */,
@@ -982,12 +982,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EE11C576222F417E00CC5B0E /* Core Data Models */ = {
+		EE11C576222F417E00CC5B0E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
 				EE9CC492222F4C89001899B5 /* BaseProject.xcdatamodeld */,
 			);
-			path = "Core Data Models";
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		EE9CC484222F44EC001899B5 /* Core Data */ = {

@@ -22,13 +22,13 @@ class LoadProfileInteractor: Interactor {
   func execute(requestModel: LoadProfileRequest) {
 
     guard let session = self.sessionPersistantService.loadSession() else {
-      self.output.onLoadProfileFail(error: .unauthorized)
+      self.output.failure(error: .unauthorized)
       return
     }
 
     let response = LoadProfileResponse(firstName: session.user.firstName,
                                        lastName: session.user.lastName)
-    self.output.onProfileLoaded(response: response)
+    self.output.success(response: response)
   }
 }
 

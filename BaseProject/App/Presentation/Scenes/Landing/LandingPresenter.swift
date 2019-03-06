@@ -43,11 +43,11 @@ class LandingPresenter: LandingController {
 }
 
 extension LandingPresenter: AutoLoginOutput {
-  func onAutoLoginFail() {
+  func failure(error: AutoLoginError) {
     self.view.showButtos()
   }
 
-  func onAutoLoggedIn() {
+  func success(response: AutoLoginResponse) {
       self.navigator.presentMainView()
   }
 }
