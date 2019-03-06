@@ -8,11 +8,11 @@ import UIKit
 // MARK: ENVIROMENT CONSTANTS
 
 #if DEV
-let BASE_URL = "http://192.168.0.38:8000"
+let BASE_URL = "http://localhost:8000"
 #elseif QA
-let BASE_URL = "https://stage.clingot.com"
+let BASE_URL = "http://localhost:8000"
 #else // PROD
-let BASE_URL = "https://app.clingot.com"
+let BASE_URL = "http://localhost:8000"
 #endif
 
 struct Constants {
@@ -38,6 +38,7 @@ struct Constants {
       static let configurationLabel = NSLocalizedString("Configuraciones", comment: "General string for configurations")
       static let loadingLabel = NSLocalizedString("Cargando...", comment: "General string for loading label")
       static let confirmLabel = NSLocalizedString("Confirmar", comment: "General string for confirm action")
+      static let sendLabel = NSLocalizedString("Enviar", comment: "General label for send")
 
       struct Errors {
         static let noInternetErrorMessage = NSLocalizedString("No hay internet", comment: "No internet general error message")

@@ -3,11 +3,13 @@ import Foundation
 class OrdersRepository: Repository {
 
   private let remoteService: ListOrdersService
-  private let localSerivce: ListOrdersService & OrdersPersistanceService
+  private let localSerivce: ListOrdersService
+  private let ordersPersistanceService: OrdersPersistanceService
 
-  init(remote: ListOrdersService, local: ListOrdersService & OrdersPersistanceService) {
+  init(remote: ListOrdersService, local: ListOrdersService, ordersPersistanceService: OrdersPersistanceService) {
     self.remoteService = remote
     self.localSerivce = local
+    self.ordersPersistanceService = ordersPersistanceService
   }
 }
 
@@ -20,26 +22,28 @@ extension OrdersRepository: CreateOrderService {
 extension OrdersRepository: ListOrdersService {
 
   func listOrdersWith(clientID: Int?, success: ([Order]) -> Void, failure: (ListOrdersError) -> Void) {
-    self.remoteService.listOrdersWith(clientID: clientID,
-                                      success: { (orders) in
+    self.remoteService.listOrdersWith(
+      clientID: clientID,
+      success: { (orders) in
                                         
-                                        localSerivce.saveOrders(orders: orders)
-                                        success(orders)
+      ordersPersistanceService.saveOrders(orders: orders)
+      success(orders)
                                         
-                                      }, failure: { (listOrdersError) in
+    }, failure: { (listOrdersError) in
                                         
-                                        localSerivce.listOrdersWith(clientID: clientID,
-                                                                    success: { (orders) in
-                                                                      
-                                                                        localSerivce.saveOrders(orders: orders)
-                                                                        success(orders)
-                                                                      
-                                                                    }, failure: { (listOrdersError) in
-                                                                      
-                                                                        failure(listOrdersError)
-                                                                      
-                                                                    })
-                                      })
+      localSerivce.listOrdersWith(
+        clientID: clientID,
+        success: { (orders) in
+          
+          ordersPersistanceService.saveOrders(orders: orders)
+          success(orders)
+          
+      }, failure: { (listOrdersError) in
+        
+        failure(listOrdersError)
+        
+      })
+    })
   }
 
 }

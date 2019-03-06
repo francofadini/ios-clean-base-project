@@ -14,7 +14,12 @@ class ListOrdersSceneConfigurator {
     let view = ListOrdersViewController()
     let navigator = ListOrdersNavigator(viewController: view)
     let presenter = ListOrdersPresenter(view: view, navigator: navigator)
-    let listOrdersService = CoreDataListOrdersService()
+    let remoteListOrdersService = APIListOrdersService()
+    let localListOrdersService = CoreDataListOrdersService()
+    let ordersPersistanceService = CoreDataOrdersPersistanceService()
+    let listOrdersService = OrdersRepository(remote: remoteListOrdersService,
+                                             local: localListOrdersService,
+                                             ordersPersistanceService: ordersPersistanceService)
     let interactor = ListOrdersInteractor(output: presenter, listOrdersService: listOrdersService)
     presenter.listOrdersInput = interactor
     view.presenter = presenter

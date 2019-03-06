@@ -5,7 +5,7 @@ import Foundation
 protocol ListOrdersView: class {
   func showLoader()
   func hideLoader()
-  func showListWith(data: [ImageLabelCellViewData])
+  func relaodListWith(data: [ImageLabelCellViewData])
   func showToast(text: String)
   func close()
 }
@@ -45,7 +45,7 @@ class ListOrdersPresenter: ListOrdersController {
     let viewDataList = orders.map { (order) -> ImageLabelCellViewData in
       return ImageLabelCellViewData(imageUrl: nil, placeholder: nil, labelText: order.firstName)
     }
-    self.view.showListWith(data: viewDataList)
+    self.view.relaodListWith(data: viewDataList)
   }
 }
 

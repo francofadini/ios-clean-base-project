@@ -49,7 +49,7 @@ extension ListOrdersViewController: ListOrdersView {
   func showLoader() {}
   func hideLoader() {}
 
-  func showListWith(data: [ImageLabelCellViewData]) {
+  func relaodListWith(data: [ImageLabelCellViewData]) {
     if self.list == nil {
       self.list = ListOrganism()
       self.addChild(childViewController: self.list!, to: self.view)

@@ -2,7 +2,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-  
   // MARK: INTERNAL ATTRIBUTES
   
   var presenter: RegisterPresenter!
