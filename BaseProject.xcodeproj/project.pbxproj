@@ -873,12 +873,12 @@
 				6DBA09C021C7F7A5003BA5F1 /* Login */,
 				6DBA09B021C7DC02003BA5F1 /* Landing */,
 				6DCAF91821C2B8D000BFB240 /* List Orders */,
-				6DC207A821B9C044000A6A5A /* Create Order */,
+				6DC207A821B9C044000A6A5A /* Create Edit Order */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		6DC207A821B9C044000A6A5A /* Create Order */ = {
+		6DC207A821B9C044000A6A5A /* Create Edit Order */ = {
 			isa = PBXGroup;
 			children = (
 				6DC207A921B9C06F000A6A5A /* CreateOrderPresenter.swift */,
@@ -886,7 +886,7 @@
 				6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */,
 				6D874D5821CD72E100464DAB /* CreateOrderNavigator.swift */,
 			);
-			path = "Create Order";
+			path = "Create Edit Order";
 			sourceTree = "<group>";
 		};
 		6DCAF91821C2B8D000BFB240 /* List Orders */ = {

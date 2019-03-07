@@ -41,6 +41,7 @@ class ListOrdersPresenter {
   
   func didTapEditOrderButton(at index: Int) {
     let order = self.orders[index]
+    self.navigator.presentUpdateOrderView(order: order, orderUpdateListener: self)
   }
   
   func didTapDeleteOrderButton(at index: Int) {
@@ -63,6 +64,14 @@ class ListOrdersPresenter {
       return
     }
     self.orders.remove(at: orderToDelete.offset)
+  }
+  
+  private func replaceOrder(order: Order) {
+    guard let orderToReplace = self.orders.enumerated().filter({$0.element.identifier == order.identifier}).first else {
+      return
+    }
+    self.orders.remove(at: orderToReplace.offset)
+    self.orders.insert(order, at: orderToReplace.offset)
   }
 }
 
@@ -98,5 +107,12 @@ extension ListOrdersPresenter: DeleteOrderOutput {
     let errorMessage = NSLocalizedString("Ocurrio un problema al eliminar la orden",
                                          comment: "Delete order error message")
     self.view.showToast(text: errorMessage)
+  }
+}
+
+extension ListOrdersPresenter: OrderUpdateListener {
+  func onOrderUpdated(order: Order) {
+    replaceOrder(order: order)
+    reloadList()
   }
 }

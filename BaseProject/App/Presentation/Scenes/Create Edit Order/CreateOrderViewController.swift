@@ -12,6 +12,7 @@ class CreateOrderViewController: UIViewController {
 
   private let form = FormOrganism()
   private let firstNameInput = TextInputRowAtom()
+  private var submitButton: UIBarButtonItem!
 
   // MARK: VIEW LIFE CYCLE
 
@@ -22,10 +23,11 @@ class CreateOrderViewController: UIViewController {
     configureInputs()
     buildForm()
     addCloseButton()
+    self.presenter.onViewDidLoad()
   }
 
   // MARK: VIEW ACTIONS
-
+  
   @objc func createOrderButtonAction() {
     self.presenter.onSubmitButtonPressed(firstName: firstNameInput.value)
   }
@@ -41,7 +43,7 @@ class CreateOrderViewController: UIViewController {
   }
 
   private func addSubmitButton() {
-    let submitButton = UIBarButtonItem(title: Constants.Strings.General.createLabel,
+    self.submitButton = UIBarButtonItem(title: Constants.Strings.General.createLabel,
                                        style: .done,
                                        target: self,
                                        action: #selector(createOrderButtonAction))
@@ -73,5 +75,11 @@ extension CreateOrderViewController: CreateOrderView {
   func showLoader() {}
   func hideLoader() {}
   func showToast(text: String) {}
-  func close() {}
+  func setNameInput(with name: String?) {
+    firstNameInput.data.value = name
+    firstNameInput.reload()
+  }
+  func setSubmitButtonTitle(title: String) {
+    submitButton.title = title
+  }
 }

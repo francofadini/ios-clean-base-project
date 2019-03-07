@@ -5,7 +5,7 @@ class Order: Codable {
   // MARK: PRIVATE ATTRIBUTES
 
   let identifier: String
-  let firstName: String?
+  var firstName: String?
 
   // MARK: INITIALIZER
 
