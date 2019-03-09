@@ -1,6 +1,7 @@
 # BaseProject
 
 BaseProject is an iOS app initial template, not only for acelerating every initial project setup, but also for promoting good practices and a scalable architecture.
+The main objective of opening this project is to constantly grow and improve with the community help. So any suggestion is welcome! 
 
 ## Features
 
@@ -10,7 +11,7 @@ BaseProject is an iOS app initial template, not only for acelerating every initi
 - Basic UI Components ✅
 - Network layer ✅
 - CRUD Example ✅
-- Architecture graph 🔜
+- Architecture diagram ✅
 - Code Templates 🔜
 - CI 🔜
 - Tests 🔜
@@ -30,6 +31,11 @@ BaseProject is an iOS app initial template, not only for acelerating every initi
 - Easy for testing
 - Not overkill
 - Fast for developing
+
+## Diagram
+
+![alt text](Documentation/Diagrams/create_order_diagram.png "Create Order Diagram")
+
 
 # How this project could reach the objectives
 
