@@ -301,6 +301,9 @@
 		6DCAF94321C43CF700BFB240 /* AlamofireAPIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCAF94221C43CF700BFB240 /* AlamofireAPIRequestBuilder.swift */; };
 		6DFF50BB21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BA21BC0DC5007B1630 /* CreateOrderSceneConfigurator.swift */; };
 		6DFF50C021BD2143007B1630 /* TextInputRowAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFF50BF21BD2143007B1630 /* TextInputRowAtom.swift */; };
+		EE16029422358228009A2259 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE16029322358228009A2259 /* MockLoginService.swift */; };
+		EE16029522358228009A2259 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE16029322358228009A2259 /* MockLoginService.swift */; };
+		EE16029622358228009A2259 /* MockLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE16029322358228009A2259 /* MockLoginService.swift */; };
 		EE9CC486222F44FC001899B5 /* CoreDataCreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC485222F44FC001899B5 /* CoreDataCreateOrderService.swift */; };
 		EE9CC487222F44FD001899B5 /* CoreDataCreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC485222F44FC001899B5 /* CoreDataCreateOrderService.swift */; };
 		EE9CC488222F44FD001899B5 /* CoreDataCreateOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CC485222F44FC001899B5 /* CoreDataCreateOrderService.swift */; };
@@ -473,6 +476,7 @@
 		C273E710044C70A6C74C4FDD /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C531D2DE55731110BDF5046D /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		CAC67CD6FF51DF9DDDD198F8 /* Pods_BaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE16029322358228009A2259 /* MockLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginService.swift; sourceTree = "<group>"; };
 		EE9CC485222F44FC001899B5 /* CoreDataCreateOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCreateOrderService.swift; sourceTree = "<group>"; };
 		EE9CC489222F48ED001899B5 /* CoreDataListOrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataListOrdersService.swift; sourceTree = "<group>"; };
 		EE9CC493222F4C89001899B5 /* BaseProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseProject.xcdatamodel; sourceTree = "<group>"; };
@@ -618,6 +622,7 @@
 		6DBA09D021C8035C003BA5F1 /* Login Service */ = {
 			isa = PBXGroup;
 			children = (
+				EE1602922235821A009A2259 /* Mock */,
 				6DBA09D321C8045D003BA5F1 /* API */,
 				6DBA09D121C80371003BA5F1 /* LoginService.swift */,
 			);
@@ -1025,6 +1030,14 @@
 				EE9CC492222F4C89001899B5 /* BaseProject.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		EE1602922235821A009A2259 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EE16029322358228009A2259 /* MockLoginService.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		EE9CC484222F44EC001899B5 /* Core Data */ = {
@@ -1518,6 +1531,7 @@
 				6D111D7421CC0B8E00A2DB6C /* LogoutInput.swift in Sources */,
 				6DBA09F721C92E8F003BA5F1 /* LoginInput.swift in Sources */,
 				6DBA09F821C92E8F003BA5F1 /* LandingPresenter.swift in Sources */,
+				EE16029622358228009A2259 /* MockLoginService.swift in Sources */,
 				6DBA09F921C92E8F003BA5F1 /* AlamofireAPIRequestBuilder.swift in Sources */,
 				6DBA09FA21C92E8F003BA5F1 /* ListOrdersViewController.swift in Sources */,
 				6DBA09FB21C92E8F003BA5F1 /* Interactor.swift in Sources */,
@@ -1637,6 +1651,7 @@
 				6D111D7321CC0B8E00A2DB6C /* LogoutInput.swift in Sources */,
 				6DBA0A3A21C93125003BA5F1 /* LoginInput.swift in Sources */,
 				6DBA0A3B21C93125003BA5F1 /* LandingPresenter.swift in Sources */,
+				EE16029522358228009A2259 /* MockLoginService.swift in Sources */,
 				6DBA0A3C21C93125003BA5F1 /* AlamofireAPIRequestBuilder.swift in Sources */,
 				6DBA0A3D21C93125003BA5F1 /* ListOrdersViewController.swift in Sources */,
 				6DBA0A3E21C93125003BA5F1 /* Interactor.swift in Sources */,
@@ -1756,6 +1771,7 @@
 				6D111D7221CC0B8E00A2DB6C /* LogoutInput.swift in Sources */,
 				6DBA09C921C7F85E003BA5F1 /* LoginInput.swift in Sources */,
 				6DBA09B821C7E94E003BA5F1 /* LandingPresenter.swift in Sources */,
+				EE16029422358228009A2259 /* MockLoginService.swift in Sources */,
 				6DCAF94321C43CF700BFB240 /* AlamofireAPIRequestBuilder.swift in Sources */,
 				6DCAF91C21C2B90C00BFB240 /* ListOrdersViewController.swift in Sources */,
 				6DC2079321B9B993000A6A5A /* Interactor.swift in Sources */,

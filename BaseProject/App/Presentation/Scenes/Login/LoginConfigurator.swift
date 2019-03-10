@@ -14,7 +14,7 @@ class LoginSceneConfigurator {
     let view = LoginViewController()
     let navigator = LoginNavigator(viewController: view)
     let presenter = LoginPresenter(view: view, navigator: navigator)
-    let loginService = APILoginService()
+    let loginService = MockLoginService()
     let currentSessionService = CurrentSessionPersistantServiceLocator.defaultService
     let interactor = LoginInteractor(output: presenter,
                                      loginService: loginService,
